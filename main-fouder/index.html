@@ -6,7 +6,46 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    
+<body class="w-full h-min-screen bg-gray-200 px-5 py-5">
+
+    <header class="w-full h-auto py-3 gap-7  flex flex-col">
+
+        <div class="flex justify-between w-full h-1/2 items-center">
+            <div class="w-8 h-8 bg-white grid items-place-center grid-cols-2 gap-1 p-1.5 rounded-xl cursor-pointer shadow-lg">
+                <div class="w-full h-full bg-gray-400 rounded-full"></div>
+                <div class="w-full h-full bg-gray-400 rounded-full"></div>
+                <div class="w-full h-full bg-gray-400 rounded-full"></div>
+                <div class="w-full h-full bg-gray-400 rounded-full"></div>
+            </div>
+            <h1 class="text-2xl font-medium text-center pl-10">Home</h1>
+            <div class="flex gap-1 h-auto w-auto items-center gap-3">
+                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center px-1 cursor-pointer">
+                    <img class="w-full opacity-50" src="/main-fouder/icons/icons8-carrinho-de-compras-30.png" alt="">
+                </div>
+                <div class="w-10 h-10 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md">
+                    <img class="w-full opacity-80" src="/main-fouder/icons/icons8-usuário-30.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-1/2 flex justify-between items-center gap-3">
+            <div class="w-full bg-white rounded-lg shadow-md h-11 flex items-center px-3">
+                <input class="w-full outline-none bg-none text-lg" type="text" placeholder="Search">
+                <img class="h-1/2 w-auto opacity-50" src="/main-fouder/icons/loupe.png" alt="">
+            </div>
+            <img class="bg-red-400 w-11 p-1 rounded-xl shadow-md" src="/main-fouder/icons/icons8-opções-de-ordenação-24.png" alt="">
+        </div>
+      
+    </header>
+
+
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
 </body>
 </html>
