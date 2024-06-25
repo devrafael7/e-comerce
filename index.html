@@ -9,6 +9,61 @@
 </head>
 <body class="w-full h-min-screen bg-gray-200 px-5 py-5">
 
+  
+
+    
+    <form id="bg-login" class=" fixed w-full h-screen z-30 left-0  pt-36 top-0 flex justify-end items-center flex-col ">
+        <div id="confirmation-pop-up" class="w-4/6 bg-red-500 rounded-b-xl h-16 fixed z-40 top-0 text-white text-xl flex justify-center items-center font-semibold hidden">
+            Check the blanks!
+        </div>
+        
+        <!-- close PopUp confirmation informations -->
+      
+
+        <div class="login w-full h-full bg-white rounded-t-xl shadow-md flex flex-col items-center pt-10 px-7 relative">
+            <img id="close-login" class="absolute left-4 top-3 w-8 h-8" src="icons/icons8-close-26.png" alt="">
+            <h2 class="text-2xl font-semibold text-purple-800 mb-8">Get Started</h2>
+            <div class="w-full flex-col flex h-auto gap-7">
+
+                <div class="w-full flex-col flex h-14 border rounded-2xl border-gray-600 border-solid relative">     
+                    <input id="input-name" class="px-5 flex justify-center h-full relative w-full rounded-full outline-none" type="text" placeholder="Enter first name"> <p class="bg-white absolute -top-4 left-3 font-semibold">First Name</p></input>
+                </div>
+
+                <div class="w-full flex-col flex h-14 border rounded-2xl border-gray-600 border-solid relative">     
+                    <input id="input-email" class="px-5 flex justify-center h-full relative w-full rounded-full outline-none" type="text" placeholder="Enter your e-mail"> <p class="bg-white absolute -top-3 left-3 font-semibold">E-mail</p></input>
+                </div>
+
+                <div class="w-full flex-col flex h-14 border rounded-2xl border-gray-600 border-solid relative">     
+                    <input id="input-password" class="px-5 flex justify-center h-full relative w-full rounded-full outline-none" type="text" placeholder="Create a password"> <p class="bg-white absolute -top-3 left-3 font-semibold">Password</p></input>
+                </div>
+
+                <div class="flex items-center">
+                    <input class="w-6 h-6 mr-2" type="checkbox" name="" id="">
+                    <p class="text-sm ">I agree to the processing of <span class="text-md text-blue-700 font-semibold">
+                        Personal data
+                    </span></p>
+                </div>
+                <button id="sign-up-btn" class="w-full h-16 bg-purple-600 rounded-2xl text-lg text-white font-normal cursor-pointer" type="button">Sign Up</button>
+            </div>
+            <div class="flex flex-col items-center mt-7">
+                <p class="opacity-80">Sign up with</p>
+                <div class="flex gap-5 my-4">
+                    <img class="w-10" src="icons/google.color.png" alt="">
+                    <img class="w-10" src="icons/facebook.color.png" alt="">
+                    <img class="w-10" src="icons/icons8-mac-os-30.png" alt="">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div id="bg-loader" class="flex space-x-2 fixed w-full h-screen z-40 left-0 items-center justify-center hidden">
+        <div class="flex ">
+            <div class="w-4 h-4 bg-purple-600 rounded-full bounce"></div>
+            <div class="w-4 h-4 bg-purple-600 rounded-full bounce"></div>
+            <div class="w-4 h-4 bg-purple-600 rounded-full bounce"></div>
+        </div>
+      </div>
+
     <header class="w-full h-auto py-3 gap-7  flex flex-col mb-2">
 
         <div class="flex justify-between w-full h-1/2 items-center">
@@ -18,17 +73,25 @@
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
             </div>
-            <h1 class="text-2xl font-medium text-center pl-10">Home</h1>
-            <div class="flex gap-1 h-auto w-auto items-center gap-3">
-                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center px-1 cursor-pointer">
-                    <img class="w-full opacity-50" src="icons/icons8-sacola-de-compras-50.png" alt="">
+            <h1 class="text-2xl font-medium text-center absolute inset-0 m-auto top-9">Home</h1>
+            <div class="flex gap-1 h-auto w-auto items-center gap-2">
+                <div id="little-cart-btn" class="w-6 h-6 bg-white rounded-full flex items-center justify-center px-1 cursor-pointer">
+                    <img  class="w-full opacity-50" src="icons/icons8-sacola-de-compras-50.png" alt="">
                 </div>
-                <div class="w-10 h-10 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md">
-                    <img class="w-full opacity-80" src="icons/icons8-usuário-30.png" alt="">
+                <h3 id="user-name" class="font-semibold"></h3>
+                <div class="w-10 h-10 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md relative">
+                    <img id="user-btn" class="w-full opacity-80" src="icons/icons8-usuário-30.png" alt="">
+                    <article id="user-informations" class="absolute -bottom-24 w-auto h-auto py-3 z-30 px-2 right-12 rounded-b-md rounded-tl-md bg-white gap-1 flex flex-col shadow-lg hidden">
+                        <h1 id="user-name-pop-up" class="font-semibold">oi</h1>
+                        <h2 id="user-email"></h2>
+                        <h3 class="w-full flex items-center">Bronze account <img class=" ml-2 w-5" src="icons/icons8-emoji-de-medalha-de-3º-lugar-48.png" alt=""> </h3>
+                    </article>
                 </div>
             </div>
         </div>
 
+        
+       
         <div class="w-full h-1/2 flex justify-between items-center gap-3">
             <div class="w-full bg-white rounded-lg shadow-md h-11 flex items-center px-3">
                 <input class="w-full outline-none bg-none text-lg" type="text" placeholder="Search">
@@ -65,7 +128,7 @@
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
             </div>
             All</div>
-        <div class="bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-tennis-48.png" alt=""> Footwear</div>
+        <div class="bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-tennis-48.png" alt="">Footwear</div>
         <div class="bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-apple-watch-48.png" alt=""> Watch</div>
         <!-- <div class="bg-white w-20 h-12 flex items-center px-2 rounded-lg shadow-lg">T-Shirt</div> -->
     </section>
@@ -82,7 +145,7 @@
                     <img class="shoesImg transform w-full h-auto mr-5" src="imgs/pngwing.com (9).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-2 font-medium text-lg">Nike Air Force Sky Blue</h2>
-                        <p class="z-20 font-semibold text-xl">$350.00</p>
+                        <p class=" font-semibold text-xl">$350.00</p>
                     </div>
                     <button class="rounded-full absolute w-2/6 h-12 bg-blue-400 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
@@ -92,7 +155,7 @@
                     <img class="shoesImg transform w-full" src="imgs/pngwing.com (5).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="mt-3 mb-1 leading-tight font-medium text-lg">Nike Jordan W&B</h2>
-                        <p class="z-20 font-semibold text-xl">$560.00</p>
+                        <p class=" font-semibold text-xl">$560.00</p>
                         <button class="rounded-full absolute w-2/6 h-12 bg-blue-600 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
                             <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                         </button>
@@ -105,7 +168,7 @@
                     <img class="shoesImg transform w-full" src="imgs/pngwing.com (7).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-1 mt-3 font-medium text-lg">Nike SB DK Green</h2>
-                        <p class="z-20 font-semibold text-xl">$795.00</p>
+                        <p class=" font-semibold text-xl">$795.00</p>
                         <button class="rounded-full absolute w-2/6 h-12 bg-green-500 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
                             <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                         </button>
@@ -115,7 +178,7 @@
                     <img class="shoesImg transform w-full mr-3 mt-2" src="imgs/pngwing.com (4).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class=" leading-tight mb-2 text-lg">Nike Jordan Traditional</h2>
-                        <p class="z-20 font-semibold text-xl">$629.00</p>
+                        <p class=" font-semibold text-xl">$629.00</p>
                         <button class="rounded-full absolute w-2/6 h-12 bg-red-500 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
                             <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                         </button>
@@ -130,7 +193,7 @@
                     <img class="transform rotate-12" src="imgs/pngwing.com (17).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-2 font-medium text-lg">Black Square Watch</h2>
-                        <p class="z-20 font-semibold text-xl">$199.00</p>
+                        <p class=" font-semibold text-xl">$199.00</p>
                     </div>
                     <button class="rounded-full absolute w-2/6 h-12 bg-gray-800 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
@@ -140,7 +203,7 @@
                     <img class="w-32" src="imgs/pngwing.com (21).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-2 font-medium text-lg">Black Fine Watch</h2>
-                        <p class="z-20 font-semibold text-xl">$100.00</p>
+                        <p class=" font-semibold text-xl">$100.00</p>
                     </div>
                     <button class="rounded-full absolute w-2/6 h-12 bg-gray-800 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
@@ -154,7 +217,7 @@
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <p class="absolute top-3 left-2 bg-white rounded-full px-2 font-semibold">New</p>
                         <h2 class="leading-tight mb-2 font-medium text-lg">White Square Watch</h2>
-                        <p class="z-20 font-semibold text-xl">$210.00</p>
+                        <p class=" font-semibold text-xl">$210.00</p>
                     </div>
                     <button class="rounded-full absolute w-2/6 h-12 bg-gray-100 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50.png" alt="">
@@ -164,7 +227,7 @@
                     <img class="transform -rotate-12" src="imgs/pngwing.com (19).png" alt="">
                        <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-2 font-medium text-lg">Gray Premium Watch</h2>
-                        <p class="z-20 font-semibold text-xl">$949.00</p>
+                        <p class=" font-semibold text-xl">$949.00</p>
                     </div>
                     <button class="rounded-full absolute w-2/6 h-12 bg-gray-600 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
@@ -186,11 +249,15 @@
         <img id="finalArrow" class="bg-white absolute right-36 -top-7 transform -rotate-90 w-14 h-14 rounded-full px-3 py-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
     </div>
     <div class="fixed w-auto h-auto bottom-3 right-5 flex justify-center items-center gap-2">
-        <img class="z-40 bg-white rounded-full p-2 w-12" src="icons/icons8-sacola-de-compras-50.png" alt="">
+        <img class="z-30 bg-white rounded-full p-2 w-12" src="icons/icons8-sacola-de-compras-50.png" alt="">
         <img class="w-16 h-auto" src="icons/whatsapp.color.png" alt="">
     </div>
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
         * {
             font-family: "Poppins", sans-serif;
@@ -213,8 +280,38 @@
             transform: rotate(-35deg);
         }
 
-  
+        #bg-login {
+            background: rgba(0, 0, 0, 0.384);
+        }
 
+        #bg-login .login {
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-25px);
+            }
+        }
+        .bounce {
+            animation: bounce 1s infinite;
+        }
+        .bounce:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .bounce:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        #bg-loader {
+            background-color: rgba(0, 0, 0, 0.116);
+        }
     </style>
+
+    <script src="script.js"></script>
 </body>
 </html>
