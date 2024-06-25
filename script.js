@@ -26,6 +26,22 @@ const signUpBtn = document.getElementById('sign-up-btn');
 
 
 const littleCartBtn = document.getElementById('little-cart-btn');
+const bgCart = document.getElementById('bg-cart');
+
+littleCartBtn.addEventListener('click', function(){
+  
+    loader.classList.remove('hidden');
+
+    setTimeout(function(){
+       
+        bgCart.classList.remove('hidden');
+        loader.classList.add('hidden');
+    }, 500)
+    const backArrowBtn = document.getElementById('back-arrow-btn');
+    backArrowBtn.addEventListener('click', function(){
+        bgCart.classList.add('hidden');
+    })
+})
 
 signUpBtn.addEventListener('click', function(){
     let userInformations = document.getElementById('user-informations');

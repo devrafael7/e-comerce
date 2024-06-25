@@ -9,10 +9,38 @@
 </head>
 <body class="w-full h-min-screen bg-gray-200 px-5 py-5">
 
+     <!-- Cart Creation-->
+     <div id="bg-cart" class="w-full h-screen bg-white fixed left-0 top-0 z-20 flex flex-col pt-14 px-5 justify-between hidden">
+        <div class="flex flex-col">
+            <img id="back-arrow-btn" class="absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
+            <h1 class="w-full text-center font-semibold text-xl mb-7">My Cart</h1>
+            <div class="w-full h-16 bg-blue-100 rounded-full flex items-center pl-5 pr-2">
+                <img class="w-7 opacity-50 mr-2" src="icons/icons8-sacola-de-compras-50 (2).png" alt="">
+                <p class="text-blue-500 font-semibold text-md">You have <span>0</span> items in your list cart</p>
+            </div>
+        </div>
+       
+        <div class="flex flex-col gap-1">
+            <div class="flex w-full justify-between">
+                <h5 class="text-lg opacity-60 font-medium">Items</h5>
+                <p class="font-semibold text-xl">$0</p>
+            </div>
+            <div class="flex w-full justify-between mb-5">
+                <h5 class="text-lg opacity-60 font-medium">Discounts</h5>
+                <p class="font-semibold text-xl">$0</p>
+            </div>
+            <div class="flex w-full justify-between mb-3">
+                <h5 class="text-lg opacity-70 font-medium">Total</h5>
+                <p class="font-semibold text-2xl">$0</p>
+            </div>
+            <button class="w-full h-16 bg-black text-white rounded-full text-lg" type="button">Checkout</button>
+        </div>
+     </div>
+    
   
 
     
-    <form id="bg-login" class=" fixed w-full h-screen z-30 left-0  pt-36 top-0 flex justify-end items-center flex-col ">
+    <form id="bg-login" class=" fixed w-full h-screen z-30 left-0  pt-36 top-0 flex justify-end items-center flex-col hidden">
         <div id="confirmation-pop-up" class="w-4/6 bg-red-500 rounded-b-xl h-16 fixed z-40 top-0 text-white text-xl flex justify-center items-center font-semibold hidden">
             Check the blanks!
         </div>
@@ -90,7 +118,7 @@
             </div>
         </div>
 
-        
+       
        
         <div class="w-full h-1/2 flex justify-between items-center gap-3">
             <div class="w-full bg-white rounded-lg shadow-md h-11 flex items-center px-3">
@@ -310,6 +338,12 @@
         #bg-loader {
             background-color: rgba(0, 0, 0, 0.116);
         }
+
+        /*#bg-cart {
+            
+        } */
+
+        
     </style>
 
     <script src="script.js"></script>
