@@ -208,10 +208,10 @@ const images = [
     if (Math.abs(diffX) > Math.abs(diffY)) {
       if (diffX > 0) {
         // Swipe para a esquerda
-        currentIndex = (currentIndex + 1) % images.length;
+        currentIndex = (currentIndex - 1) % images.length;
       } else {
         // Swipe para a direita
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        currentIndex = (currentIndex + 1 + images.length) % images.length;
       }
   
       updateImage();
