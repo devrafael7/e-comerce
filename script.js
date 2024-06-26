@@ -160,14 +160,18 @@ const images = [
   
       // Modifica o tamanho da imagem conforme o índice atual
       if (currentIndex === 2) {
-        mainCardImage.style.width = '150px'; // Defina o tamanho desejado aqui
+        mainCardImage.style.width = '160px'; // Defina o tamanho desejado aqui
         mainCardImage.style.height = 'auto'; // Mantenha a proporção
+        mainCardImage.style.marginTop = '50px'
       } else if (currentIndex === 0){
         mainCardImage.style.width = '160px'; // Volta ao tamanho original
         mainCardImage.style.height = 'auto'; // Exemplo de altura original
+        mainCardImage.style.marginBottom = '20px'
       } else {
         mainCardImage.style.width = '130px'; // Volta ao tamanho original
         mainCardImage.style.height = 'auto'; // Exemplo de altura original
+        mainCardImage.style.marginLeft = '40px';
+        mainCardImage.style.marginBottom = '20px'
       }
   
       // Atualiza a classe dos botões para destacar o botão correspondente à imagem atual
@@ -186,7 +190,18 @@ const images = [
     }, 300);
   }
   
+  // Função para trocar a imagem automaticamente a cada 3 segundos
+  function autoChangeImage() {
+    setInterval(() => {
+      updateImage();
+    }, 5000); // Intervalo de 3 segundos (3000 milissegundos)
+  }
+  
+  // Adiciona um evento de clique ao mainCard para chamar a função updateImage
   mainCard.addEventListener('click', updateImage);
+  
+  // Inicia a troca automática de imagens
+  autoChangeImage();
   
   let startX = null;
   let startY = null;
