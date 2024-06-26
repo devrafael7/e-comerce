@@ -91,6 +91,10 @@ signUpBtn.addEventListener('click', function(){
 
     userNamePopUp.textContent = `${nameValue}`;
     userEmail.textContent = `${emailValue}`;
+    const menuName = document.getElementById('menu-name');
+    menuName.textContent = `${nameValue}`;
+
+
     
 
     userBtn.addEventListener('click', function(){
@@ -241,3 +245,30 @@ const images = [
     startX = null;
     startY = null;
   });
+
+const sendBtn = document.getElementById('send-btn');
+const message = document.getElementById('message');
+
+let emailNotification = document.getElementById('email-notification');
+let enValue = emailNotification.value;
+
+sendBtn.addEventListener('click', function() {
+    message.classList.add('show');
+    message.classList.remove('hidden')
+
+    setTimeout(function() {
+        message.classList.remove('show');
+        message.classList.add('hidden');
+    }, 3000); 
+    
+    emailNotification.value = '';
+    
+});
+
+const finalArrow = document.getElementById('final-arrow');
+finalArrow.addEventListener('click', function(){
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
+});
