@@ -139,44 +139,84 @@ priceRange.addEventListener('input', function() {
 
 
 
+
 const images = [
     'imgs/pngwing.com (1).png',
-    'imgs/pngwing.com (9).png',
-    'imgs/pngwing.com (7).png'
+    'imgs/pngwing.com (airmax).png',
+    'imgs/pngwing.com.png'
   ];
-
-  let currentIndex = 0;
-
-  // Elementos do DOM
+  
+  let currentIndex = 1;
   const mainCard = document.getElementById('mainCard');
   const mainCardImage = document.getElementById('mainCardImage');
   const buttons = document.querySelectorAll('.btn');
-
-  // Função para atualizar a imagem quando o mainCard é clicado
+  let currentButton = 0;
+  
   function updateImage() {
-    // Aplica a transição de opacidade para suavizar a mudança de imagem
     mainCardImage.classList.add('opacity-0');
     setTimeout(() => {
-      // Define a nova imagem no elemento mainCardImage
       mainCardImage.src = images[currentIndex];
       mainCardImage.classList.remove('opacity-0');
-    }, 300); // Tempo correspondente à transição CSS
-
-    // Atualiza a classe dos botões para destacar o botão correspondente à imagem atual
-    buttons.forEach((btn, index) => {
-      if (index === currentIndex) {
-        btn.classList.remove('opacity-50');
-        btn.classList.add('w-5');
+  
+      // Modifica o tamanho da imagem conforme o índice atual
+      if (currentIndex === 2) {
+        mainCardImage.style.width = '150px'; // Defina o tamanho desejado aqui
+        mainCardImage.style.height = 'auto'; // Mantenha a proporção
+      } else if (currentIndex === 0){
+        mainCardImage.style.width = '160px'; // Volta ao tamanho original
+        mainCardImage.style.height = 'auto'; // Exemplo de altura original
       } else {
-        btn.classList.add('opacity-50');
-        btn.classList.remove('w-5');
-    
+        mainCardImage.style.width = '130px'; // Volta ao tamanho original
+        mainCardImage.style.height = 'auto'; // Exemplo de altura original
       }
-    });
-
-    // Atualiza o índice para a próxima imagem no array circularmente
-    currentIndex = (currentIndex + 1) % images.length;
+  
+      // Atualiza a classe dos botões para destacar o botão correspondente à imagem atual
+      buttons.forEach((btn, index) => {
+        if (index === currentIndex) {
+          btn.classList.remove('opacity-50');
+          btn.classList.add('w-5');
+        } else {
+          btn.classList.add('opacity-50');
+          btn.classList.remove('w-5');
+        }
+      });
+  
+      // Atualiza o índice para a próxima imagem no array circularmente
+      currentIndex = (currentIndex + 1) % images.length;
+    }, 300);
   }
-
-  // Adiciona um evento de clique ao mainCard para chamar a função updateImage
+  
   mainCard.addEventListener('click', updateImage);
+  
+  let startX = null;
+  let startY = null;
+  
+  mainCard.addEventListener('touchstart', function(e) {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  });
+  
+  mainCard.addEventListener('touchend', function(e) {
+    if (!startX || !startY) return;
+  
+    const endX = e.changedTouches[0].clientX;
+    const endY = e.changedTouches[0].clientY;
+  
+    const diffX = startX - endX;
+    const diffY = startY - endY;
+  
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX > 0) {
+        // Swipe para a esquerda
+        currentIndex = (currentIndex + 1) % images.length;
+      } else {
+        // Swipe para a direita
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+      }
+  
+      updateImage();
+    }
+  
+    startX = null;
+    startY = null;
+  });
