@@ -105,3 +105,40 @@ menuBtn.addEventListener('click', function(){
 
 
 
+const filterBtn = document.getElementById('filter-btn');
+
+filterBtn.addEventListener('click', function(){
+    const filter = document.getElementById('filter');
+    filter.classList.remove('hidden');
+    const confirmFilterBtn = document.getElementById('confirm-filter-btn');
+    const backArrowFilterBtn = document.getElementById('back-arrow-btn-filter');
+    backArrowFilterBtn.addEventListener('click', function(){
+        filter.classList.add('hidden');
+    })
+    confirmFilterBtn.addEventListener('click', function(){
+        loader.classList.remove('hidden');
+        setTimeout(function(){
+            loader.classList.add('hidden');
+            filter.classList.add('hidden');
+        }, 700)
+            
+    })
+
+  
+    
+})
+
+
+const priceRange = document.getElementById('price-range');
+const priceValue = document.getElementById('price-value');
+const filterButton = document.getElementById('filter-button');
+
+priceRange.addEventListener('input', function() {
+  priceValue.textContent = '$' + priceRange.value;
+});
+
+filterButton.addEventListener('click', function() {
+
+});
+
+

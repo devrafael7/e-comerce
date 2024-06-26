@@ -159,6 +159,114 @@
         </div>
       </div>
 
+     <div id="filter" class="w-full h-screen fixed bg-white z-20 left-0 top-0 px-5 pt-8 hidden">
+        <div class="flex items-center h-auto justify-between mb-12">
+            <div class="flex gap-4">
+                <img id="back-arrow-btn-filter" class=" w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
+      
+                <h2 class="text-2xl font-semibold mt-1">Filters</h2>
+            </div>
+          
+
+            <div>
+                <img id="confirm-filter-btn" class="w-9 h-9" src="icons/icons8-selecionado-50.png" alt="">
+            </div>
+        </div>
+           
+            <div class="flex justify-between text-sm text-gray-600 mb-2">
+                <h3 class="font-semibold text-lg">Price Range</h3>
+                <div class="flex">
+                    <span class="font-semibold text-md" id="min-price">$100 - </span>
+                    <span class="font-semibold text-md" id="max-price">$949</span>
+                </div>
+             
+            </div>
+            <div class="relative mb-6">
+              <input type="range" id="price-range" min="100" max="949" value="500" class="w-full">
+              <div class="flex justify-between text-sm text-gray-600 mt-2">
+                <span class="md">max</span>
+                <span class="font-bold text-xl" id="price-value">$500</span>
+              </div>
+            </div>
+
+            <div class="flex gap-3 mb-9">
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-blue-500 rounded-xl">
+                    <p class="text-white opacity-90 font-medium">All Products</p>
+                </div>
+
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">Only New</p>
+                </div>
+            </div>
+
+            <h2 class="font-semibold text-md mb-4">Brand</h2>
+
+            <div class="flex flex-wrap gap-3 mb-8">
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">Nike</p>
+                </div>
+
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">Apple</p>
+                </div>
+
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">Adidas</p>
+                </div>
+
+
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">Puma</p>
+                </div>
+                
+
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">Vans</p>
+                </div>
+
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">Nike Jordan</p>
+                </div>
+
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">New Balance</p>
+                </div>
+            </div>
+
+            <h2 class="font-semibold text-md mb-3">Features</h2>
+          
+            <div class="flex flex-wrap gap-3">
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">Footwear</p>
+                </div>
+
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">Watches</p>
+                </div>
+
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">Headset</p>
+                </div>
+
+
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">T-Shirt</p>
+                </div>
+
+
+                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class="opacity-90 font-medium">Cap</p>
+                </div>
+            </div>
+
+
+           
+          </div>
+     </div>
+    
+
+
+
     <!-- header creation -->
 
     <header class="w-full h-auto py-3 gap-7  flex flex-col mb-2">
@@ -170,9 +278,9 @@
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
             </div>
-            <div>
-                <h1 class="text-2xl font-medium text-center absolute top-9">Home</h1>
-            </div>
+            
+                <h1 class="text-2xl font-medium text-center absolute  left-1/2 transform -translate-x-1/2 ">Home</h1>
+            
            
             <div class="flex gap-1 h-auto w-auto items-center gap-2">
                 <div id="little-cart-btn" class="w-6 h-6 bg-white rounded-full flex items-center justify-center px-1 cursor-pointer">
@@ -197,7 +305,7 @@
                 <input class="w-full outline-none bg-none text-lg" type="text" placeholder="Search">
                 <img class="h-1/2 w-auto opacity-50" src="icons/loupe.png" alt="">
             </div>
-            <img class="bg-red-400 w-11 p-1 rounded-xl shadow-md" src="icons/icons8-opções-de-ordenação-24.png" alt="">
+            <img id="filter-btn" class="bg-red-400 w-11 p-1 rounded-xl shadow-md" src="icons/icons8-opções-de-ordenação-24.png" alt="">
         </div>
 
     </header>
@@ -414,6 +522,36 @@
         /*#bg-cart {
             
         } */
+
+        input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 8px;
+      background: #ddd;
+      outline: none;
+      opacity: 0.7;
+      transition: opacity .2s;
+    }
+    input[type=range]:hover {
+      opacity: 1;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      background: #1453ff;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      background: #4a90e2;
+      cursor: pointer;
+      border-radius: 50%;
+    }
 
         
     </style>
