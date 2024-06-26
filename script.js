@@ -137,8 +137,46 @@ priceRange.addEventListener('input', function() {
   priceValue.textContent = '$' + priceRange.value;
 });
 
-filterButton.addEventListener('click', function() {
-
-});
 
 
+const images = [
+    'imgs/pngwing.com (1).png',
+    'imgs/pngwing.com (9).png',
+    'imgs/pngwing.com (7).png'
+  ];
+
+  let currentIndex = 0;
+
+  // Elementos do DOM
+  const mainCard = document.getElementById('mainCard');
+  const mainCardImage = document.getElementById('mainCardImage');
+  const buttons = document.querySelectorAll('.btn');
+
+  // Função para atualizar a imagem quando o mainCard é clicado
+  function updateImage() {
+    // Aplica a transição de opacidade para suavizar a mudança de imagem
+    mainCardImage.classList.add('opacity-0');
+    setTimeout(() => {
+      // Define a nova imagem no elemento mainCardImage
+      mainCardImage.src = images[currentIndex];
+      mainCardImage.classList.remove('opacity-0');
+    }, 300); // Tempo correspondente à transição CSS
+
+    // Atualiza a classe dos botões para destacar o botão correspondente à imagem atual
+    buttons.forEach((btn, index) => {
+      if (index === currentIndex) {
+        btn.classList.remove('opacity-50');
+        btn.classList.add('w-5');
+      } else {
+        btn.classList.add('opacity-50');
+        btn.classList.remove('w-5');
+    
+      }
+    });
+
+    // Atualiza o índice para a próxima imagem no array circularmente
+    currentIndex = (currentIndex + 1) % images.length;
+  }
+
+  // Adiciona um evento de clique ao mainCard para chamar a função updateImage
+  mainCard.addEventListener('click', updateImage);
