@@ -3,7 +3,6 @@ const bgLogin = document.getElementById('bg-login');
 const closeLogin = document.getElementById('close-login').addEventListener('click', function(){
     
 
-    
     loader.classList.remove('hidden');
 
     setTimeout(function(){
@@ -28,6 +27,24 @@ const signUpBtn = document.getElementById('sign-up-btn');
 const littleCartBtn = document.getElementById('little-cart-btn');
 const bgCart = document.getElementById('bg-cart');
 
+const fixedCartBtn = document.getElementById('fixed-cart-btn');
+
+fixedCartBtn.addEventListener('click', function(){
+   
+    loader.classList.remove('hidden');
+
+    setTimeout(function(){
+       
+        bgCart.classList.remove('hidden');
+        loader.classList.add('hidden');
+    }, 500)
+    backArrowBtn.addEventListener('click', function(){
+        bgCart.classList.add('hidden');
+    })
+})
+
+const backArrowBtn = document.getElementById('back-arrow-btn');
+
 littleCartBtn.addEventListener('click', function(){
   
     loader.classList.remove('hidden');
@@ -37,7 +54,6 @@ littleCartBtn.addEventListener('click', function(){
         bgCart.classList.remove('hidden');
         loader.classList.add('hidden');
     }, 500)
-    const backArrowBtn = document.getElementById('back-arrow-btn');
     backArrowBtn.addEventListener('click', function(){
         bgCart.classList.add('hidden');
     })
@@ -72,8 +88,7 @@ signUpBtn.addEventListener('click', function(){
     
     }
 
-   
-   
+
     userNamePopUp.textContent = `${nameValue}`;
     userEmail.textContent = `${emailValue}`;
     
@@ -102,9 +117,6 @@ menuBtn.addEventListener('click', function(){
 })
 
 
-
-
-
 const filterBtn = document.getElementById('filter-btn');
 
 filterBtn.addEventListener('click', function(){
@@ -123,9 +135,6 @@ filterBtn.addEventListener('click', function(){
         }, 700)
             
     })
-
-  
-    
 })
 
 
@@ -136,9 +145,6 @@ const filterButton = document.getElementById('filter-button');
 priceRange.addEventListener('input', function() {
   priceValue.textContent = '$' + priceRange.value;
 });
-
-
-
 
 const images = [
     'imgs/pngwing.com (1).png',
@@ -171,7 +177,7 @@ const images = [
         mainCardImage.style.width = '130px'; // Volta ao tamanho original
         mainCardImage.style.height = 'auto'; // Exemplo de altura original
         mainCardImage.style.marginLeft = '40px';
-        mainCardImage.style.marginBottom = '20px'
+        mainCardImage.style.marginBottom = '40px'
       }
   
       // Atualiza a classe dos botões para destacar o botão correspondente à imagem atual
