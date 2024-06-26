@@ -9,8 +9,75 @@
 </head>
 <body class="w-full h-min-screen bg-gray-200 px-5 py-5">
 
+    <!--Menu Creation-->
+    <div id="menu"  class="menu w-5/6 h-screen bg-white fixed left-0 z-20 top-0 py-7 flex flex-col pl-10 pr-5 hidden">
+        <div class="w-full h-auto items-center flex gap-5 mb-8">
+            <div class="w-14 h-14 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md relative">
+                <img id="" class="w-full opacity-80" src="icons/icons8-usuário-30.png" alt="">
+            </div>
+            <div class="flex flex-col">
+                <h1 class="font-medium">How is it going?</h1>
+                <h3 class="font-semibold">Rafael</h3>
+            </div>
+        </div>
+        <h1 class="text-xl font-semibold mb-4">
+            Features
+        </h1>
+        <div class="flex flex-col gap-4 mb-12 pl-3">
+            <div class="flex items-center w-full h-auto">
+                <img class=" w-4 h-4" src="icons/icons8-usuário-30 (1).png" alt="">
+                <p class="font-medium pl-3">Account</p>
+            </div>
+            <div class="flex items-center w-full h-auto">
+                <img class="w-4 h-4" src="icons/icons8-sacola-de-compras-50.png" alt="">
+                <p class="font-medium pl-3">Shopping Cart</p>
+            </div>
+            <div class="flex items-center w-full h-auto">
+                <img class="w-4 h-4 " src="icons/icons8-gostar-30.png" alt="">
+                <p class="font-medium pl-3">Favorites</p>
+            </div>
+            <div class="flex items-center w-full h-auto">
+                <img class="w-4 h-4" src="icons/icons8-telefone-desligado-30.png" alt="">
+               <p class="font-medium pl-3">Contact </p>
+            </div>
+            <div class="flex items-center w-full h-auto">
+                <img class="w-5 h-5" src="icons/icons8-estado-mental-30.png" alt="">
+               <p class="font-medium pl-3">Report a problem</p>
+            </div>
+        </div>
+
+        <h2 class="font-semibold text-xl mb-5">Settings</h2>
+        <div class="flex flex-col pl-3 gap-5">
+            <div class="flex justify-between items-end">
+                <h1 class="leading-tight font-semibold text-lg">Dark Mode <br> <span class="font-medium text-gray-400 text-sm">switch to dark mode</span> </h1>
+                <div class="w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
+                    <div class="w-6 h-6 bg-white rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-end">
+                <h1 class="leading-tight font-semibold text-lg">Floating items<br> <span class="font-medium text-gray-400 text-sm">hide floating items</span> </h1>
+                <div class="w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
+                    <div class="w-6 h-6 bg-white rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-end">
+                <h1 class="leading-tight font-semibold text-lg">Discounts<br> <span class="font-medium text-gray-400 text-sm">not receive discounts</span> </h1>
+                <div class="w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
+                    <div class="w-6 h-6 bg-white rounded-full"></div>
+                </div>
+            </div>
+         
+        </div>
+        <div class="w-full flex items-end justify-end mt-10">
+            <h5 id="menu-back-btn" class="font-semibold tracking-wide text-md">< Back</h5>
+        </div>
+      
+    </div>
+
      <!-- Cart Creation-->
-     <div id="bg-cart" class="w-full h-screen bg-white fixed left-0 top-0 z-20 flex flex-col pt-14 px-5 justify-between hidden">
+     <div id="bg-cart" class="w-full h-screen bg-white fixed left-0 top-0 z-20 flex flex-col pt-14 px-5 justify-between hidden pb-10">
         <div class="flex flex-col">
             <img id="back-arrow-btn" class="absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
             <h1 class="w-full text-center font-semibold text-xl mb-7">My Cart</h1>
@@ -92,21 +159,26 @@
         </div>
       </div>
 
+    <!-- header creation -->
+
     <header class="w-full h-auto py-3 gap-7  flex flex-col mb-2">
 
         <div class="flex justify-between w-full h-1/2 items-center">
-            <div class="w-8 h-8 bg-white grid items-place-center grid-cols-2 gap-1 p-1.5 rounded-xl cursor-pointer shadow-lg">
+            <div id="menu-btn" class=" w-8 h-8 bg-white grid items-place-center grid-cols-2 gap-1 p-1.5 rounded-xl cursor-pointer shadow-lg">
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
             </div>
-            <h1 class="text-2xl font-medium text-center absolute inset-0 m-auto top-9">Home</h1>
+            <div>
+                <h1 class="text-2xl font-medium text-center absolute top-9">Home</h1>
+            </div>
+           
             <div class="flex gap-1 h-auto w-auto items-center gap-2">
                 <div id="little-cart-btn" class="w-6 h-6 bg-white rounded-full flex items-center justify-center px-1 cursor-pointer">
                     <img  class="w-full opacity-50" src="icons/icons8-sacola-de-compras-50.png" alt="">
                 </div>
-                <h3 id="user-name" class="font-semibold"></h3>
+                <h3 id="user-name" class=" font-semibold"></h3>
                 <div class="w-10 h-10 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md relative">
                     <img id="user-btn" class="w-full opacity-80" src="icons/icons8-usuário-30.png" alt="">
                     <article id="user-informations" class="absolute -bottom-24 w-auto h-auto py-3 z-30 px-2 right-12 rounded-b-md rounded-tl-md bg-white gap-1 flex flex-col shadow-lg hidden">

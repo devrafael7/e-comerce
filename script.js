@@ -91,6 +91,17 @@ userBtn.addEventListener('click', function(){
         bgLogin.classList.remove('hidden')
 })
 
+const menu = document.getElementById('menu');
+const menuBtn = document.getElementById('menu-btn');
+menuBtn.addEventListener('click', function(){
+    menu.classList.remove('hidden');
+    const menuBackBtn = document.getElementById('menu-back-btn');
+    menuBackBtn.addEventListener('click', function(){
+        menu.classList.add('hidden');
+    })
+})
+
+
 
 
 
