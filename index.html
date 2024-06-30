@@ -77,14 +77,18 @@
     </div>
 
      <!-- Cart Creation-->
-     <div id="bg-cart" class="w-full h-screen bg-white fixed left-0 top-0 z-20 flex flex-col pt-14 px-5 justify-between hidden pb-10">
-        <div class="flex flex-col">
+     <div id="bg-cart" class="w-full h-screen bg-white fixed left-0 top-0 z-20 flex flex-col pt-14 px-5 justify-between hidden pb-10 ">
+        <div class="flex flex-col ">
             <img id="back-arrow-btn" class="absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
             <h1 class="w-full text-center font-semibold text-xl mb-7">My Cart</h1>
-            <div class="w-full h-16 bg-blue-100 rounded-full flex items-center pl-5 pr-2">
+            <div class="w-full h-16 bg-blue-100 rounded-full flex items-center pl-5 pr-2 mb-4">
                 <img class="w-7 opacity-50 mr-2" src="icons/icons8-sacola-de-compras-50 (2).png" alt="">
                 <p class="text-blue-500 font-semibold text-md">You have <span>0</span> items in your list cart</p>
             </div>
+        </div>
+
+        <div class="itemsFromCart w-full h-auto flex flex-col gap-3 mb-7">
+            
         </div>
        
         <div class="flex flex-col gap-1">
@@ -343,25 +347,25 @@
     </section>-->
 
     <section class="sectionOptions w-auto h-20 my-2 mt-4 pl-4 flex overflow-x-hidden items-center  justify-center">
-        <div class="bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium cursor-pointer">
-            <div class="w-7 h-7 bg-white grid items-place-center grid-cols-2 gap-1 p-1.5 rounded-xl cursor-pointer shadow-lg mr-1">
+        <div class="allItemsBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium cursor-pointer">
+            <div class=" w-7 h-7 bg-white grid items-place-center grid-cols-2 gap-1 p-1.5 rounded-xl cursor-pointer shadow-lg mr-1">
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
             </div>
             All</div>
-        <div class="bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-tennis-48.png" alt="">Footwear</div>
-        <div class="bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-apple-watch-48.png" alt=""> Watch</div>
+        <div class="allFootwearBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-tennis-48.png" alt="">Footwear</div>
+        <div class="allWatchBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-apple-watch-48.png" alt=""> Watch</div>
         <!-- <div class="bg-white w-20 h-12 flex items-center px-2 rounded-lg shadow-lg">T-Shirt</div> -->
     </section>
 
-    <h2 class="font-bold text-lg my-3">
+    <h2 id="title-all-products" class="font-bold text-lg my-3">
         Popular
     </h2>
 
     <main class="w-full h-auto my-3 flex flex-col gap-5 mb-14">
-        <div class=" w-full h-auto flex gap-5">
+        <div class="wholeFootwear w-full h-auto flex gap-5">
             <div class="flex flex-col w-1/2 h-auto gap-7">
                 <div class="card w-full h-64 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pt-7 relative">
                     <p class="absolute top-3 left-2 bg-white rounded-full px-2 font-semibold">New</p>
@@ -370,7 +374,10 @@
                         <h2 class="leading-tight mb-2 font-medium text-lg">Nike Air Force Sky Blue</h2>
                         <p class=" font-semibold text-xl">$350.00</p>
                     </div>
-                    <button class="rounded-full absolute w-2/6 h-12 bg-blue-400 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
+                    <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-blue-400 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                        data-name ="Nike Air Force Sky Blue"
+                        data-price="350.00"
+                        data-image="imgs/pngwing.com (9).png">
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                     </button>
                 </div>
@@ -379,7 +386,10 @@
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="mt-3 mb-1 leading-tight font-medium text-lg">Nike Jordan W&B</h2>
                         <p class=" font-semibold text-xl">$560.00</p>
-                        <button class="rounded-full absolute w-2/6 h-12 bg-blue-600 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
+                        <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-blue-600 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                            data-name ="Nike Jordan W&B"
+                            data-price="560.00"
+                            data-image="imgs/pngwing.com (5).png">
                             <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                         </button>
                     </div>
@@ -392,7 +402,10 @@
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-1 mt-3 font-medium text-lg">Nike SB DK Green</h2>
                         <p class=" font-semibold text-xl">$795.00</p>
-                        <button class="rounded-full absolute w-2/6 h-12 bg-green-500 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
+                        <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-green-500 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                            data-name ="Nike SB DK Green"
+                            data-price="795.00"
+                            data-image="imgs/pngwing.com (7).png">
                             <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                         </button>
                     </div>
@@ -402,7 +415,10 @@
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class=" leading-tight mb-2 text-lg">Nike Jordan Traditional</h2>
                         <p class=" font-semibold text-xl">$629.00</p>
-                        <button class="rounded-full absolute w-2/6 h-12 bg-red-500 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
+                        <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-red-500 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                            data-name ="Nike Jordan Traditional"
+                            data-price="629.00"
+                            data-image="imgs/pngwing.com (4).png">
                             <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                         </button>
                     </div>
@@ -410,7 +426,7 @@
             </div>
         </div>
 
-        <div class=" w-full h-auto flex gap-5">
+        <div class="wholeWatches w-full h-auto flex gap-5">
             <div class="flex flex-col w-1/2 h-auto gap-5">
                 <div class="pt-3 flex items-center flex-col w-full h-72 bg-gray-300 rounded-xl relative">
                     <img class="transform rotate-12" src="imgs/pngwing.com (17).png" alt="">
@@ -418,7 +434,10 @@
                         <h2 class="leading-tight mb-2 font-medium text-lg">Black Square Watch</h2>
                         <p class=" font-semibold text-xl">$199.00</p>
                     </div>
-                    <button class="rounded-full absolute w-2/6 h-12 bg-gray-800 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
+                    <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-800 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                        data-name ="Black Square Watch"
+                        data-price="199.00"
+                        data-image="imgs/pngwing.com (17).png">
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                     </button>
                 </div>
@@ -428,7 +447,10 @@
                         <h2 class="leading-tight mb-2 font-medium text-lg">Black Fine Watch</h2>
                         <p class=" font-semibold text-xl">$100.00</p>
                     </div>
-                    <button class="rounded-full absolute w-2/6 h-12 bg-gray-800 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
+                    <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-800 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                        data-name ="Black Fine Watch"
+                        data-price="100.00"
+                        data-image="imgs/pngwing.com (21).png">
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                     </button>
                 </div>
@@ -442,7 +464,10 @@
                         <h2 class="leading-tight mb-2 font-medium text-lg">White Square Watch</h2>
                         <p class=" font-semibold text-xl">$210.00</p>
                     </div>
-                    <button class="rounded-full absolute w-2/6 h-12 bg-gray-100 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
+                    <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-100 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                        data-name ="White Square Watch"
+                        data-price="210.00"
+                        data-image="imgs/pngwing.com (18).png">
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50.png" alt="">
                     </button>
                 </div>
@@ -452,7 +477,10 @@
                         <h2 class="leading-tight mb-2 font-medium text-lg">Gray Premium Watch</h2>
                         <p class=" font-semibold text-xl">$949.00</p>
                     </div>
-                    <button class="rounded-full absolute w-2/6 h-12 bg-gray-600 bottom-0 right-0 rounded-br-xl flex justify-center items-center">
+                    <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-600 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                        data-name ="Gray Premium Watch"
+                        data-price="949.00"
+                        data-image="imgs/pngwing.com (19).png">
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                     </button>
             </div>
@@ -475,7 +503,12 @@
         <img id="final-arrow" class="bg-white absolute right-36 -top-7 transform -rotate-90 w-14 h-14 rounded-full px-3 py-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
     </div>
     <div class="fixed w-auto h-auto bottom-3 right-5 flex justify-center items-center gap-2">
-        <img id="fixed-cart-btn" class="z-30 bg-white rounded-full p-2 w-12" src="icons/icons8-sacola-de-compras-50.png" alt="">
+        <div class="relative">
+            <img id="fixed-cart-btn" class=" z-30 bg-white rounded-full p-2 w-12" src="icons/icons8-sacola-de-compras-50.png" alt="">
+            <h4 class="cartCounter absolute right-0 -top-1 bg-green-600 w-6 h-6 flex justify-center items-center font-semibold text-white rounded-full hidden"></h4>
+        </div>
+      
+
         <a href="https://wa.me/5524993318146?text=Olá,%20gostaria%20de%20mais%20informações" target="" class="whatsapp-button">
             <img class="w-16 h-auto" src="icons/whatsapp.color.png" alt="WhatsApp">
           </a>
@@ -581,8 +614,23 @@
     .fade-in-out.show {
         opacity: 1;
     }
+
+    #bg-cart {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            padding-top: 4rem; /* Ajuste conforme necessário */
+            padding-bottom: 4rem; /* Ajuste conforme necessário */
+            z-index: 20;
+            overflow-y: scroll; /* Habilita a rolagem vertical */
+        }
+
         
     </style>
+    
 
     <script src="script.js"></script>
 </body>

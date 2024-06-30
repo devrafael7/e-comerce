@@ -250,20 +250,31 @@ const sendBtn = document.getElementById('send-btn');
 const message = document.getElementById('message');
 
 let emailNotification = document.getElementById('email-notification');
-let enValue = emailNotification.value;
 
 sendBtn.addEventListener('click', function() {
-    message.classList.add('show');
-    message.classList.remove('hidden')
-
-    setTimeout(function() {
-        message.classList.remove('show');
+  let enValue = emailNotification.value;
+  
+    if (enValue === '') {
+      message.textContent = `Check the blank`;
+      message.classList.remove('bg-green-500');
+      message.classList.add('bg-red-500');
+      message.classList.remove('hidden');
+      setTimeout(function(){
         message.classList.add('hidden');
-    }, 3000); 
-    
-    emailNotification.value = '';
-    
+      }, 2200);
+      return;
+    } else {
+      message.innerHTML = `Thanks! We will email you back <br> if the desired product arrives.`;
+      message.classList.remove('hidden')
+      message.classList.add('bg-green-500');
+      setTimeout(function() {
+          message.classList.add('hidden');
+      }, 2200); 
+      
+      emailNotification.value = '';
+    }
 });
+
 
 const finalArrow = document.getElementById('final-arrow');
 finalArrow.addEventListener('click', function(){
@@ -272,3 +283,78 @@ finalArrow.addEventListener('click', function(){
       behavior: 'smooth'
   });
 });
+
+let wholeFootwear = document.querySelector('.wholeFootwear');
+let wholeWatches = document.querySelector('.wholeWatches');
+let titleAllProducts = document.getElementById('title-all-products');
+
+const allItemsBtn = document.querySelector('.allItemsBtn');
+allItemsBtn.addEventListener('click', function(){
+  wholeFootwear.classList.remove('hidden');
+  wholeWatches.classList.remove('hidden');
+
+  titleAllProducts.textContent = `All Products`;
+})
+
+const allFootwearBtn = document.querySelector('.allFootwearBtn');
+allFootwearBtn.addEventListener('click', function(){
+  wholeFootwear.classList.remove('hidden');
+  wholeWatches.classList.add('hidden');
+
+  titleAllProducts.textContent = `Footwear`;
+})
+
+const allWatchBtn = document.querySelector('.allWatchBtn');
+allWatchBtn.addEventListener('click', function(){
+  wholeFootwear.classList.add('hidden');
+  wholeWatches.classList.remove('hidden');
+
+  titleAllProducts.textContent = `Watches`;
+})
+
+const cart = [];
+
+function addToCart(name, price, image) {
+  cart.push({name, price, image});
+  console.log(cart);
+  updateCart();
+}
+
+function updateCart(){
+  const itemsFromCart = document.querySelector('.itemsFromCart');
+  itemsFromCart.innerHTML = '';
+  cart.forEach(item => {
+    const cartItem = document.createElement('div');
+    cartItem.classList = ' cart-item w-full bg-gray-200 rounded-xl h-24 flex items-center px-3 gap-3';
+    cartItem.innerHTML = `
+      <img class="w-24 h-20 my-4" src="${item.image}" alt="${item.name}">
+      <div>
+        <h4>${item.name}</h4>
+        <p class="mt-2 font-semibold">$${item.price}</p4>
+      </div>
+    `;
+    itemsFromCart.appendChild(cartItem);
+  });
+}
+
+const cartCounter = document.querySelector('.cartCounter');
+
+
+
+let count = 0;
+const addToCartBtn = document.querySelectorAll('.addToCartBtn');
+addToCartBtn.forEach(btn => {
+  btn.addEventListener('click', function(){
+    cartCounter.classList.remove('hidden');
+    count++;
+    cartCounter.textContent = `${count}`;
+    console.log(count);
+
+    const name = btn.getAttribute('data-name');
+    const price = btn.getAttribute('data-price');
+    const image = btn.getAttribute('data-image');
+    addToCart(name, price, image)
+
+  })
+})
+
