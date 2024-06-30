@@ -10,7 +10,7 @@
 <body class="w-full h-min-screen bg-gray-200 px-5 py-5">
 
     <!--Menu Creation-->
-    <div id="menu"  class="menu w-5/6 h-screen bg-white fixed left-0 z-20 top-0 py-7 flex flex-col pl-10 pr-5 hidden">
+    <div id="menu"  class="fade-in-out fade-in-out show menu w-5/6 h-screen bg-white fixed left-0 z-20 top-0 py-7 flex flex-col pl-10 pr-5 hidden">
         <div class="w-full h-auto items-center flex gap-5 mb-8">
             <div class="w-14 h-14 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md relative">
                 <img id="" class="w-full opacity-80" src="icons/icons8-usuário-30.png" alt="">
@@ -94,7 +94,7 @@
         <div class="flex flex-col gap-1">
             <div class="flex w-full justify-between">
                 <h5 class="text-lg opacity-60 font-medium">Items</h5>
-                <p class="font-semibold text-xl">$0</p>
+                <p class="font-semibold text-xl"></p>
             </div>
             <div class="flex w-full justify-between mb-5">
                 <h5 class="text-lg opacity-60 font-medium">Discounts</h5>
@@ -194,11 +194,11 @@
             </div>
 
             <div class="flex gap-3 mb-9">
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-blue-500 rounded-xl">
-                    <p class="text-white opacity-90 font-medium">All Products</p>
+                <div id="all-products-toggle" class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                    <p class=" opacity-90 font-medium">All Products</p>
                 </div>
 
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div id="new-products-toggle" class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Only New</p>
                 </div>
             </div>
@@ -206,33 +206,33 @@
             <h2 class="font-semibold text-md mb-4">Brand</h2>
 
             <div class="flex flex-wrap gap-3 mb-8">
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Nike</p>
                 </div>
 
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Apple</p>
                 </div>
 
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Adidas</p>
                 </div>
 
 
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Puma</p>
                 </div>
                 
 
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Vans</p>
                 </div>
 
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Nike Jordan</p>
                 </div>
 
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">New Balance</p>
                 </div>
             </div>
@@ -240,25 +240,25 @@
             <h2 class="font-semibold text-md mb-3">Features</h2>
           
             <div class="flex flex-wrap gap-3">
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Footwear</p>
                 </div>
 
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Watches</p>
                 </div>
 
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Headset</p>
                 </div>
 
 
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">T-Shirt</p>
                 </div>
 
 
-                <div class="w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Cap</p>
                 </div>
             </div>
@@ -287,11 +287,11 @@
             
            
             <div class="flex gap-1 h-auto w-auto items-center gap-2">
-                <div id="little-cart-btn" class="w-6 h-6 bg-white rounded-full flex items-center justify-center px-1 cursor-pointer">
-                    <img  class="w-full opacity-50" src="icons/icons8-sacola-de-compras-50.png" alt="">
+                <div id="little-cart-btn" class="hover:scale-50 w-6 h-6 bg-white rounded-full flex items-center justify-center px-1 cursor-pointer">
+                    <img  class=" w-full opacity-50" src="icons/icons8-sacola-de-compras-50.png" alt="">
                 </div>
                 <h3 id="user-name" class=" font-semibold"></h3>
-                <div class="w-10 h-10 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md relative">
+                <div id="userHome" class="w-10 h-10 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md relative">
                     <img id="user-btn" class="w-full opacity-80" src="icons/icons8-usuário-30.png" alt="">
                     <article id="user-informations" class="absolute -bottom-24 w-auto h-auto py-3 z-30 px-2 right-12 rounded-b-md rounded-tl-md bg-white gap-1 flex flex-col shadow-lg hidden">
                         <h1 id="user-name-pop-up" class="font-semibold">oi</h1>
@@ -309,7 +309,7 @@
                 <input class="w-full outline-none bg-none text-lg" type="text" placeholder="Search">
                 <img class="h-1/2 w-auto opacity-50" src="icons/loupe.png" alt="">
             </div>
-            <img id="filter-btn" class="bg-red-400 w-11 p-1 rounded-xl shadow-md" src="icons/icons8-opções-de-ordenação-24.png" alt="">
+            <img id="filter-btn" class="hover:bg-red-500 bg-red-400 w-11 p-1 rounded-xl shadow-md" src="icons/icons8-opções-de-ordenação-24.png" alt="">
         </div>
 
     </header>
@@ -322,7 +322,8 @@
           </h1>
         </article>
         <img id="mainCardImage" class="w-auto h-40 mt-5 ml-5" src="imgs/pngwing.com (1).png" alt="Promotion Image">
-        <img id="mainCardFavoriteBtn" class="absolute right-2 top-2 w-8 h-8 rounded-full flex justify-center items-center p-2" src="icons/icons8-gostar-50.png" alt="Favorite Button">
+        <img id="mainCardFavoriteBtnEmpty" class="absolute right-2 top-2 w-8 h-8 rounded-full flex justify-center items-center p-2" src="icons/icons8-gostar-empty.png" alt="Favorite Button">
+        <img id="mainCardFavoriteBtn" class="absolute right-2 top-2 w-8 h-8 rounded-full flex justify-center items-center p-2 hidden" src="icons/icons8-gostar-50.png" alt="Favorite Button h">
       </div>
       <section class="flex gap-1 w-full justify-center my-3">
         <button id="btn1" class="btn w-2 h-2 bg-black rounded-full" type="button"></button>
@@ -347,7 +348,7 @@
     </section>-->
 
     <section class="sectionOptions w-auto h-20 my-2 mt-4 pl-4 flex overflow-x-hidden items-center  justify-center">
-        <div class="allItemsBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium cursor-pointer">
+        <div class="allItemsBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium cursor-pointer hover:bg-gray-100 hover:text-black">
             <div class=" w-7 h-7 bg-white grid items-place-center grid-cols-2 gap-1 p-1.5 rounded-xl cursor-pointer shadow-lg mr-1">
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
@@ -355,8 +356,8 @@
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
             </div>
             All</div>
-        <div class="allFootwearBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-tennis-48.png" alt="">Footwear</div>
-        <div class="allWatchBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-apple-watch-48.png" alt=""> Watch</div>
+        <div class="allFootwearBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium hover:bg-gray-100 hover:text-black"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-tennis-48.png" alt="">Footwear</div>
+        <div class="allWatchBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium hover:bg-gray-100 hover:text-black"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-apple-watch-48.png" alt=""> Watch</div>
         <!-- <div class="bg-white w-20 h-12 flex items-center px-2 rounded-lg shadow-lg">T-Shirt</div> -->
     </section>
 
@@ -374,7 +375,7 @@
                         <h2 class="leading-tight mb-2 font-medium text-lg">Nike Air Force Sky Blue</h2>
                         <p class=" font-semibold text-xl">$350.00</p>
                     </div>
-                    <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-blue-400 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                    <button class="hover:bg-blue-500 addToCartBtn rounded-full absolute w-2/6 h-12 bg-blue-400 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
                         data-name ="Nike Air Force Sky Blue"
                         data-price="350.00"
                         data-image="imgs/pngwing.com (9).png">
@@ -386,7 +387,7 @@
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="mt-3 mb-1 leading-tight font-medium text-lg">Nike Jordan W&B</h2>
                         <p class=" font-semibold text-xl">$560.00</p>
-                        <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-blue-600 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                        <button class="hover:bg-blue-700 addToCartBtn rounded-full absolute w-2/6 h-12 bg-blue-600 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
                             data-name ="Nike Jordan W&B"
                             data-price="560.00"
                             data-image="imgs/pngwing.com (5).png">
@@ -402,7 +403,7 @@
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-1 mt-3 font-medium text-lg">Nike SB DK Green</h2>
                         <p class="price font-semibold text-xl">$795.00</p>
-                        <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-green-500 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                        <button class="hover:bg-green-600  addToCartBtn rounded-full absolute w-2/6 h-12 bg-green-500 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
                             data-name ="Nike SB DK Green"
                             data-price="795.00"
                             data-image="imgs/pngwing.com (7).png">
@@ -415,7 +416,7 @@
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class=" leading-tight mb-2 text-lg">Nike Jordan Traditional</h2>
                         <p class=" font-semibold text-xl">$629.00</p>
-                        <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-red-500 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                        <button class="hover:bg-red-600  addToCartBtn rounded-full absolute w-2/6 h-12 bg-red-500 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
                             data-name ="Nike Jordan Traditional"
                             data-price="629.00"
                             data-image="imgs/pngwing.com (4).png">
@@ -434,7 +435,7 @@
                         <h2 class="leading-tight mb-2 font-medium text-lg">Black Square Watch</h2>
                         <p class=" font-semibold text-xl">$199.00</p>
                     </div>
-                    <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-800 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                    <button class="hover:bg-black   addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-800 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
                         data-name ="Black Square Watch"
                         data-price="199.00"
                         data-image="imgs/pngwing.com (17).png">
@@ -447,7 +448,7 @@
                         <h2 class="leading-tight mb-2 font-medium text-lg">Black Fine Watch</h2>
                         <p class=" font-semibold text-xl">$100.00</p>
                     </div>
-                    <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-800 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                    <button class="hover:bg-black addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-800 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
                         data-name ="Black Fine Watch"
                         data-price="100.00"
                         data-image="imgs/pngwing.com (21).png">
@@ -464,7 +465,7 @@
                         <h2 class="leading-tight mb-2 font-medium text-lg">White Square Watch</h2>
                         <p class=" font-semibold text-xl">$210.00</p>
                     </div>
-                    <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-100 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                    <button class="hover:bg-white addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-100 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
                         data-name ="White Square Watch"
                         data-price="210.00"
                         data-image="imgs/pngwing.com (18).png">
@@ -477,7 +478,7 @@
                         <h2 class="leading-tight mb-2 font-medium text-lg">Gray Premium Watch</h2>
                         <p class=" font-semibold text-xl">$949.00</p>
                     </div>
-                    <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-600 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                    <button class="hover:bg-gray-800 addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-600 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
                         data-name ="Gray Premium Watch"
                         data-price="949.00"
                         data-image="imgs/pngwing.com (19).png">
@@ -492,19 +493,19 @@
         <h3 class="text-black text-md mb-7">Informe seu e-mail e receba atualizações sobre o produto!</h3>
         <div class="flex">
             <input id="email-notification" class="h-12 rounded-l-md w-4/6 px-4 text-lg outline-none" type="email" placeholder="E-mail">
-            <button id="send-btn" class="h-12 w-2/6 bg-purple-600 rounded-r-md text-white text-lg tracking-wider" type="button">Enviar</button>
+            <button id="send-btn" class="h-12 w-2/6 bg-purple-600 rounded-r-md text-white text-lg tracking-wider hover:bg-purple-800" type="button">Enviar</button>
         </div>
         <div id="message" class="fade-in-out fixed bottom-52 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded hidden w-max z-40">
             Thanks! We will email you back <br> if the desired product arrives.
         </div>
     </form>
 
-    <div class="w-full h-20 bg-purple-600 mt-10 rounded-t-lg relative">
-        <img id="final-arrow" class="bg-white absolute right-36 -top-7 transform -rotate-90 w-14 h-14 rounded-full px-3 py-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
+    <div class="hover:bg-purple-700 w-full h-20 bg-purple-600 mt-10 rounded-t-lg relative">
+        <img id="final-arrow" class="hover:bg-gray-100  bg-white absolute right-36 -top-7 transform -rotate-90 w-14 h-14 rounded-full px-3 py-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
     </div>
     <div class="fixed w-auto h-auto bottom-3 right-5 flex justify-center items-center gap-2">
         <div class="relative">
-            <img id="fixed-cart-btn" class=" z-30 bg-white rounded-full p-2 w-12" src="icons/icons8-sacola-de-compras-50.png" alt="">
+            <img id="fixed-cart-btn" class="z-30 bg-white rounded-full p-2 w-12" src="icons/icons8-sacola-de-compras-50.png" alt="">
             <h4 id="fixed-cart-counter" class="cartCounter absolute right-0 -top-1 bg-green-600 w-6 h-6 flex justify-center items-center font-semibold text-white rounded-full hidden"></h4>
         </div>
       
@@ -522,6 +523,7 @@
 
         * {
             font-family: "Poppins", sans-serif;
+            transition: .3s ease;
         }
 
         .mainCard {
@@ -606,7 +608,7 @@
       border-radius: 50%;
     }
 
-    . .fade-in-out {
+    .fade-in-out {
         opacity: 0;
         transition: opacity 1s ease;
     }
@@ -627,6 +629,23 @@
             z-index: 20;
             overflow-y: scroll; /* Habilita a rolagem vertical */
         }
+
+        #little-cart-btn:hover {
+            transform: scale(1.2);
+        }
+
+        #userHome:hover {
+            transform: scale(1.2);
+        }
+
+        #menu-btn:hover {
+            transform: scale(1.1);  
+        }
+
+        #fixed-cart-btn:hover {
+            transform: scale(1.1);  
+        }
+
 
         
     </style>

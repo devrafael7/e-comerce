@@ -329,9 +329,9 @@ function updateCart() {
     cartItem.innerHTML = `
       <img class="w-24 h-20 my-4" src="${item.image}" alt="${item.name}">
       <div>
-        <h4>${item.name}</h4>
-        <p class="mt-2 font-semibold">$${(item.price * item.quantity).toFixed(2)}</p> <!-- Mostra o preço multiplicado pela quantidade -->
-        <div class="flex gap-2 absolute right-3 top-3">
+        <h4 class="mt-4">${item.name}</h4>
+        <p class=" font-semibold">$${(item.price * item.quantity).toFixed(2)}</p> <!-- Mostra o preço multiplicado pela quantidade -->
+        <div class="pl-7 flex gap-2 absolute right-3 top-3">
           <div class="cursor-pointer rounded-full h-5 w-5 text-black font-normal border border-black border-solid flex justify-center items-center text-xl decrement-btn" data-name="${item.name}">
             -
           </div>
@@ -388,3 +388,30 @@ addToCartBtn.forEach(btn => {
 });
 
 updateCart();
+
+const toggleFilterBtn = document.querySelectorAll('.toggleFilterBtn');
+
+toggleFilterBtn.forEach(toggleBtn => {
+  toggleBtn.addEventListener('click', ()=>{
+    toggleBtn.classList.toggle('bg-blue-500');
+    toggleBtn.classList.toggle('text-white');
+  })
+})
+
+const allProductsToggle = document.getElementById('all-products-toggle');
+const newProductsToggle = document.getElementById('new-products-toggle');
+
+
+const mainCardFavoriteBtnEmpty = document.getElementById('mainCardFavoriteBtnEmpty');
+const mainCardFavoriteBtn = document.getElementById('mainCardFavoriteBtn');
+
+mainCardFavoriteBtn.addEventListener('click', function(){
+  mainCardFavoriteBtn.classList.add('hidden');
+  mainCardFavoriteBtnEmpty.classList.remove('hidden');
+});
+
+mainCardFavoriteBtnEmpty.addEventListener('click', function(){
+  mainCardFavoriteBtn.classList.remove('hidden');
+  mainCardFavoriteBtnEmpty.classList.add('hidden');
+});
+
