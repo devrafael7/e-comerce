@@ -1,7 +1,6 @@
 
 const bgLogin = document.getElementById('bg-login');
 const closeLogin = document.getElementById('close-login').addEventListener('click', function(){
-    
 
     loader.classList.remove('hidden');
 
@@ -21,8 +20,6 @@ let userName = document.getElementById('user-name');
 const userBtn = document.getElementById('user-btn');
 
 const signUpBtn = document.getElementById('sign-up-btn');
-
-
 
 const littleCartBtn = document.getElementById('little-cart-btn');
 const bgCart = document.getElementById('bg-cart');
@@ -88,22 +85,16 @@ signUpBtn.addEventListener('click', function(){
     
     }
 
-
     userNamePopUp.textContent = `${nameValue}`;
     userEmail.textContent = `${emailValue}`;
     const menuName = document.getElementById('menu-name');
     menuName.textContent = `${nameValue}`;
-
-
-    
 
     userBtn.addEventListener('click', function(){
         userInformations.classList.toggle('hidden');
         bgLogin.classList.add('hidden')
         
     })
-
-  
 })
 
 userBtn.addEventListener('click', function(){
@@ -168,23 +159,22 @@ const images = [
       mainCardImage.src = images[currentIndex];
       mainCardImage.classList.remove('opacity-0');
   
-      // Modifica o tamanho da imagem conforme o índice atual
       if (currentIndex === 2) {
-        mainCardImage.style.width = '160px'; // Defina o tamanho desejado aqui
-        mainCardImage.style.height = 'auto'; // Mantenha a proporção
+        mainCardImage.style.width = '160px'; 
+        mainCardImage.style.height = 'auto'; 
         mainCardImage.style.marginTop = '50px'
       } else if (currentIndex === 0){
-        mainCardImage.style.width = '160px'; // Volta ao tamanho original
-        mainCardImage.style.height = 'auto'; // Exemplo de altura original
+        mainCardImage.style.width = '160px'; 
+        mainCardImage.style.height = 'auto'; 
         mainCardImage.style.marginBottom = '20px'
       } else {
-        mainCardImage.style.width = '130px'; // Volta ao tamanho original
-        mainCardImage.style.height = 'auto'; // Exemplo de altura original
+        mainCardImage.style.width = '130px'; 
+        mainCardImage.style.height = 'auto'; 
         mainCardImage.style.marginLeft = '40px';
         mainCardImage.style.marginBottom = '40px'
       }
   
-      // Atualiza a classe dos botões para destacar o botão correspondente à imagem atual
+      
       buttons.forEach((btn, index) => {
         if (index === currentIndex) {
           btn.classList.remove('opacity-50');
@@ -200,17 +190,14 @@ const images = [
     }, 300);
   }
   
-  // Função para trocar a imagem automaticamente a cada 3 segundos
   function autoChangeImage() {
     setInterval(() => {
       updateImage();
-    }, 5000); // Intervalo de 3 segundos (3000 milissegundos)
+    }, 5000); 
   }
   
-  // Adiciona um evento de clique ao mainCard para chamar a função updateImage
   mainCard.addEventListener('click', updateImage);
   
-  // Inicia a troca automática de imagens
   autoChangeImage();
   
   let startX = null;
@@ -232,10 +219,8 @@ const images = [
   
     if (Math.abs(diffX) > Math.abs(diffY)) {
       if (diffX > 0) {
-        // Swipe para a esquerda
         currentIndex = (currentIndex - 1) % images.length;
       } else {
-        // Swipe para a direita
         currentIndex = (currentIndex + 1 + images.length) % images.length;
       }
   
@@ -313,48 +298,93 @@ allWatchBtn.addEventListener('click', function(){
 })
 
 const cart = [];
+const itemsFromCart = document.querySelector('.itemsFromCart');
+const cartCounter = document.querySelector('.cartCounter');
+let count = 0;
+let quantityCart = document.getElementById('quantity-cart');
+let fixedCartCounter = document.getElementById('fixed-cart-counter');
+let totalCart = document.getElementById('total-cart'); 
 
 function addToCart(name, price, image) {
-  cart.push({name, price, image});
+  const existingItem = cart.find(item => item.name === name && item.price === price && item.image === image);
+
+  if (existingItem) {
+    existingItem.quantity++;
+  } else {
+    cart.push({ name, price, image, quantity: 1 });
+  }
+
+  fixedCartCounter.classList.remove('hidden');
+
   console.log(cart);
   updateCart();
 }
 
-function updateCart(){
-  const itemsFromCart = document.querySelector('.itemsFromCart');
+function updateCart() {
   itemsFromCart.innerHTML = '';
+
   cart.forEach(item => {
     const cartItem = document.createElement('div');
-    cartItem.classList = ' cart-item w-full bg-gray-200 rounded-xl h-24 flex items-center px-3 gap-3';
+    cartItem.classList = 'cart-item w-full bg-gray-200 rounded-xl h-24 flex items-center px-3 gap-3 relative';
     cartItem.innerHTML = `
       <img class="w-24 h-20 my-4" src="${item.image}" alt="${item.name}">
       <div>
         <h4>${item.name}</h4>
-        <p class="mt-2 font-semibold">$${item.price}</p4>
+        <p class="mt-2 font-semibold">$${(item.price * item.quantity).toFixed(2)}</p> <!-- Mostra o preço multiplicado pela quantidade -->
+        <div class="flex gap-2 absolute right-3 top-3">
+          <div class="cursor-pointer rounded-full h-5 w-5 text-black font-normal border border-black border-solid flex justify-center items-center text-xl decrement-btn" data-name="${item.name}">
+            -
+          </div>
+          <span class="quantity">${item.quantity}</span>
+          <div class="cursor-pointer rounded-full h-5 w-5 text-black font-normal border border-black border-solid flex justify-center items-center text-xl increment-btn" data-name="${item.name}">
+            +
+          </div>
+        </div>
       </div>
     `;
     itemsFromCart.appendChild(cartItem);
+
+    const decrementBtn = cartItem.querySelector('.decrement-btn');
+    decrementBtn.addEventListener('click', () => decrementItem(item.name));
+
+    const incrementBtn = cartItem.querySelector('.increment-btn');
+    incrementBtn.addEventListener('click', () => incrementItem(item.name));
   });
+
+  count = cart.reduce((total, item) => total + item.quantity, 0);
+  cartCounter.textContent = `${count}`;
+  quantityCart.textContent = `${count}`;
+  fixedCartCounter.textContent = `${count}`;
+
+  const totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+  totalCart.textContent = `$${totalPrice.toFixed(2)}`;
 }
 
-const cartCounter = document.querySelector('.cartCounter');
+function decrementItem(name) {
+  const item = cart.find(item => item.name === name);
+  if (item.quantity > 1) {
+    item.quantity--;
+  } else {
+    const itemIndex = cart.findIndex(item => item.name === name);
+    cart.splice(itemIndex, 1);
+  }
+  updateCart();
+}
 
+function incrementItem(name) {
+  const item = cart.find(item => item.name === name);
+  item.quantity++;
+  updateCart();
+};
 
-
-let count = 0;
 const addToCartBtn = document.querySelectorAll('.addToCartBtn');
 addToCartBtn.forEach(btn => {
-  btn.addEventListener('click', function(){
-    cartCounter.classList.remove('hidden');
-    count++;
-    cartCounter.textContent = `${count}`;
-    console.log(count);
-
+  btn.addEventListener('click', function() {
     const name = btn.getAttribute('data-name');
-    const price = btn.getAttribute('data-price');
+    const price = parseFloat(btn.getAttribute('data-price')); 
     const image = btn.getAttribute('data-image');
-    addToCart(name, price, image)
+    addToCart(name, price, image);
+  });
+});
 
-  })
-})
-
+updateCart();

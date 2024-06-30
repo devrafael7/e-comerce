@@ -83,7 +83,7 @@
             <h1 class="w-full text-center font-semibold text-xl mb-7">My Cart</h1>
             <div class="w-full h-16 bg-blue-100 rounded-full flex items-center pl-5 pr-2 mb-4">
                 <img class="w-7 opacity-50 mr-2" src="icons/icons8-sacola-de-compras-50 (2).png" alt="">
-                <p class="text-blue-500 font-semibold text-md">You have <span>0</span> items in your list cart</p>
+                <p class="text-blue-500 font-semibold text-md">You have <span id="quantity-cart">0</span> items in your list cart</p>
             </div>
         </div>
 
@@ -101,8 +101,8 @@
                 <p class="font-semibold text-xl">$0</p>
             </div>
             <div class="flex w-full justify-between mb-3">
-                <h5 class="text-lg opacity-70 font-medium">Total</h5>
-                <p class="font-semibold text-2xl">$0</p>
+                <h5  class="text-lg opacity-70 font-medium">Total</h5>
+                <p id="total-cart" class="font-semibold text-2xl">$0</p>
             </div>
             <button class="w-full h-16 bg-black text-white rounded-full text-lg" type="button">Checkout</button>
         </div>
@@ -401,7 +401,7 @@
                     <img class="shoesImg transform w-full" src="imgs/pngwing.com (7).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-1 mt-3 font-medium text-lg">Nike SB DK Green</h2>
-                        <p class=" font-semibold text-xl">$795.00</p>
+                        <p class="price font-semibold text-xl">$795.00</p>
                         <button class="addToCartBtn rounded-full absolute w-2/6 h-12 bg-green-500 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
                             data-name ="Nike SB DK Green"
                             data-price="795.00"
@@ -505,7 +505,7 @@
     <div class="fixed w-auto h-auto bottom-3 right-5 flex justify-center items-center gap-2">
         <div class="relative">
             <img id="fixed-cart-btn" class=" z-30 bg-white rounded-full p-2 w-12" src="icons/icons8-sacola-de-compras-50.png" alt="">
-            <h4 class="cartCounter absolute right-0 -top-1 bg-green-600 w-6 h-6 flex justify-center items-center font-semibold text-white rounded-full hidden"></h4>
+            <h4 id="fixed-cart-counter" class="cartCounter absolute right-0 -top-1 bg-green-600 w-6 h-6 flex justify-center items-center font-semibold text-white rounded-full hidden"></h4>
         </div>
       
 
