@@ -49,9 +49,9 @@
         <h2 class="font-semibold text-xl mb-5">Settings</h2>
         <div class="flex flex-col pl-3 gap-5">
             <div class="flex justify-between items-end">
-                <h1 class="leading-tight font-semibold text-lg">Dark Mode <br> <span class="font-medium text-gray-400 text-sm">switch to dark mode</span> </h1>
-                <div class="w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
-                    <div class="w-6 h-6 bg-white rounded-full"></div>
+                <h1 class="leading-tight font-semibold text-lg">Dark Mode/White Mode<br> <span class="font-medium text-gray-400 text-sm">switch the theme</span> </h1>
+                <div class="boxDarkBtn w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
+                    <div class="indicatorDarkBtn w-6 h-6 bg-white rounded-full"></div>
                 </div>
             </div>
 
@@ -273,14 +273,20 @@
 
     <!-- header creation -->
 
-    <header class="w-full h-auto py-3 gap-7  flex flex-col mb-2">
+    <header id="header-content" class="w-full h-auto py-3 gap-7  flex flex-col mb-2">
 
         <div class="flex justify-between w-full h-1/2 items-center">
-            <div id="menu-btn" class=" w-8 h-8 bg-white grid items-place-center grid-cols-2 gap-1 p-1.5 rounded-xl cursor-pointer shadow-lg">
-                <div class="w-full h-full bg-gray-400 rounded-full"></div>
-                <div class="w-full h-full bg-gray-400 rounded-full"></div>
-                <div class="w-full h-full bg-gray-400 rounded-full"></div>
-                <div class="w-full h-full bg-gray-400 rounded-full"></div>
+            <div class="flex gap-3">
+                <div id="menu-btn" class=" w-8 h-8 bg-white grid items-place-center grid-cols-2 gap-1 p-1.5 rounded-xl cursor-pointer shadow-lg">
+                    <div class="insideMenuBtn w-full h-full bg-gray-400 rounded-full"></div>
+                    <div class="insideMenuBtn w-full h-full bg-gray-400 rounded-full"></div>
+                    <div class="insideMenuBtn w-full h-full bg-gray-400 rounded-full"></div>
+                    <div class="insideMenuBtn w-full h-full bg-gray-400 rounded-full"></div>
+                </div>
+
+             <div class="boxDarkBtn w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
+                    <div class="indicatorDarkBtn w-6 h-6 bg-white rounded-full"></div>
+                </div>
             </div>
             
                 <h1 class="text-2xl font-medium text-center absolute  left-1/2 transform -translate-x-1/2 ">Home</h1>
@@ -288,7 +294,8 @@
            
             <div class="flex gap-1 h-auto w-auto items-center gap-2">
                 <div id="little-cart-btn" class="hover:scale-50 w-6 h-6 bg-white rounded-full flex items-center justify-center px-1 cursor-pointer">
-                    <img  class=" w-full opacity-50" src="icons/icons8-sacola-de-compras-50.png" alt="">
+                    <img id="black-img" class="w-full opacity-50" src="icons/icons8-sacola-de-compras-50.png" alt="">
+                    <img id="white-img" class="w-full opacity-50 hidden" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                 </div>
                 <h3 id="user-name" class=" font-semibold"></h3>
                 <div id="userHome" class="w-10 h-10 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md relative">
@@ -304,10 +311,11 @@
 
        
        
-        <div class="w-full h-1/2 flex justify-between items-center gap-3">
-            <div class="w-full bg-white rounded-lg shadow-md h-11 flex items-center px-3">
+        <div class="searchAndFilter w-full h-1/2 flex justify-between items-center gap-3">
+            <div class="searchBox w-full bg-white rounded-lg shadow-md h-11 flex items-center px-3">
                 <input class="w-full outline-none bg-none text-lg" type="text" placeholder="Search">
-                <img class="h-1/2 w-auto opacity-50" src="icons/loupe.png" alt="">
+                <img id="black-loupe" class="h-1/2 w-auto opacity-50" src="icons/loupe.png" alt="">
+                <img id="white-loupe" class="h-1/2 w-auto opacity-60 hidden" src="icons/icons8-pesquisar-50.png" alt="">
             </div>
             <img id="filter-btn" class="hover:bg-red-500 bg-red-400 w-11 p-1 rounded-xl shadow-md" src="icons/icons8-opções-de-ordenação-24.png" alt="">
         </div>
@@ -316,12 +324,12 @@
 
     <div id="mainCard" class="mainCard w-full h-40 bg-gray-700 shadow-xl rounded-2xl px-4 py-4 flex items-center relative cursor-pointer ">
         <article class="promotionCard w-2/5 h-full rounded-xl px-3 py-3 text-white flex justify-center items-center">
-          <h1 class="text-4xl font-semibold ">
+          <h1 class="text-4xl font-semibold bg-none">
             50% <br>
             OFF
           </h1>
         </article>
-        <img id="mainCardImage" class="w-auto h-40 mt-5 ml-5" src="imgs/pngwing.com (1).png" alt="Promotion Image">
+        <img id="mainCardImage" class="bg-none w-auto h-40 mt-5 ml-5" src="imgs/pngwing.com (1).png" alt="Promotion Image">
         <img id="mainCardFavoriteBtnEmpty" class="absolute right-2 top-2 w-8 h-8 rounded-full flex justify-center items-center p-2" src="icons/icons8-gostar-empty.png" alt="Favorite Button">
         <img id="mainCardFavoriteBtn" class="absolute right-2 top-2 w-8 h-8 rounded-full flex justify-center items-center p-2 hidden" src="icons/icons8-gostar-50.png" alt="Favorite Button h">
       </div>
@@ -349,14 +357,19 @@
 
     <section class="sectionOptions w-auto h-20 my-2 mt-4 pl-4 flex overflow-x-hidden items-center  justify-center">
         <div class="allItemsBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium cursor-pointer hover:bg-gray-100 hover:text-black">
-            <div class=" w-7 h-7 bg-white grid items-place-center grid-cols-2 gap-1 p-1.5 rounded-xl cursor-pointer shadow-lg mr-1">
+            <div class="allProductsToggle w-7 h-7 bg-white grid items-place-center grid-cols-2 gap-1 p-1.5 rounded-xl cursor-pointer shadow-lg mr-1">
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
                 <div class="w-full h-full bg-gray-400 rounded-full"></div>
             </div>
             All</div>
-        <div class="allFootwearBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium hover:bg-gray-100 hover:text-black"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-tennis-48.png" alt="">Footwear</div>
+
+        <div class="allFootwearBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium hover:bg-gray-100 hover:text-black">
+            <img class="whiteFootwear w-6 mr-1 cursor-pointer hidden opacity-60" src="icons/icons8-trainers-50.png" alt="">
+            <img class="blackFootwear w-6 mr-1 cursor-pointer" src="icons/icons8-trainers-24.png" alt="">Footwear
+        </div>
+
         <div class="allWatchBtn bg-white w-auto h-12 mr-3 flex items-center px-3 rounded-lg shadow-lg text-gray-500 font-medium hover:bg-gray-100 hover:text-black"><img class="w-6 mr-1 cursor-pointer" src="icons/icons8-apple-watch-48.png" alt=""> Watch</div>
         <!-- <div class="bg-white w-20 h-12 flex items-center px-2 rounded-lg shadow-lg">T-Shirt</div> -->
     </section>
@@ -369,7 +382,7 @@
         <div class="wholeFootwear w-full h-auto flex gap-5">
             <div class="flex flex-col w-1/2 h-auto gap-7">
                 <div class="card w-full h-64 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pt-7 relative">
-                    <p class="absolute top-3 left-2 bg-white rounded-full px-2 font-semibold">New</p>
+                    <p class="newCard absolute top-3 left-2 bg-white rounded-full px-2 font-semibold">New</p>
                     <img class="shoesImg transform w-full h-auto mr-5" src="imgs/pngwing.com (9).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-2 font-medium text-lg">Nike Air Force Sky Blue</h2>
@@ -382,7 +395,7 @@
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                     </button>
                 </div>
-                <div class="w-full h-56 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pr-2 pt-5 relative">
+                <div class="card w-full h-56 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pr-2 pt-5 relative">
                     <img class="shoesImg transform w-full" src="imgs/pngwing.com (5).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="mt-3 mb-1 leading-tight font-medium text-lg">Nike Jordan W&B</h2>
@@ -398,7 +411,7 @@
             </div>
            
             <div class="flex flex-col w-1/2 h-auto gap-7">
-                <div class="w-full h-56 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pr-2 pt-3 relative">
+                <div class="card w-full h-56 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pr-2 pt-3 relative">
                     <img class="shoesImg transform w-full" src="imgs/pngwing.com (7).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-1 mt-3 font-medium text-lg">Nike SB DK Green</h2>
@@ -411,7 +424,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="w-full h-64 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pt-7 relative">
+                <div class="card w-full h-64 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pt-7 relative">
                     <img class="shoesImg transform w-full mr-3 mt-2" src="imgs/pngwing.com (4).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class=" leading-tight mb-2 text-lg">Nike Jordan Traditional</h2>
@@ -429,7 +442,7 @@
 
         <div class="wholeWatches w-full h-auto flex gap-5">
             <div class="flex flex-col w-1/2 h-auto gap-5">
-                <div class="pt-3 flex items-center flex-col w-full h-72 bg-gray-300 rounded-xl relative">
+                <div class="card pt-3 flex items-center flex-col w-full h-72 bg-gray-300 rounded-xl relative">
                     <img class="transform rotate-12" src="imgs/pngwing.com (17).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-2 font-medium text-lg">Black Square Watch</h2>
@@ -442,7 +455,7 @@
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                     </button>
                 </div>
-                <div class="pt-3 flex items-center flex-col w-full h-60 bg-gray-300 rounded-xl relative">
+                <div class="card pt-3 flex items-center flex-col w-full h-60 bg-gray-300 rounded-xl relative">
                     <img class="w-32" src="imgs/pngwing.com (21).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-2 font-medium text-lg">Black Fine Watch</h2>
@@ -458,21 +471,22 @@
             </div>
            
             <div class="flex flex-col w-1/2 h-auto gap-5 relative">
-                <div class="pt-3 flex items-center flex-col w-full h-60 bg-gray-300 rounded-xl relative">
+                <div class="card pt-3 flex items-center flex-col w-full h-60 bg-gray-300 rounded-xl relative">
                     <img class="w-32 transform rotate-12" src="imgs/pngwing.com (18).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
-                        <p class="absolute top-3 left-2 bg-white rounded-full px-2 font-semibold">New</p>
+                        <p class="newCard absolute top-3 left-2 bg-white rounded-full px-2 font-semibold">New</p>
                         <h2 class="leading-tight mb-2 font-medium text-lg">White Square Watch</h2>
                         <p class=" font-semibold text-xl">$210.00</p>
                     </div>
-                    <button class="hover:bg-white addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-100 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
+                    <button id="" class="hover:bg-white addToCartBtn rounded-full absolute w-2/6 h-12 bg-gray-100 bottom-0 right-0 rounded-br-xl flex justify-center items-center"
                         data-name ="White Square Watch"
                         data-price="210.00"
                         data-image="imgs/pngwing.com (18).png">
-                        <img class="w-2/6" src="icons/icons8-sacola-de-compras-50.png" alt="">
+                        <img id="white-square-watch-img" class="w-2/6 hidden" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
+                        <img id="black-square-watch-img" class="w-2/6" src="icons/icons8-sacola-de-compras-50.png" alt="">
                     </button>
                 </div>
-                <div class="pt-3 flex items-center flex-col w-full h-72 bg-gray-300 rounded-xl relative">
+                <div class="card pt-3 flex items-center flex-col w-full h-72 bg-gray-300 rounded-xl relative">
                     <img class="transform -rotate-12" src="imgs/pngwing.com (19).png" alt="">
                        <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-2 font-medium text-lg">Gray Premium Watch</h2>
@@ -488,9 +502,9 @@
         </div>
     </main>
 
-    <form class="w-full h-auto flex flex-col">
-        <h3 class="text-black font-semibold text-lg mb-2">Não encontrou o produto desejado?</h3>
-        <h3 class="text-black text-md mb-7">Informe seu e-mail e receba atualizações sobre o produto!</h3>
+    <form class="findTheProduct w-full h-auto flex flex-col">
+        <h3 class="formText text-black font-semibold text-lg mb-2">Não encontrou o produto desejado?</h3>
+        <h3 class="formText text-black text-md mb-7">Informe seu e-mail e receba atualizações sobre o produto!</h3>
         <div class="flex">
             <input id="email-notification" class="h-12 rounded-l-md w-4/6 px-4 text-lg outline-none" type="email" placeholder="E-mail">
             <button id="send-btn" class="h-12 w-2/6 bg-purple-600 rounded-r-md text-white text-lg tracking-wider hover:bg-purple-800" type="button">Enviar</button>
@@ -528,7 +542,7 @@
 
         .mainCard {
             background: rgb(113, 49, 209);
-        background: linear-gradient(76deg, rgba(114,47,214,1) 0%, rgba(97,171,244,1) 100%);
+            background: linear-gradient(76deg, rgba(114,47,214,1) 0%, rgba(97,171,244,1) 100%);
         }
 
         .mainCard .promotionCard {
@@ -646,6 +660,141 @@
             transform: scale(1.1);  
         }
 
+        /*Dark Mode Creation*/
+
+        .boxDarkBtn.dark {
+            padding-left: 36px;
+            background: #484863;
+        }
+
+        .boxDarkBtn.dark .indicatorDarkBtn {
+            background: #ffffff80;
+        }
+
+
+        body.dark {
+            background: #181821;
+        }
+
+        body.dark #header-content{
+            color: white;
+        }
+
+        body.dark #header-content #menu-btn {
+            background: #484863;
+        }
+
+        body.dark #header-content #menu-btn .insideMenuBtn{
+            background: rgb(129, 101, 101);
+        }
+
+        body.dark #header-content #little-cart-btn {
+            background:#484863;
+        }
+
+        body.dark #header-content #user-informations {
+            color: #000;
+        }
+
+        body.dark .searchAndFilter .searchBox{
+            background: #60607ebe;
+        }
+
+        body.dark .searchAndFilter .searchBox input{
+            background: none;
+        }
+
+        body .searchAndFilter .searchBox input{
+            background: none;
+        }
+
+        body.dark .searchAndFilter #filter-btn{
+            background: #9245f7b7;
+        }
+
+        body.dark .searchAndFilter #white-loupe {
+            background: none;
+        }
+        
+        body.dark .allItemsBtn {
+            background:#302d2d77;
+            color: #ffffffbb;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+          
+        }
+
+        body.dark .allFootwearBtn {
+            background:#302d2d77;
+            color: #ffffffbb;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+
+
+        body.dark .allWatchBtn {
+            background:#302d2d77;
+            color: #ffffffbb;   
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+
+        body.dark .btn {
+            background: #fff;
+            
+        }
+
+        body.dark .allProductsToggle {
+            background: #363649;
+        }
+
+        body.dark .allProductsToggle div {
+            background: rgb(129, 101, 101);
+        }
+
+        body.dark #title-all-products {
+            color: #ffffffd3;
+        }
+
+        body.dark .card {
+            color: #ffffffd0;
+            background: #22223063;
+        }
+
+        body.dark .card .newCard {
+            background: #3f3f53;
+        }
+
+        body.dark .card .addToCartBtn {
+            background: #3d3d538e;
+        }
+
+        body.dark .findTheProduct .formText{
+            color: #fff;
+        }
+
+
+        body.dark .mainCard {
+            box-shadow: rgba(255, 255, 255, 0.096) 0px 1px 4px, rgba(124, 53, 255, 0.151) 0px 0px 0px 3px;
+            color: #fff;
+            background: #181821;
+        }
+
+        .mainCard #mainCardImage {
+            background: none;
+        }
+
+        body.dark .mainCard .promotionCard {
+            background: #2b2b3b59;
+        }
+
+        body.dark .mainCard .promotionCard h1{
+            background: none;
+        }
+        
+
+
+
+        
+
+        
 
         
     </style>

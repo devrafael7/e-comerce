@@ -415,3 +415,37 @@ mainCardFavoriteBtnEmpty.addEventListener('click', function(){
   mainCardFavoriteBtnEmpty.classList.add('hidden');
 });
 
+const boxDarkBtn = document.querySelectorAll('.boxDarkBtn');
+const body = document.querySelector('body');
+boxDarkBtn.forEach(darkBtn => {
+  darkBtn.addEventListener('click', function(){
+    body.classList.toggle('dark');
+    darkBtn.classList.toggle('dark');
+    console.log("oi")
+    
+    const blackImg = document.getElementById('black-img');
+    const whiteImg = document.getElementById('white-img');
+    blackImg.classList.toggle('hidden');
+    whiteImg.classList.toggle('hidden');
+
+    const blackLoupe = document.getElementById('black-loupe');
+    const whiteLoup = document.getElementById('white-loupe');
+    blackLoupe.classList.toggle('hidden')
+    whiteLoup.classList.toggle('hidden');
+
+    const blackFootwear = document.querySelector('.blackFootwear');
+    const whiteFootwear = document.querySelector('.whiteFootwear');
+    whiteFootwear.classList.toggle('hidden')
+    blackFootwear.classList.toggle('hidden');
+
+    const whiteSWimg = document.getElementById('white-square-watch-img');
+    const blackSWimg = document.getElementById('black-square-watch-img');
+    whiteSWimg.classList.toggle('hidden')
+    blackSWimg.classList.toggle('hidden');
+  })
+})
+
+
+
+
+
