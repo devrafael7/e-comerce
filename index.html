@@ -23,48 +23,54 @@
         <h1 class="text-xl font-semibold mb-4">
             Features
         </h1>
-        <div class="flex flex-col gap-4 mb-12 pl-3">
+        <div class="Menu flex flex-col gap-4 mb-12 pl-3">
             <div class="flex items-center w-full h-auto">
-                <img class=" w-4 h-4" src="icons/icons8-usuário-30 (1).png" alt="">
+                <img  class="whiteUser w-4 h-4 hidden" src="icons/icons8-usuário-30.png" alt="">
+                <img class="blackUser w-4 h-4" src="icons/icons8-usuário-30 (1).png" alt="">
                 <p class="font-medium pl-3">Account</p>
             </div>
             <div class="flex items-center w-full h-auto">
-                <img class="w-4 h-4" src="icons/icons8-sacola-de-compras-50.png" alt="">
+                <img  class="menuWhiteCart hidden w-4 h-4" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
+                <img  class="menuBlackCart w-4 h-4" src="icons/icons8-sacola-de-compras-50.png" alt="">
                 <p class="font-medium pl-3">Shopping Cart</p>
             </div>
             <div class="flex items-center w-full h-auto">
-                <img class="w-4 h-4 " src="icons/icons8-gostar-30.png" alt="">
+                 <img class="whiteFavBtn w-4 h-4 hidden" src="icons/icons8-gostar-50.png" alt="">
+                <img class="blackFavBtn w-4 h-4 " src="icons/icons8-gostar-30.png" alt="">
                 <p class="font-medium pl-3">Favorites</p>
             </div>
             <div class="flex items-center w-full h-auto">
-                <img class="w-4 h-4" src="icons/icons8-telefone-desligado-30.png" alt="">
+                <img class="whiteContact hidden w-4 h-4" src="icons/icons8-casa-50.white.png" alt="">
+                <img class="blackContact w-4 h-4" src="icons/icons8-telefone-desligado-30.png" alt="">
                <p class="font-medium pl-3">Contact </p>
             </div>
             <div class="flex items-center w-full h-auto">
-                <img class="w-5 h-5" src="icons/icons8-estado-mental-30.png" alt="">
+                <img class="whiteRP w-5 h-5 hidden" src="icons/icons8-estado-mental-30 (2).png" alt="">
+                <img class="blackRP w-5 h-5" src="icons/icons8-estado-mental-30.png" alt="">
                <p class="font-medium pl-3">Report a problem</p>
             </div>
         </div>
 
         <h2 class="font-semibold text-xl mb-5">Settings</h2>
         <div class="flex flex-col pl-3 gap-5">
+            <!-- 
             <div class="flex justify-between items-end">
                 <h1 class="leading-tight font-semibold text-lg">Dark Mode/White Mode<br> <span class="font-medium text-gray-400 text-sm">switch the theme</span> </h1>
                 <div class="boxDarkBtn w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
                     <div class="indicatorDarkBtn w-6 h-6 bg-white rounded-full"></div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="flex justify-between items-end">
+            <div class="flex justify-between items-end ">
                 <h1 class="leading-tight font-semibold text-lg">Floating items<br> <span class="font-medium text-gray-400 text-sm">hide floating items</span> </h1>
-                <div class="w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
+                <div class="menuBoxDarkBtn w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
                     <div class="w-6 h-6 bg-white rounded-full"></div>
                 </div>
             </div>
 
             <div class="flex justify-between items-end">
                 <h1 class="leading-tight font-semibold text-lg">Discounts<br> <span class="font-medium text-gray-400 text-sm">not receive discounts</span> </h1>
-                <div class="w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
+                <div class="menuBoxDarkBtn w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
                     <div class="w-6 h-6 bg-white rounded-full"></div>
                 </div>
             </div>
@@ -79,9 +85,10 @@
      <!-- Cart Creation-->
      <div id="bg-cart" class="w-full h-screen bg-white fixed left-0 top-0 z-20 flex flex-col pt-14 px-5 justify-between hidden pb-10 ">
         <div class="flex flex-col ">
-            <img id="back-arrow-btn" class="absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
+            <img  class="backArrowBtn hidden whiteArrow absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-24.png" alt="">
+            <img  class="backArrowBtn blackArrow absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
             <h1 class="w-full text-center font-semibold text-xl mb-7">My Cart</h1>
-            <div class="w-full h-16 bg-blue-100 rounded-full flex items-center pl-5 pr-2 mb-4">
+            <div id="my-cart-you-have" class="w-full h-16 bg-blue-100 rounded-full flex items-center pl-5 pr-2 mb-4">
                 <img class="w-7 opacity-50 mr-2" src="icons/icons8-sacola-de-compras-50 (2).png" alt="">
                 <p class="text-blue-500 font-semibold text-md">You have <span id="quantity-cart">0</span> items in your list cart</p>
             </div>
@@ -104,7 +111,7 @@
                 <h5  class="text-lg opacity-70 font-medium">Total</h5>
                 <p id="total-cart" class="font-semibold text-2xl">$0</p>
             </div>
-            <button class="w-full h-16 bg-black text-white rounded-full text-lg" type="button">Checkout</button>
+            <button class="checkoutBtn w-full h-16 bg-black text-white rounded-full text-lg mt-3" type="button">Checkout</button>
         </div>
      </div>
     
@@ -120,8 +127,9 @@
       
 
         <div class="login w-full h-full bg-white rounded-t-xl shadow-md flex flex-col items-center pt-10 px-7 relative">
-            <img id="close-login" class="absolute left-4 top-3 w-8 h-8" src="icons/icons8-close-26.png" alt="">
-            <h2 class="text-2xl font-semibold text-purple-800 mb-8">Get Started</h2>
+            <img  class="closeLogin whiteCloseLogin hidden absolute left-4 top-3 w-8 h-8" src="icons/icons8-close-26 (1).png" alt="">
+            <img  class="closeLogin blackCloseLogin absolute left-4 top-3 w-8 h-8" src="icons/icons8-close-26.png" alt="">
+            <h2 id="get-started" class="text-2xl font-semibold text-purple-800 mb-8">Get Started</h2>
             <div class="w-full flex-col flex h-auto gap-7">
 
                 <div class="w-full flex-col flex h-14 border rounded-2xl border-gray-600 border-solid relative">     
@@ -166,14 +174,16 @@
      <div id="filter" class="w-full h-screen fixed bg-white z-20 left-0 top-0 px-5 pt-8 hidden">
         <div class="flex items-center h-auto justify-between mb-12">
             <div class="flex gap-4">
-                <img id="back-arrow-btn-filter" class=" w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
+                <img class="hidden backArrowBtnFilter whiteBackArrowF w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-24.png" alt="">
+                <img class="backArrowBtnFilter blackBackArrowF w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
       
                 <h2 class="text-2xl font-semibold mt-1">Filters</h2>
             </div>
           
 
             <div>
-                <img id="confirm-filter-btn" class="w-9 h-9" src="icons/icons8-selecionado-50.png" alt="">
+                <img class="confirmFilterBtn whiteConfirmFBtn hidden w-9 h-9" src="icons/icons8-done-50.png" alt="">
+                <img class="confirmFilterBtn blackConfirmFBtn  w-9 h-9" src="icons/icons8-selecionado-50.png" alt="">
             </div>
         </div>
            
@@ -770,7 +780,6 @@
             color: #fff;
         }
 
-
         body.dark .mainCard {
             box-shadow: rgba(255, 255, 255, 0.096) 0px 1px 4px, rgba(124, 53, 255, 0.151) 0px 0px 0px 3px;
             color: #fff;
@@ -788,7 +797,88 @@
         body.dark .mainCard .promotionCard h1{
             background: none;
         }
-        
+
+        body.dark .menu {
+            background: #181821;
+            color: #ffffffd7;
+        }
+
+        body.dark .menu .menuBoxDarkBtn {
+            background:#363649;
+        }
+
+        body.dark .menu .menuBoxDarkBtn div{
+            background: rgb(125, 130, 173);
+        }
+
+        body.dark #bg-cart {
+            background: #181821;
+            color: #ffffffd7;
+        }
+
+        body.dark #bg-cart #my-cart-you-have {
+            background: #181821;
+            border: 2px solid rgba(51, 51, 240, 0.493);
+        }
+
+        body.dark #bg-cart .itemsFromCart div{
+            color: #ffffffd0;
+            background: #22223080;
+        }
+
+        body.dark #bg-cart .itemsFromCart .plusBtn, .minusBtn{
+            border: 1px solid white;
+        }
+
+        body.dark #bg-cart .checkoutBtn {
+            background: #434eeba6;
+        }
+
+        body.dark .login{
+            background: #181821;
+        }
+
+        body.dark .login #get-started {
+            color: rgb(111, 87, 248);
+        }
+
+        body.dark .login input{
+            background: none;
+            color: #ffffffd7;
+        }
+
+        body.dark .login p{
+            background: #181821;
+            color: #ffffffd7;
+        }
+
+        body.dark #filter{
+            background: #181821;
+        }
+
+        body.dark #filter h2, h3{
+            color: #ffffffd7;
+        }
+
+        body.dark #filter .toggleFilterBtn {
+            opacity: 80%;
+        }
+
+        body.dark input[type=range]::-webkit-slider-thumb {
+            background: #ffffff;
+        }
+
+        body.dark input[type=range]::-moz-range-thumb {
+            background: #ffffff;
+        }
+
+        body.dark #filter #price-value {
+            color: #d5e8ff;
+        }
+   
+
+
+
 
 
 

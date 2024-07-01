@@ -1,6 +1,8 @@
 
 const bgLogin = document.getElementById('bg-login');
-const closeLogin = document.getElementById('close-login').addEventListener('click', function(){
+const closeLogin = document.querySelectorAll('.closeLogin');
+closeLogin.forEach(closeLoginBtn => {
+  closeLoginBtn.addEventListener('click', function(){
 
     loader.classList.remove('hidden');
 
@@ -10,6 +12,7 @@ const closeLogin = document.getElementById('close-login').addEventListener('clic
             confirmationPopUp.classList.add('hidden');
             
     }, 800)
+  })
 })
 
 const confirmationPopUp = document.getElementById('confirmation-pop-up');
@@ -35,12 +38,14 @@ fixedCartBtn.addEventListener('click', function(){
         bgCart.classList.remove('hidden');
         loader.classList.add('hidden');
     }, 500)
-    backArrowBtn.addEventListener('click', function(){
+    backArrowBtn.forEach(backCartBtn => {
+      backCartBtn.addEventListener('click', function(){
         bgCart.classList.add('hidden');
+      })
     })
 })
 
-const backArrowBtn = document.getElementById('back-arrow-btn');
+const backArrowBtn = document.querySelectorAll('.backArrowBtn');
 
 littleCartBtn.addEventListener('click', function(){
   
@@ -51,8 +56,10 @@ littleCartBtn.addEventListener('click', function(){
         bgCart.classList.remove('hidden');
         loader.classList.add('hidden');
     }, 500)
-    backArrowBtn.addEventListener('click', function(){
+    backArrowBtn.forEach(backCartBtn => {
+      backCartBtn.addEventListener('click', function(){
         bgCart.classList.add('hidden');
+      })
     })
 })
 
@@ -117,22 +124,25 @@ const filterBtn = document.getElementById('filter-btn');
 filterBtn.addEventListener('click', function(){
     const filter = document.getElementById('filter');
     filter.classList.remove('hidden');
-    const confirmFilterBtn = document.getElementById('confirm-filter-btn');
-    const backArrowFilterBtn = document.getElementById('back-arrow-btn-filter');
-    backArrowFilterBtn.addEventListener('click', function(){
+    const confirmFilterBtn = document.querySelectorAll('.confirmFilterBtn');
+    const backArrowFilterBtn = document.querySelectorAll('.backArrowBtnFilter');
+    backArrowFilterBtn.forEach(backArrowBtnF_all => {
+      backArrowBtnF_all.addEventListener('click', function(){
         filter.classList.add('hidden');
     })
-    confirmFilterBtn.addEventListener('click', function(){
+    confirmFilterBtn.forEach(confirmFilterBtns => {
+      confirmFilterBtns.addEventListener('click', function(){
         loader.classList.remove('hidden');
         setTimeout(function(){
             loader.classList.add('hidden');
             filter.classList.add('hidden');
-        }, 700)
-            
+        }, 700)   
+        })
+      })
     })
-})
-
-
+    })
+  
+    
 const priceRange = document.getElementById('price-range');
 const priceValue = document.getElementById('price-value');
 const filterButton = document.getElementById('filter-button');
@@ -332,11 +342,11 @@ function updateCart() {
         <h4 class="mt-4">${item.name}</h4>
         <p class=" font-semibold">$${(item.price * item.quantity).toFixed(2)}</p> <!-- Mostra o preço multiplicado pela quantidade -->
         <div class="pl-7 flex gap-2 absolute right-3 top-3">
-          <div class="cursor-pointer rounded-full h-5 w-5 text-black font-normal border border-black border-solid flex justify-center items-center text-xl decrement-btn" data-name="${item.name}">
+          <div class="minusBtn cursor-pointer rounded-full h-5 w-5 text-black font-normal border border-black border-solid flex justify-center items-center text-xl decrement-btn" data-name="${item.name}">
             -
           </div>
           <span class="quantity">${item.quantity}</span>
-          <div class="cursor-pointer rounded-full h-5 w-5 text-black font-normal border border-black border-solid flex justify-center items-center text-xl increment-btn" data-name="${item.name}">
+          <div class="plusBtn cursor-pointer rounded-full h-5 w-5 text-black font-normal border border-black border-solid flex justify-center items-center text-xl increment-btn" data-name="${item.name}">
             +
           </div>
         </div>
@@ -442,6 +452,51 @@ boxDarkBtn.forEach(darkBtn => {
     const blackSWimg = document.getElementById('black-square-watch-img');
     whiteSWimg.classList.toggle('hidden')
     blackSWimg.classList.toggle('hidden');
+
+    const whiteUser = document.querySelector('.whiteUser');
+    const blackUser = document.querySelector('.blackUser');
+    whiteUser.classList.toggle('hidden')
+    blackUser.classList.toggle('hidden');
+
+    const menuWhiteCart = document.querySelector('.menuWhiteCart');
+    const menuBlackCart = document.querySelector('.menuBlackCart');
+    menuWhiteCart.classList.toggle('hidden')
+    menuBlackCart.classList.toggle('hidden');
+
+    const whiteFavBtn = document.querySelector('.whiteFavBtn');
+    const blackFavBtn = document.querySelector('.blackFavBtn');
+    whiteFavBtn.classList.toggle('hidden')
+    blackFavBtn.classList.toggle('hidden');
+
+    const whiteContact = document.querySelector('.whiteContact');
+    const blackContact = document.querySelector('.blackContact');
+    whiteContact.classList.toggle('hidden')
+    blackContact.classList.toggle('hidden');
+
+    const whiteRP = document.querySelector('.whiteRP');
+    const blackRP = document.querySelector('.blackRP');
+    whiteRP.classList.toggle('hidden')
+    blackRP.classList.toggle('hidden');
+
+    const whiteArrow = document.querySelector('.whiteArrow');
+    const blackArrow = document.querySelector('.blackArrow');
+    whiteArrow.classList.toggle('hidden')
+    blackArrow.classList.toggle('hidden');
+
+    const whiteCloseLogin = document.querySelector('.whiteCloseLogin');
+    const blackCloseLogin = document.querySelector('.blackCloseLogin');
+    whiteCloseLogin.classList.toggle('hidden')
+    blackCloseLogin.classList.toggle('hidden');
+
+    const whiteBackArrowF = document.querySelector('.whiteBackArrowF');
+    const blackBackArrowF = document.querySelector('.blackBackArrowF');
+    whiteBackArrowF.classList.toggle('hidden')
+    blackBackArrowF.classList.toggle('hidden');
+
+    const whiteConfirmFBtn = document.querySelector('.whiteConfirmFBtn');
+    const blackConfirmFBtn = document.querySelector('.blackConfirmFBtn');
+    whiteConfirmFBtn.classList.toggle('hidden')
+    blackConfirmFBtn.classList.toggle('hidden');
   })
 })
 
