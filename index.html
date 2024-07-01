@@ -137,15 +137,15 @@
                 </div>
 
                 <div class="w-full flex-col flex h-14 border rounded-2xl border-gray-600 border-solid relative">     
-                    <input id="input-email" class="px-5 flex justify-center h-full relative w-full rounded-full outline-none" type="text" placeholder="Enter your e-mail"> <p class="bg-white absolute -top-3 left-3 font-semibold">E-mail</p></input>
+                    <input id="input-email" class="px-5 flex justify-center h-full relative w-full rounded-full outline-none" type="email" placeholder="Enter your e-mail"> <p class="bg-white absolute -top-3 left-3 font-semibold">E-mail</p></input>
                 </div>
 
                 <div class="w-full flex-col flex h-14 border rounded-2xl border-gray-600 border-solid relative">     
-                    <input id="input-password" class="px-5 flex justify-center h-full relative w-full rounded-full outline-none" type="text" placeholder="Create a password"> <p class="bg-white absolute -top-3 left-3 font-semibold">Password</p></input>
+                    <input id="input-password" class="px-5 flex justify-center h-full relative w-full rounded-full outline-none" type="password" placeholder="Create a password"> <p class="bg-white absolute -top-3 left-3 font-semibold">Password</p></input>
                 </div>
 
-                <div class="flex items-center">
-                    <input class="w-6 h-6 mr-2" type="checkbox" name="" id="">
+                <div class="loginAgree flex items-center">
+                    <input class="w-6 h-6 mr-2" type="checkbox" name="" id="agree-checkbox">
                     <p class="text-sm ">I agree to the processing of <span class="text-md text-blue-700 font-semibold">
                         Personal data
                     </span></p>
@@ -157,7 +157,8 @@
                 <div class="flex gap-5 my-4">
                     <img class="w-10" src="icons/google.color.png" alt="">
                     <img class="w-10" src="icons/facebook.color.png" alt="">
-                    <img class="w-10" src="icons/icons8-mac-os-30.png" alt="">
+                    <img class="w-10 hidden whiteMacOs" src="icons/icons8-mac-os-30 (1).png" alt="">
+                    <img class="w-10 blackMacOs" src="icons/icons8-mac-os-30.png" alt="">
                 </div>
             </div>
         </div>
@@ -307,13 +308,13 @@
                     <img id="black-img" class="w-full opacity-50" src="icons/icons8-sacola-de-compras-50.png" alt="">
                     <img id="white-img" class="w-full opacity-50 hidden" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                 </div>
-                <h3 id="user-name" class=" font-semibold"></h3>
+                <h3 id="user-name" class="userNameHome font-semibold"></h3>
                 <div id="userHome" class="w-10 h-10 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md relative">
                     <img id="user-btn" class="w-full opacity-80" src="icons/icons8-usuário-30.png" alt="">
-                    <article id="user-informations" class="absolute -bottom-24 w-auto h-auto py-3 z-30 px-2 right-12 rounded-b-md rounded-tl-md bg-white gap-1 flex flex-col shadow-lg hidden">
-                        <h1 id="user-name-pop-up" class="font-semibold">oi</h1>
+                    <article id="user-informations" class="absolute -bottom-24 w-max h-auto py-3 z-50 px-2 right-12 rounded-b-md rounded-tl-md bg-white gap-1 flex flex-col shadow-lg hidden">
+                        <h1 id="user-name-pop-up" class="font-semibold"></h1>
                         <h2 id="user-email"></h2>
-                        <h3 class="w-full flex items-center">Bronze account <img class=" ml-2 w-5" src="icons/icons8-emoji-de-medalha-de-3º-lugar-48.png" alt=""> </h3>
+                        <h3 class="statusNivelAccount w-full flex items-center text-md text-black">Bronze account <img class=" ml-2 w-5" src="icons/icons8-emoji-de-medalha-de-3º-lugar-48.png" alt=""> </h3>
                     </article>
                 </div>
             </div>
@@ -702,10 +703,6 @@
             background:#484863;
         }
 
-        body.dark #header-content #user-informations {
-            color: #000;
-        }
-
         body.dark .searchAndFilter .searchBox{
             background: #60607ebe;
         }
@@ -874,6 +871,28 @@
 
         body.dark #filter #price-value {
             color: #d5e8ff;
+        }
+
+        body .userNameHome {
+            color: #000;
+        }
+
+        body.dark .userNameHome {
+            color: #ffffff;
+        }
+
+        body.dark #user-informations {
+            background: #22223080;
+            color: #ffffff;
+        }
+
+        body.dark #user-informations h3{
+            color: #f8a37cc0;
+        }
+
+        .loginAgree.check {
+            border: 1px solid red;
+            padding: 5px;
         }
    
 

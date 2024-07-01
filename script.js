@@ -77,6 +77,19 @@ signUpBtn.addEventListener('click', function(){
     const userNamePopUp = document.getElementById('user-name-pop-up');
     const userEmail = document.getElementById('user-email');
 
+    const loginAgree = document.querySelector('.loginAgree');
+    let agreeCheckbox = document.getElementById('agree-checkbox');
+    if (agreeCheckbox.checked) {
+      console.log('checked');
+      loginAgree.classList.remove('check');
+    } else {
+      loginAgree.classList.toggle('check');
+      loader.classList.add('hidden');
+      bgLogin.classList.remove('hidden');
+      return;
+    }
+
+
     if (nameValue === '' || emailValue === '' || passwordValue === '') {
         confirmationPopUp.classList.remove('hidden');
         return;
@@ -102,6 +115,8 @@ signUpBtn.addEventListener('click', function(){
         bgLogin.classList.add('hidden')
         
     })
+
+
 })
 
 userBtn.addEventListener('click', function(){
@@ -497,6 +512,11 @@ boxDarkBtn.forEach(darkBtn => {
     const blackConfirmFBtn = document.querySelector('.blackConfirmFBtn');
     whiteConfirmFBtn.classList.toggle('hidden')
     blackConfirmFBtn.classList.toggle('hidden');
+
+    const whiteMacOs = document.querySelector('.whiteMacOs');
+    const blackMacOs = document.querySelector('.blackMacOs');
+    whiteMacOs.classList.toggle('hidden')
+    blackMacOs.classList.toggle('hidden');
   })
 })
 
