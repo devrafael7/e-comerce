@@ -126,8 +126,8 @@
      <!-- Cart Creation-->
      <div id="bg-cart" class="w-full h-screen bg-white fixed left-0 top-0 z-20 flex flex-col pt-14 px-5 justify-between hidden pb-10 ">
         <div class="flex flex-col ">
-            <img  class="backArrowBtn hidden whiteArrow absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-24.png" alt="">
-            <img  class="backArrowBtn blackArrow absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
+            <img id="back=arrow-btn-my-cart-w"  class="backArrowBtn hidden whiteArrow absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-24.png" alt="">
+            <img id="back=arrow-btn-my-cart-b"  class="backArrowBtn blackArrow absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
             <h1 class="w-full text-center font-semibold text-xl mb-7">My Cart</h1>
             <div id="my-cart-you-have" class="w-full h-16 bg-blue-100 rounded-full flex items-center pl-5 pr-2 mb-4">
                 <img class="w-7 opacity-50 mr-2" src="icons/icons8-sacola-de-compras-50 (2).png" alt="">
@@ -154,6 +154,8 @@
             <button class="checkoutBtn w-full h-16 bg-black text-white rounded-full text-lg mt-3" type="button">Checkout</button>
 
             <div class="container checkoutPayment hidden fixed w-full h-screen bg-white z-50 top-0 left-0 flex flex-col justify-center items-center px-10">
+                <img id="finalize-payment-back-arrow-w"  class="backArrowBtn hidden whiteArrow absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-24.png" alt="">
+                <img id="finalize-payment-back-arrow-b"  class="backArrowBtn blackArrow absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
 
                 <div class="paymentFinished hidden w-full h-screen bg-white fixed top-0 left-0 flex justify-center items-center flex-col px-10">
                     <h1 class="mb-7 font-semibold text-yellow-400 text-2xl text-center">Thank you for <br> your preferences, <span class="userName"></span></h1>
@@ -198,7 +200,7 @@
         </div>
      </div>
     
-    <form id="bg-login" class=" fixed w-full h-screen z-30 left-0  pt-36 top-0 flex justify-end items-center flex-col hidden">
+    <form id="bg-login" class=" fixed w-full h-screen z-30 left-0  pt-36 top-0 flex justify-end items-center flex-col xl:hidden">
         <div id="confirmation-pop-up" class="w-4/6 bg-red-500 rounded-b-xl h-16 fixed z-40 top-0 text-white text-xl flex justify-center items-center font-semibold hidden">
             Check the blanks!
         </div>
