@@ -177,92 +177,91 @@ priceRange.addEventListener('input', function() {
 });
 
 const images = [
-    'imgs/pngwing.com (1).png',
-    'imgs/pngwing.com (airmax).png',
-    'imgs/pngwing.com.png'
-  ];
-  
-  let currentIndex = 1;
-  const mainCard = document.getElementById('mainCard');
-  const mainCardImage = document.getElementById('mainCardImage');
-  const buttons = document.querySelectorAll('.btn');
-  let currentButton = 0;
-  
-  function updateImage() {
-    mainCardImage.classList.add('opacity-0');
-    setTimeout(() => {
+  'imgs/pngwing.com (1).png',
+  'imgs/pngwing.com (airmax).png',
+  'imgs/pngwing.com.png'
+];
+
+let currentIndex = 1;
+const mainCard = document.getElementById('mainCard');
+const mainCardImage = document.getElementById('mainCardImage');
+const buttons = document.querySelectorAll('.btn');
+let currentButton = 0;
+
+function updateImage() {
+  mainCardImage.classList.add('opacity-0');
+  setTimeout(() => {
       mainCardImage.src = images[currentIndex];
       mainCardImage.classList.remove('opacity-0');
-  
+
       if (currentIndex === 2) {
-        mainCardImage.style.width = '160px'; 
-        mainCardImage.style.height = 'auto'; 
-        mainCardImage.style.marginTop = '50px'
+          mainCardImage.style.width = '160px'; 
+          mainCardImage.style.height = 'auto'; 
+          mainCardImage.style.marginTop = '50px'
       } else if (currentIndex === 0){
-        mainCardImage.style.width = '160px'; 
-        mainCardImage.style.height = 'auto'; 
-        mainCardImage.style.marginBottom = '20px'
+          mainCardImage.style.width = '160px'; 
+          mainCardImage.style.height = 'auto'; 
+          mainCardImage.style.marginBottom = '20px'
       } else {
-        mainCardImage.style.width = '130px'; 
-        mainCardImage.style.height = 'auto'; 
-        mainCardImage.style.marginLeft = '40px';
-        mainCardImage.style.marginBottom = '40px'
+          mainCardImage.style.width = '130px'; 
+          mainCardImage.style.height = 'auto'; 
+          mainCardImage.style.marginLeft = '40px';
+          mainCardImage.style.marginBottom = '40px'
       }
-  
-      
+
       buttons.forEach((btn, index) => {
-        if (index === currentIndex) {
-          btn.classList.remove('opacity-50');
-          btn.classList.add('w-5');
-        } else {
-          btn.classList.add('opacity-50');
-          btn.classList.remove('w-5');
-        }
+          if (index === currentIndex) {
+              btn.classList.remove('opacity-50');
+              btn.classList.add('w-5');
+          } else {
+              btn.classList.add('opacity-50');
+              btn.classList.remove('w-5');
+          }
       });
-  
+
       currentIndex = (currentIndex + 1) % images.length;
-    }, 300);
-  }
-  
-  function autoChangeImage() {
-    setInterval(() => {
+  }, 300);
+}
+
+function autoChangeImage() {
+  setInterval(() => {
       updateImage();
-    }, 5000); 
-  }
-  
-  mainCard.addEventListener('click', updateImage);
-  
-  autoChangeImage();
-  
-  let startX = null;
-  let startY = null;
-  
-  mainCard.addEventListener('touchstart', function(e) {
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-  });
-  
-  mainCard.addEventListener('touchend', function(e) {
-    if (!startX || !startY) return;
-  
-    const endX = e.changedTouches[0].clientX;
-    const endY = e.changedTouches[0].clientY;
-  
-    const diffX = startX - endX;
-    const diffY = startY - endY;
-  
-    if (Math.abs(diffX) > Math.abs(diffY)) {
+  }, 5000); 
+}
+
+mainCard.addEventListener('click', updateImage);
+
+autoChangeImage();
+
+let startX = null;
+let startY = null;
+
+mainCard.addEventListener('touchstart', function(e) {
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+});
+
+mainCard.addEventListener('touchend', function(e) {
+  if (!startX || !startY) return;
+
+  const endX = e.changedTouches[0].clientX;
+  const endY = e.changedTouches[0].clientY;
+
+  const diffX = startX - endX;
+  const diffY = startY - endY;
+
+  if (Math.abs(diffX) > Math.abs(diffY)) {
       if (diffX > 0) {
-        currentIndex = (currentIndex - 1) % images.length;
+          currentIndex = (currentIndex + 1 + images.length) % images.length;
       } else {
-        currentIndex = (currentIndex + 1 + images.length) % images.length;
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
       }
-  
+
       updateImage();
-    }
-  
-    startX = null;
-    startY = null;
+  }
+
+  startX = null;
+  startY = null;
 });
 
 const sendBtn = document.getElementById('send-btn');
@@ -529,7 +528,6 @@ boxDarkBtn.forEach(darkBtn => {
     const blackMacOs = document.querySelector('.blackMacOs');
     whiteMacOs.classList.toggle('hidden')
     blackMacOs.classList.toggle('hidden');
-
   })
 })
 
@@ -651,7 +649,46 @@ document.getElementById("report-toggle").addEventListener("click", function() {
   }
 });
 
+const products = [
+  "Nike Air Force Sky Blue",
+  "Nike Jordan W&B",
+  "Nike SB DK Green",
+  "Nike Jordan Traditional",
+  "Black Square Watch",
+  "Black Fine Watch",
+  "White Square Watch",
+  "Gray Premium Watch"
+];
+     
+function filterProducts() {
+  const input = document.getElementById('search-input').value.toLowerCase();
+  const resultsContainer = document.getElementById('search-results');
+    resultsContainer.innerHTML = ''; 
 
+    if (input === '') {
+      resultsContainer.classList.add('hidden');
+      resultsContainer.classList.remove('block');
+      return;
+    }
+
+    const filteredProducts = products.filter(product => product.toLowerCase().includes(input));
+
+    if (filteredProducts.length > 0) {
+      filteredProducts.forEach(product => {
+        const item = document.createElement('div');
+        item.textContent = product;
+        item.className = 'result-item p-2 hover:bg-gray-200 cursor-pointer hover:text-black';
+        item.addEventListener('click', () => {
+        document.getElementById('search-input').value = product;
+          resultsContainer.classList.add('hidden');
+        });
+          resultsContainer.appendChild(item);
+        });
+          resultsContainer.classList.remove('hidden');
+        } else {
+            resultsContainer.classList.add('hidden');
+        }
+}
 
 
 

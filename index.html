@@ -393,14 +393,14 @@
         </div>
 
         <div class="searchAndFilter w-full h-1/2 flex justify-between items-center gap-3">
-            <div class="searchBox w-full bg-white rounded-lg shadow-md h-11 flex items-center px-3">
-                <input class="w-full outline-none bg-none text-lg" type="text" placeholder="Search">
+            <div class="searchBox w-full bg-white rounded-lg shadow-md h-11 flex items-center px-3 relative">
+                <input id="search-input" class="w-full outline-none bg-transparent text-lg" type="text" placeholder="Search" oninput="filterProducts()">
                 <img id="black-loupe" class="h-1/2 w-auto opacity-50 z-10" src="icons/loupe.png" alt="">
                 <img id="white-loupe" class="h-1/2 w-auto opacity-60 hidden z-10" src="icons/icons8-pesquisar-50.png" alt="">
+                <div id="search-results" class="opacity-90 z-50 absolute left-0 top-full w-full bg-white border border-gray-300 mt-2 rounded-b-lg shadow-lg hidden"></div>
             </div>
             <img id="filter-btn" class="hover:bg-red-500 bg-red-400 w-11 p-1 rounded-xl shadow-md" src="icons/icons8-opções-de-ordenação-24.png" alt="">
         </div>
-
     </header>
 
     <div id="mainCard" class="mainCard w-full h-40 bg-gray-700 shadow-xl rounded-2xl px-4 py-4 flex items-center relative cursor-pointer ">
@@ -606,6 +606,7 @@
         <a href="https://wa.me/5524993318146?text=Olá,%20gostaria%20de%20mais%20informações" target="" class="whatsapp-button">
             <img class="w-16 h-auto" src="icons/whatsapp.color.png" alt="WhatsApp">
         </a>
+
 
     <style>
 
@@ -996,9 +997,15 @@
             background: none;
         }
 
+        body.dark #search-results {
+            background: #181821;
+            color: #ffffff;
+            border: none;
+        }
     </style>
 
 <script src="script.js">
+    
 </script>
 </body>
 </html>
