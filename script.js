@@ -1,4 +1,3 @@
-
 const bgLogin = document.getElementById('bg-login');
 const closeLogin = document.querySelectorAll('.closeLogin');
 closeLogin.forEach(closeLoginBtn => {
@@ -128,8 +127,6 @@ signUpBtn.addEventListener('click', function(){
         bgLogin.classList.add('hidden')
         
     })
-
-
 })
 
 userBtn.addEventListener('click', function(){
@@ -165,10 +162,10 @@ filterBtn.addEventListener('click', function(){
             loader.classList.add('hidden');
             filter.classList.add('hidden');
         }, 700)   
-        })
       })
     })
-    })
+  })
+})
   
     
 const priceRange = document.getElementById('price-range');
@@ -223,7 +220,6 @@ const images = [
         }
       });
   
-      // Atualiza o índice para a próxima imagem no array circularmente
       currentIndex = (currentIndex + 1) % images.length;
     }, 300);
   }
@@ -267,7 +263,7 @@ const images = [
   
     startX = null;
     startY = null;
-  });
+});
 
 const sendBtn = document.getElementById('send-btn');
 const message = document.getElementById('message');
@@ -654,6 +650,8 @@ document.getElementById("report-toggle").addEventListener("click", function() {
       reportDetails.classList.add('hidden');
   }
 });
+
+
 
 
 
