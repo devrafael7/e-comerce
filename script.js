@@ -721,3 +721,50 @@ const finalizePaymentBackArrowB = document.getElementById(
 finalizePaymentBackArrowB.addEventListener("click", function () {
   checkoutPayment.classList.add("hidden");
 });
+
+const priceRangeFilter = document.getElementById('price-range');
+const priceValueFilter = document.getElementById('price-value');
+
+const productsFilter = [
+    {
+        name: "Nike Air Force Sky Blue",
+        price: 350.00,
+        image: "imgs/pngwing.com (9).png"
+    },
+    {
+        name: "Nike Jordan W&B",
+        price: 560.00,
+        image: "imgs/pngwing.com (5).png"
+    },
+    {
+        name: "Nike SB DK Green",
+        price: 795.00,
+        image: "imgs/pngwing.com (7).png"
+    },
+    {
+        name: "Nike Jordan Traditional",
+        price: 629.00,
+        image: "imgs/pngwing.com (4).png"
+    },
+    {
+        name: "Black Square Watch",
+        price: 199.00,
+        image: "imgs/pngwing.com (17).png"
+    },
+    {
+        name: "Black Fine Watch",
+        price: 100.00,
+        image: "imgs/pngwing.com (21).png"
+    },
+    {
+        name: "White Square Watch",
+        price: 210.00,
+        image: "imgs/pngwing.com (18).png"
+    },
+    {
+        name: "Gray Premium Watch",
+        price: 949.00,
+        image: "imgs/pngwing.com (19).png"
+    }
+];
+
