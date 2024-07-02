@@ -567,21 +567,13 @@ document.getElementById('pay-button').addEventListener('click', function () {
   const agreeCheckbox = document.getElementById('agree-checkbox-payment').checked;
 
  const FPcheckbox = document.querySelector('.FPcheckbox');
-  if (!agreeCheckbox) {
-
-    FPcheckbox.classList.remove('hidden');
-  } else {
-    FPcheckbox.classList.add('hidden');
-  }
-
-
   const FPcheckField = document.querySelector('.FPcheckField');
   const paymentFinished = document.querySelector('.paymentFinished');
   const userName = document.querySelector('.userName');
   userName.textContent = `${name}!`;
 
 
-  if (name === '' || email === '' || cpf === '' || !agreeCheckbox) {
+  if (name === '' || email === '' || cpf === '') {
     FPcheckField.classList.remove('hidden');
   } else {
     FPcheckField.classList.add('hidden');
