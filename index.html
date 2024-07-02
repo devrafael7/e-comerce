@@ -44,10 +44,14 @@
                 <img class="blackContact w-4 h-4" src="icons/icons8-telefone-desligado-30.png" alt="">
                <p class="font-medium pl-3">Contact </p>
             </div>
-            <div class="flex items-center w-full h-auto">
-                <img class="whiteRP w-5 h-5 hidden" src="icons/icons8-estado-mental-30 (2).png" alt="">
-                <img class="blackRP w-5 h-5" src="icons/icons8-estado-mental-30.png" alt="">
+            <div class="reportBtn relative flex items-center w-full h-auto">
+                <img class="reportBtn whiteRP w-5 h-5 hidden" src="icons/icons8-estado-mental-30 (2).png" alt="">
+                <img class="reportBtn blackRP w-5 h-5" src="icons/icons8-estado-mental-30.png" alt="">
                <p class="font-medium pl-3">Report a problem</p>
+               <div class="reportDiv hidden flex absolute -bottom-7 font-medium pl-3">
+                    <input class="rounded-l-md px-2 bg-gray-200 outline-none text-black placeholder-text-sm" placeholder="Report a problem" type="text" name="" id="">
+                    <button id="report-send-btn" class="border border-gray-200 border-solid text-white w-max  rounded-r-md px-4 " type="button">Send</button>
+               </div>
             </div>
         </div>
 
@@ -74,6 +78,7 @@
                     <div class="w-6 h-6 bg-white rounded-full"></div>
                 </div>
             </div>
+
          
         </div>
         <div class="w-full flex items-end justify-end mt-10">
@@ -90,7 +95,7 @@
             <h1 class="w-full text-center font-semibold text-xl mb-7">My Cart</h1>
             <div id="my-cart-you-have" class="w-full h-16 bg-blue-100 rounded-full flex items-center pl-5 pr-2 mb-4">
                 <img class="w-7 opacity-50 mr-2" src="icons/icons8-sacola-de-compras-50 (2).png" alt="">
-                <p class="text-blue-500 font-semibold text-md">You have <span id="quantity-cart">0</span> items in your list cart</p>
+                <p class="youHaveText text-blue-500 font-semibold text-md">You have <span id="quantity-cart">0</span> items in your list cart</p>
             </div>
         </div>
 
@@ -109,9 +114,52 @@
             </div>
             <div class="flex w-full justify-between mb-3">
                 <h5  class="text-lg opacity-70 font-medium">Total</h5>
-                <p id="total-cart" class="font-semibold text-2xl">$0</p>
+                <p  class="total-cart font-semibold text-2xl">$0</p>
             </div>
             <button class="checkoutBtn w-full h-16 bg-black text-white rounded-full text-lg mt-3" type="button">Checkout</button>
+
+            <div class="container checkoutPayment hidden fixed w-full h-screen bg-white z-50 top-0 left-0 flex flex-col justify-center items-center">
+
+                <div class="paymentFinished hidden w-full h-screen bg-white fixed top-0 left-0 flex justify-center items-center flex-col px-10">
+                    <h1 class="mb-7 font-semibold text-yellow-500 text-2xl text-center">Thank you for <br> your preferences, <span class="userName"></span></h1>
+                    <img class="w-72" src="imgs/mochi-young-man-or-teenager-skateboarding.gif" alt="">
+                </div>
+
+                <div class="FPcheckField hidden bg-red-500 absolute top-0 w-max px-5 h-12 rounded-md text-white flex jusitfy-center items-center font-semibold">
+                    Check empty fields
+                </div>
+
+                <div class="FPcheckbox hidden bg-red-500 absolute top-0 w-max px-5 h-16 rounded-md text-white flex jusitfy-center items-center font-semibold">
+                    You must accept the terms <br> and conditions to continue
+                </div>
+
+                <h1 class="font-semibold text-3xl mb-2 text-green-500 text-start">Finalize Payment</h1>
+                <form id="payment-form w-full">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input class="mb-2 rounded-md px-2 finalizePaymentInput w-full h-9 outline-none bg-gray-100 " type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input class="mb-2 rounded-md px-2 finalizePaymentInput w-full h-9 outline-none bg-gray-100 " type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">CPF:</label>
+                        <input class="mb-2 rounded-md px-2 finalizePaymentInput w-full h-9 outline-none bg-gray-100 " type="text" id="cpf" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Value:</label>
+                        <p  class="total-cart font-semibold text-2xl">$0</p>
+                    </div>
+                    <div class="form-group mt-2">
+                        <input type="checkbox" id="agree-checkbox-payment">
+                        <label for="agree-checkbox-payment">I accept the terms and conditions</label>
+                    </div>
+                    <button class="bg-green-500 w-full h-10 rounded-md text-white font-medium tracking-wide hover:bg-green-700" type="button" id="pay-button">Pay</button>
+                </form>
+                <div id="messagePay" class="hidden"></div>
+            </div>
+        </div>
         </div>
      </div>
     
@@ -325,8 +373,8 @@
         <div class="searchAndFilter w-full h-1/2 flex justify-between items-center gap-3">
             <div class="searchBox w-full bg-white rounded-lg shadow-md h-11 flex items-center px-3">
                 <input class="w-full outline-none bg-none text-lg" type="text" placeholder="Search">
-                <img id="black-loupe" class="h-1/2 w-auto opacity-50" src="icons/loupe.png" alt="">
-                <img id="white-loupe" class="h-1/2 w-auto opacity-60 hidden" src="icons/icons8-pesquisar-50.png" alt="">
+                <img id="black-loupe" class="h-1/2 w-auto opacity-50 z-10" src="icons/loupe.png" alt="">
+                <img id="white-loupe" class="h-1/2 w-auto opacity-60 hidden z-10" src="icons/icons8-pesquisar-50.png" alt="">
             </div>
             <img id="filter-btn" class="hover:bg-red-500 bg-red-400 w-11 p-1 rounded-xl shadow-md" src="icons/icons8-opções-de-ordenação-24.png" alt="">
         </div>
@@ -520,7 +568,7 @@
             <input id="email-notification" class="h-12 rounded-l-md w-4/6 px-4 text-lg outline-none" type="email" placeholder="E-mail">
             <button id="send-btn" class="h-12 w-2/6 bg-purple-600 rounded-r-md text-white text-lg tracking-wider hover:bg-purple-800" type="button">Enviar</button>
         </div>
-        <div id="message" class="fade-in-out fixed bottom-52 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded hidden w-max z-40">
+        <div id="message" class="z-40 fade-in-out fixed bottom-52 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded hidden w-max z-40">
             Thanks! We will email you back <br> if the desired product arrives.
         </div>
     </form>
@@ -537,8 +585,8 @@
 
         <a href="https://wa.me/5524993318146?text=Olá,%20gostaria%20de%20mais%20informações" target="" class="whatsapp-button">
             <img class="w-16 h-auto" src="icons/whatsapp.color.png" alt="WhatsApp">
-          </a>
-    </div>
+        </a>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -659,7 +707,7 @@
             transform: scale(1.2);
         }
 
-        #userHome:hover {
+        #user-btn:hover {
             transform: scale(1.2);
         }
 
@@ -823,7 +871,10 @@
             background: #22223080;
         }
 
-        body.dark #bg-cart .itemsFromCart .plusBtn, .minusBtn{
+        body.dark #bg-cart .itemsFromCart .plusBtn {
+            border: 1px solid white;
+        }
+        body.dark #bg-cart .itemsFromCart .minusBtn{
             border: 1px solid white;
         }
 
@@ -895,6 +946,24 @@
             padding: 5px;
         }
    
+        .menuBoxDarkBtn.plToggle {
+            padding-left: 36px;
+        }
+
+        body.dark .checkoutPayment {
+            background: #181821;
+            color: #ffffff;
+        }
+
+        body.dark .checkoutPayment input{
+            background: none;
+            border: 1px solid rgba(62, 238, 91, 0.404);
+        }
+
+        body.dark .paymentFinished{
+            background: #181821;
+        }
+
 
 
 

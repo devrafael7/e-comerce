@@ -265,10 +265,10 @@ sendBtn.addEventListener('click', function() {
   let enValue = emailNotification.value;
   
     if (enValue === '') {
-      message.textContent = `Check the blank`;
+      message.classList.remove('hidden');
+      message.innerHTML = `Check the blank`;
       message.classList.remove('bg-green-500');
       message.classList.add('bg-red-500');
-      message.classList.remove('hidden');
       setTimeout(function(){
         message.classList.add('hidden');
       }, 2200);
@@ -328,7 +328,7 @@ const cartCounter = document.querySelector('.cartCounter');
 let count = 0;
 let quantityCart = document.getElementById('quantity-cart');
 let fixedCartCounter = document.getElementById('fixed-cart-counter');
-let totalCart = document.getElementById('total-cart'); 
+let totalCart = document.querySelectorAll('.total-cart');
 
 function addToCart(name, price, image) {
   const existingItem = cart.find(item => item.name === name && item.price === price && item.image === image);
@@ -382,7 +382,10 @@ function updateCart() {
   fixedCartCounter.textContent = `${count}`;
 
   const totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-  totalCart.textContent = `$${totalPrice.toFixed(2)}`;
+  totalCart.forEach(totalCarts => {
+    totalCarts.textContent = `$${totalPrice.toFixed(2)}`;
+  })
+  
 }
 
 function decrementItem(name) {
@@ -517,8 +520,81 @@ boxDarkBtn.forEach(darkBtn => {
     const blackMacOs = document.querySelector('.blackMacOs');
     whiteMacOs.classList.toggle('hidden')
     blackMacOs.classList.toggle('hidden');
+
   })
 })
+
+const menuBoxDarkBtn = document.querySelectorAll('.menuBoxDarkBtn');
+menuBoxDarkBtn.forEach(menuBoxDarkBtns => {
+  menuBoxDarkBtns.addEventListener('click', function(){
+    menuBoxDarkBtns.classList.toggle('plToggle')
+  })
+})
+
+//const reportDiv = document.querySelector('.reportDiv');
+//const reportBtn = document.querySelectorAll('.reportBtn');
+//reportBtn.forEach(reportBtns => {
+//  reportBtns.addEventListener('click', function(){
+//    reportDiv.classList.toggle('hidden');
+//  })
+//  
+//})
+
+const myCartYouHave = document.getElementById('my-cart-you-have');
+const youHaveText = document.querySelector('.youHaveText');
+const checkoutBtn = document.querySelector('.checkoutBtn');
+
+const checkoutPayment = document.querySelector('.checkoutPayment');
+checkoutBtn.addEventListener('click',()=> {
+  if (count === 0) {
+    quantityCart.classList.add('text-red-500');
+  } else {
+    quantityCart.classList.remove('text-red-500');
+    loader.classList.remove('hidden');
+    setTimeout(function(){
+      loader.classList.add('hidden');
+      checkoutPayment.classList.remove('hidden');
+    }, 2000)
+  }
+})
+
+quantityCart.classList.remove('text-red-500');
+
+document.getElementById('pay-button').addEventListener('click', function () {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const cpf = document.getElementById('cpf').value;
+  const agreeCheckbox = document.getElementById('agree-checkbox-payment').checked;
+
+ const FPcheckbox = document.querySelector('.FPcheckbox');
+  if (!agreeCheckbox) {
+
+    FPcheckbox.classList.remove('hidden');
+  } else {
+    FPcheckbox.classList.add('hidden');
+  }
+
+
+  const FPcheckField = document.querySelector('.FPcheckField');
+  const paymentFinished = document.querySelector('.paymentFinished');
+  const userName = document.querySelector('.userName');
+  userName.textContent = `${name}!`;
+
+
+  if (name === '' || email === '' || cpf === '' || !agreeCheckbox) {
+    FPcheckField.classList.remove('hidden');
+  } else {
+    loader.classList.remove('hidden');
+    setTimeout(function(){
+      loader.classList.add('hidden');
+      paymentFinished.classList.remove('hidden');
+  }, 3100)
+  }
+  
+});
+
+
+
 
 
 
