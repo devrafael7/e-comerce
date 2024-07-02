@@ -604,9 +604,7 @@ document.getElementById("account-toggle").addEventListener("click", function() {
   let accountDetails = document.getElementById("account-details");
   if (accountDetails.classList.contains("hidden")) {
       accountDetails.classList.remove("hidden");
-      accountDetails.classList.add("visible");
   } else {
-      accountDetails.classList.remove("visible");
       accountDetails.classList.add("hidden");
   }
 });
@@ -617,42 +615,35 @@ document.getElementById("cart-toggle").addEventListener("click", function() {
 
 
   let cartDetails = document.getElementById("cart-details");
-  if (cartDetails.classList.contains("hidden")) {
-      cartDetails.classList.remove("hidden");
-      cartDetails.classList.add("visible");
+  if (cartDetails.classList.contains('hidden')) {
+      cartDetails.classList.remove('hidden');
   } else {
-      cartDetails.classList.remove("visible");
-      cartDetails.classList.add("hidden");
+      cartDetails.classList.add('hidden');
   }
 });
 
 document.getElementById("favorites-toggle").addEventListener("click", function() {
   let favoritesDetails = document.getElementById("favorites-details");
-  if (favoritesDetails.classList.contains("hidden")) {
-      favoritesDetails.classList.remove("hidden");
-      favoritesDetails.classList.add("visible");
+  if (favoritesDetails.classList.contains('hidden')) {
+      favoritesDetails.classList.remove('hidden');
   } else {
-      favoritesDetails.classList.remove("visible");
-      favoritesDetails.classList.add("hidden");
+      favoritesDetails.classList.add('hidden');
   }
 });
 
 document.getElementById("contact-toggle").addEventListener("click", function() {
   let contactDetails = document.getElementById("contact-details");
-  if (contactDetails.classList.contains("hidden")) {
-      contactDetails.classList.remove("hidden");
-      contactDetails.classList.add("visible");
+  if (contactDetails.classList.contains('hidden')) {
+      contactDetails.classList.remove('hidden');
   } else {
-      contactDetails.classList.remove("visible");
-      contactDetails.classList.add("hidden");
+      contactDetails.classList.add('hidden');
   }
 });
 
 document.getElementById("report-toggle").addEventListener("click", function() {
   var reportDetails = document.getElementById("report-details");
-  if (reportDetails.classList.contains("hidden")) {
-      reportDetails.classList.remove("hidden");
-      reportDetails.classList.add("visible");
+  if (reportDetails.classList.contains('hidden')) {
+      reportDetails.classList.remove('hidden');
       let reportInput = document.getElementById('report-input');
       reportInputValue = reportInput.value;
       let reportSubmit = document.getElementById('report-submit');
@@ -660,8 +651,7 @@ document.getElementById("report-toggle").addEventListener("click", function() {
         reportInput.value = '';
       })
   } else {
-      reportDetails.classList.remove("visible");
-      reportDetails.classList.add("hidden");
+      reportDetails.classList.add('hidden');
   }
 });
 
