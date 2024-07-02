@@ -584,6 +584,7 @@ document.getElementById('pay-button').addEventListener('click', function () {
   if (name === '' || email === '' || cpf === '' || !agreeCheckbox) {
     FPcheckField.classList.remove('hidden');
   } else {
+    FPcheckField.classList.add('hidden');
     loader.classList.remove('hidden');
     setTimeout(function(){
       loader.classList.add('hidden');
