@@ -24,34 +24,72 @@
             Features
         </h1>
         <div class="Menu flex flex-col gap-4 mb-12 pl-3">
-            <div class="flex items-center w-full h-auto">
-                <img  class="whiteUser w-4 h-4 hidden" src="icons/icons8-usuário-30.png" alt="">
-                <img class="blackUser w-4 h-4" src="icons/icons8-usuário-30 (1).png" alt="">
-                <p class="font-medium pl-3">Account</p>
+            <div class="flex flex-col jusitfy-center w-full h-auto" id="account-toggle">
+                <div class="flex items-center">
+                    <img  class="whiteUser w-4 h-4 hidden" src="icons/icons8-usuário-30.png" alt="">
+                    <img class="blackUser w-4 h-4" src="icons/icons8-usuário-30 (1).png" alt="">
+                    <p class="font-medium pl-3">Account</p>
+                </div>
+               
+                <div id="account-details" class="hidden">
+                    <!-- Conteúdo da nova div -->
+                    <p class="font-medium accName">You need to log in!</p>
+                    <p class="accEmail"></p>
+                    <p id="acc-status-nivel" class="hidden statusNivelAccount w-full flex items-center text-md text-yellow-600">Bronze account <img class=" ml-2 w-5" src="icons/icons8-emoji-de-medalha-de-3º-lugar-48.png" alt=""> </p>
+                </div>
             </div>
-            <div class="flex items-center w-full h-auto">
-                <img  class="menuWhiteCart hidden w-4 h-4" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
-                <img  class="menuBlackCart w-4 h-4" src="icons/icons8-sacola-de-compras-50.png" alt="">
-                <p class="font-medium pl-3">Shopping Cart</p>
+
+            <div class="flex flex-col jusitfy-center w-full h-auto" id="cart-toggle">
+                <div class="flex items-center">
+                    <img  class="menuWhiteCart hidden w-4 h-4" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
+                    <img  class="menuBlackCart w-4 h-4" src="icons/icons8-sacola-de-compras-50.png" alt="">
+                    <p class="font-medium pl-3">Shopping Cart</p>
+                </div>
+                <div id="cart-details" class="hidden">
+              
+                    <p class="accCart"></p>
+                </div>
             </div>
-            <div class="flex items-center w-full h-auto">
-                 <img class="whiteFavBtn w-4 h-4 hidden" src="icons/icons8-gostar-50.png" alt="">
-                <img class="blackFavBtn w-4 h-4 " src="icons/icons8-gostar-30.png" alt="">
-                <p class="font-medium pl-3">Favorites</p>
+
+            <div class="flex flex-col jusitfy-center w-full h-auto" id="favorites-toggle">
+                <div class="flex items-center">
+                    <img class="whiteFavBtn w-4 h-4 hidden" src="icons/icons8-gostar-50.png" alt="">
+                    <img class="blackFavBtn w-4 h-4" src="icons/icons8-gostar-30.png" alt="">
+                    <p class="font-medium pl-3">Favorites</p>
+                </div>
+                <div id="favorites-details" class="hidden">
+              
+                    <p>No favorite items</p>
+                </div>
             </div>
-            <div class="flex items-center w-full h-auto">
-                <img class="whiteContact hidden w-4 h-4" src="icons/icons8-casa-50.white.png" alt="">
-                <img class="blackContact w-4 h-4" src="icons/icons8-telefone-desligado-30.png" alt="">
-               <p class="font-medium pl-3">Contact </p>
+           
+            
+            <div class="flex flex-col jusitfy-center w-full h-auto" id="contact-toggle">
+                <div class="flex items-center">
+                    <img class="whiteContact hidden w-4 h-4" src="icons/icons8-casa-50.white.png" alt="">
+                    <img class="blackContact w-4 h-4" src="icons/icons8-telefone-desligado-30.png" alt="">
+                    <p class="font-medium pl-3">Contact</p>
+                </div>
+                <div id="contact-details" class="hidden">
+            
+                    <a href="https://wa.me/5524993318146?text=Olá,%20gostaria%20de%20mais%20informações" target="" class="whatsapp-button">
+                       +55 24 99331-8146
+                    </a>
+                </div>
             </div>
-            <div class="reportBtn relative flex items-center w-full h-auto">
+           
+
+            <div class="reportBtn relative flex items-center w-full h-auto" id="report-toggle">
                 <img class="reportBtn whiteRP w-5 h-5 hidden" src="icons/icons8-estado-mental-30 (2).png" alt="">
                 <img class="reportBtn blackRP w-5 h-5" src="icons/icons8-estado-mental-30.png" alt="">
-               <p class="font-medium pl-3">Report a problem</p>
-               <div class="reportDiv hidden flex absolute -bottom-7 font-medium pl-3">
-                    <input class="rounded-l-md px-2 bg-gray-200 outline-none text-black placeholder-text-sm" placeholder="Report a problem" type="text" name="" id="">
-                    <button id="report-send-btn" class="border border-gray-200 border-solid text-white w-max  rounded-r-md px-4 " type="button">Send</button>
-               </div>
+                <p class="font-medium pl-3">Report a problem</p>
+            </div>
+            <div id="report-details" class="hidden">
+           
+                <div class="reportProblemDiv flex">
+                    <input class="h-8 rounded-l-md outline-none border border-black border-solid placeholder-text-sm px-2" type="text" id="report-input" placeholder="Report a problem">
+                    <button class="h-8 rounded-r-md border border-black border-solid px-3" id="report-submit">Send</button>
+                </div>
             </div>
         </div>
 
@@ -964,6 +1002,24 @@
             background: #181821;
         }
 
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+
+        body.dark .reportProblemDiv input{
+            border: 1px solid white;
+            color: #ffffff;
+            background: none;
+        }
+
+        body.dark .reportProblemDiv button{
+            border: 1px solid white;
+            color: #ffffff;
+            background: none;
+        }
 
 
 

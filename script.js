@@ -74,6 +74,14 @@ signUpBtn.addEventListener('click', function(){
     const emailValue = inputEmail.value;
     const passwordValue = inputPassword.value;
 
+    const accName = document.querySelector('.accName');
+    const accEmail = document.querySelector('.accEmail');
+    const accLevel = document.querySelector('.accLevel');
+
+    accName.textContent = `${nameValue}`; 
+    accEmail.textContent = `${emailValue}`; 
+
+
     const userNamePopUp = document.getElementById('user-name-pop-up');
     const userEmail = document.getElementById('user-email');
 
@@ -89,11 +97,16 @@ signUpBtn.addEventListener('click', function(){
       return;
     }
 
+    let accStatusNivel = document.getElementById('acc-status-nivel');
 
     if (nameValue === '' || emailValue === '' || passwordValue === '') {
         confirmationPopUp.classList.remove('hidden');
+        accStatusNivel.classList.add('hidden');
         return;
+   
     } else {
+      accStatusNivel.classList.remove('hidden');
+      
         loader.classList.remove('hidden');
 
         setTimeout(function(){
@@ -587,9 +600,70 @@ document.getElementById('pay-button').addEventListener('click', function () {
   
 });
 
+document.getElementById("account-toggle").addEventListener("click", function() {
+  let accountDetails = document.getElementById("account-details");
+  if (accountDetails.classList.contains("hidden")) {
+      accountDetails.classList.remove("hidden");
+      accountDetails.classList.add("visible");
+  } else {
+      accountDetails.classList.remove("visible");
+      accountDetails.classList.add("hidden");
+  }
+});
+
+document.getElementById("cart-toggle").addEventListener("click", function() {
+  const accCart = document.querySelector('.accCart');
+  accCart.textContent =`${count} items in cart`;
 
 
+  let cartDetails = document.getElementById("cart-details");
+  if (cartDetails.classList.contains("hidden")) {
+      cartDetails.classList.remove("hidden");
+      cartDetails.classList.add("visible");
+  } else {
+      cartDetails.classList.remove("visible");
+      cartDetails.classList.add("hidden");
+  }
+});
 
+document.getElementById("favorites-toggle").addEventListener("click", function() {
+  let favoritesDetails = document.getElementById("favorites-details");
+  if (favoritesDetails.classList.contains("hidden")) {
+      favoritesDetails.classList.remove("hidden");
+      favoritesDetails.classList.add("visible");
+  } else {
+      favoritesDetails.classList.remove("visible");
+      favoritesDetails.classList.add("hidden");
+  }
+});
+
+document.getElementById("contact-toggle").addEventListener("click", function() {
+  let contactDetails = document.getElementById("contact-details");
+  if (contactDetails.classList.contains("hidden")) {
+      contactDetails.classList.remove("hidden");
+      contactDetails.classList.add("visible");
+  } else {
+      contactDetails.classList.remove("visible");
+      contactDetails.classList.add("hidden");
+  }
+});
+
+document.getElementById("report-toggle").addEventListener("click", function() {
+  var reportDetails = document.getElementById("report-details");
+  if (reportDetails.classList.contains("hidden")) {
+      reportDetails.classList.remove("hidden");
+      reportDetails.classList.add("visible");
+      let reportInput = document.getElementById('report-input');
+      reportInputValue = reportInput.value;
+      let reportSubmit = document.getElementById('report-submit');
+      reportSubmit.addEventListener('click', function(){
+        reportInput.value = '';
+      })
+  } else {
+      reportDetails.classList.remove("visible");
+      reportDetails.classList.add("hidden");
+  }
+});
 
 
 
