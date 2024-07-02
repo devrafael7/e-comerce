@@ -585,6 +585,7 @@ document.getElementById('pay-button').addEventListener('click', function () {
     FPcheckField.classList.remove('hidden');
   } else {
     FPcheckField.classList.add('hidden');
+    FPcheckbox.classList.add('hidden');
     loader.classList.remove('hidden');
     setTimeout(function(){
       loader.classList.add('hidden');
