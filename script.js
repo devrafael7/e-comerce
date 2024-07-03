@@ -290,12 +290,21 @@ sendBtn.addEventListener("click", function () {
   }
 });
 
+const contentScroll = document.querySelector('.contentScroll');
 const finalArrow = document.getElementById("final-arrow");
+
 finalArrow.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
+    if (window.innerWidth >= 1024) {
+        contentScroll.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    } else {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }
 });
 
 let wholeFootwear = document.querySelector(".wholeFootwear");
