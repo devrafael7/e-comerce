@@ -190,18 +190,20 @@ function updateImage() {
     mainCardImage.classList.remove("opacity-0");
 
     if (currentIndex === 2) {
-      mainCardImage.style.width = "160px";
+      mainCardImage.style.width = "10rem";
       mainCardImage.style.height = "auto";
       mainCardImage.style.marginTop = "50px";
+      mainCardImage.style.marginLeft = "2rem";
     } else if (currentIndex === 0) {
-      mainCardImage.style.width = "160px";
+      mainCardImage.style.width = "10rem";
       mainCardImage.style.height = "auto";
       mainCardImage.style.marginBottom = "20px";
+      mainCardImage.style.marginLeft = "2rem";
     } else {
-      mainCardImage.style.width = "130px";
+      mainCardImage.style.width = "8rem";
       mainCardImage.style.height = "auto";
-      mainCardImage.style.marginLeft = "40px";
-      mainCardImage.style.marginBottom = "40px";
+      mainCardImage.style.marginLeft = "2rem";
+      mainCardImage.style.marginBottom = "2rem";
     }
 
     buttons.forEach((btn, index) => {
