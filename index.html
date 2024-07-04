@@ -7,24 +7,24 @@
     <title>E-Comerce</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="w-full h-min-screen bg-gray-200 px-5 py-5 md:px-7 lg:bg-gray-100 lg:rounded-2xl lg:relative lg:pl-40 lg:overflow-hidden lg:pr-8">
+<body class="w-full h-min-screen bg-gray-200 px-5 py-5 md:px-7 lg:bg-white lg:rounded-2xl lg:relative lg:pl-52 lg:overflow-hidden lg:pr-8">
     
 
     <!--Menu Creation-->
-    <div id="menu"  class="fade-in-out fade-in-out show menu w-5/6 h-screen bg-white fixed left-0 z-20 top-0 py-7 flex flex-col pl-10 pr-5 hidden ">
-        <div class="w-full h-auto items-center flex gap-5 mb-8">
-            <div class="w-14 h-14 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md relative">
+    <div id="menu"  class="fade-in-out fade-in-out show menu w-5/6 h-screen bg-white fixed left-0 z-20 top-0 py-7 flex flex-col pl-10 pr-5 hidden lg:flex lg:absolute lg:left-0 lg:w-1/6 lg:pl-2 lg:text-sm lg:pr-5 lg:pl-4">
+        <div class="w-full h-auto items-center flex gap-5 lg:gap-3 mb-8 lg:mb-6">
+            <div class="w-14 h-14 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md relative lg:px-2 lg:w-10 lg:h-10">
                 <img id="" class="w-full opacity-80" src="icons/icons8-usuário-30.png" alt="">
             </div>
             <div class="flex flex-col">
-                <h1 class="font-medium">How is it going?</h1>
+                <h1 class="font-medium lg:leading-none lg:text-sm lg:mb-1">How is it going?</h1>
                 <h3 id="menu-name" class="font-semibold text-black"></h3>
             </div>
         </div>
-        <h1 class="text-xl font-semibold mb-4">
+        <h1 class="text-xl font-semibold mb-4 lg:text-sm lg:pl-1 lg:mb-3 settingsAndFeaturesText">
             Features
         </h1>
-        <div class="Menu flex flex-col gap-4 mb-12 pl-3 md:mb-5 md:gap-2">
+        <div class="Menu flex flex-col gap-4 mb-12 pl-3 md:mb-5 md:gap-2 lg:pl-2 lg:mb-5">
             <div class="flex flex-col jusitfy-center w-full h-auto" id="account-toggle">
                 <div class="flex items-center">
                     <img  class="whiteUser w-4 h-4 hidden" src="icons/icons8-usuário-30.png" alt="">
@@ -80,21 +80,21 @@
            
 
             <div class="reportBtn relative flex items-center w-full h-auto" id="report-toggle">
-                <img class="reportBtn whiteRP w-5 h-5 hidden" src="icons/icons8-estado-mental-30 (2).png" alt="">
-                <img class="reportBtn blackRP w-5 h-5" src="icons/icons8-estado-mental-30.png" alt="">
-                <p class="font-medium pl-3">Report a problem</p>
+                <img class="reportBtn whiteRP w-5 h-5 lg:h-4 lg:w-4 hidden" src="icons/icons8-estado-mental-30 (2).png" alt="">
+                <img class="reportBtn blackRP w-5 h-5 lg:h-4 lg:w-4" src="icons/icons8-estado-mental-30.png" alt="">
+                <p class="font-medium pl-3 lg:leading-tight">Report a problem</p>
             </div>
             <div id="report-details" class="hidden">
            
-                <div class="reportProblemDiv flex w-full pr-7">
-                    <input class="h-8 w-full rounded-l-md outline-none border border-black border-solid placeholder-text-sm px-2" type="text" id="report-input" placeholder="Report a problem">
-                    <button class="h-8 rounded-r-md border border-black border-solid px-3 w-max" id="report-submit">Send</button>
+                <div class="reportProblemDiv flex w-full pr-7 lg:pr-0">
+                    <input class="h-8 lg:h-6 w-full rounded-l-md outline-none border border-black border-solid placeholder-text-sm px-2 lg:text-sm" type="text" id="report-input" placeholder="Report a problem">
+                    <button class="h-8 lg:h-6 rounded-r-md border border-black border-solid px-3 w-max" id="report-submit">Send</button>
                 </div>
             </div>
         </div>
 
-        <h2 class="font-semibold text-xl mb-5 md:mb-2">Settings</h2>
-        <div class="flex flex-col pl-3 gap-5">
+        <h2 class="font-semibold text-xl mb-5 md:mb-2 lg:text-md lg:pl-1 settingsAndFeaturesText lg:mb-1">Settings</h2>
+        <div class="flex flex-col pl-3 gap-5 lg:pl-2 lg:gap-2">
             <!-- 
             <div class="flex justify-between items-end">
                 <h1 class="leading-tight font-semibold text-lg">Dark Mode/White Mode<br> <span class="font-medium text-gray-400 text-sm">switch the theme</span> </h1>
@@ -103,23 +103,23 @@
                 </div>
             </div> -->
 
-            <div class="flex justify-between items-end ">
-                <h1 class="leading-tight font-semibold text-lg">Floating items<br> <span class="font-medium text-gray-400 text-sm">hide floating items</span> </h1>
-                <div class="menuBoxDarkBtn w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
-                    <div class="w-6 h-6 bg-white rounded-full"></div>
+            <div class="flex justify-between items-end">
+                <h1 class="leading-tight font-semibold text-lg lg:text-sm  lg:pr-3">Floating Icon<br> <span class="font-medium text-gray-400 text-sm lg:text-sm sizeTextMenu">hide floating items</span> </h1>
+                <div class="menuBoxDarkBtn lg:w-14 lg:h-5 w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
+                    <div class="w-6 h-6 bg-white rounded-full lg:w-4 lg:h-4"></div>
                 </div>
             </div>
 
             <div class="flex justify-between items-end">
-                <h1 class="leading-tight font-semibold text-lg">Discounts<br> <span class="font-medium text-gray-400 text-sm">not receive discounts</span> </h1>
-                <div class="menuBoxDarkBtn w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
-                    <div class="w-6 h-6 bg-white rounded-full"></div>
+                <h1 class="leading-tight font-semibold text-lg lg:text-sm">Discounts<br> <span class="font-medium text-gray-400 text-sm lg:text-sm sizeTextMenu">not receive discounts</span> </h1>
+                <div class="menuBoxDarkBtn lg:w-14 lg:h-5 w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center ">
+                    <div class="w-6 h-6 bg-white rounded-full lg:w-4 lg:h-4"></div>
                 </div>
             </div>
         </div>
 
         <div class="w-full flex items-end justify-end mt-10 fixed bottom-10 right-24">
-            <h5 id="menu-back-btn" class=" font-semibold tracking-wide text-md">< Back</h5>
+            <h5 id="menu-back-btn" class=" font-semibold tracking-wide text-md lg:hidden">< Back</h5>
         </div>
 
     </div>
@@ -361,6 +361,8 @@
     <!-- header creation -->
 
     <header id="header-content" class="w-full h-auto py-3 gap-7  flex flex-col mb-2 relative">
+
+        <h1 id="rafas-site" class="fixed right-52 text-xl mt-1 hidden lg:flex">Rafa's Website</h1>
         
        
         <div class="flex justify-between w-full h-1/2 items-center">
@@ -397,13 +399,13 @@
         </div>
 
         <div class="searchAndFilter w-full h-1/2 flex justify-between items-center gap-3 lg:order-1 lg:absolute lg:w-3/6 lg:left-20">
-            <div class="searchBox w-full bg-white rounded-lg shadow-md h-11 flex items-center px-3 relative">
+            <div class="searchBox w-full bg-white rounded-lg shadow-md h-11 flex items-center px-3 relative lg:h-10 lg:bg-gray-100">
                 <input id="search-input" class="w-full outline-none bg-transparent text-lg" type="text" placeholder="Search" oninput="filterProducts()">
                 <img id="black-loupe" class="h-1/2 w-auto opacity-50 z-10" src="icons/loupe.png" alt="">
                 <img id="white-loupe" class="h-1/2 w-auto opacity-60 hidden z-10" src="icons/icons8-pesquisar-50.png" alt="">
                 <div id="search-results" class="opacity-90 z-50 absolute left-0 top-full w-full bg-white border border-gray-300 mt-2 rounded-b-lg shadow-lg hidden"></div>
             </div>
-            <img id="filter-btn" class="hover:bg-red-500 bg-red-400 w-11 p-1 rounded-xl shadow-md" src="icons/icons8-opções-de-ordenação-24.png" alt="">
+            <img id="filter-btn" class="hover:bg-red-500 bg-red-400 w-11 p-1 rounded-xl shadow-md lg:w-10 lg:rounded-lg" src="icons/icons8-opções-de-ordenação-24.png" alt="">
         </div>
     </header>
 
@@ -602,7 +604,7 @@
         <h3 class="formText text-black text-md mb-7 lg:leading-tight">Informe seu e-mail e receba atualizações sobre o produto!</h3>
         </div>
         <div class="lg:w-4/6 flex">
-            <input id="email-notification" class="h-12 rounded-l-md w-4/6 px-4 text-lg outline-none lg:w-full" type="email" placeholder="E-mail">
+            <input id="email-notification" class="h-12 rounded-l-md w-4/6 px-4 text-lg outline-none lg:w-full lg:bg-gray-200" type="email" placeholder="E-mail">
             <button id="send-btn" class="h-12 w-2/6 bg-purple-600 rounded-r-md text-white text-lg tracking-wider hover:bg-purple-800" type="button">Enviar</button>
         </div>
         <div id="message" class="z-40 fade-in-out fixed bottom-52 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded hidden w-max z-40">
@@ -632,6 +634,10 @@
     
         @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+
         .contentScroll::-webkit-scrollbar {
             display: none;
             }
@@ -647,10 +653,70 @@
         }
 
         @media (min-width: 1024px) {
+            html {
+                background: rgba(47, 86, 177, 0.938);
+                background: linear-gradient(49deg, rgba(47, 86, 177, 0.356) 0%, rgb(212, 234, 253) 100%);
+            }
+
+            html.dark {
+                background: rgba(30, 29, 92, 0.938);
+                background: linear-gradient(49deg, rgb(41, 18, 94) 0%, rgb(40, 36, 61) 100%);
+            }
+
             body {
                 height: 92vh;
             }
-        
+
+            body .sizeTextMenu {
+                font-size: 0.75rem;
+                line-height: 1px;
+            }
+
+            body .settingsAndFeaturesText {
+                font-size: 1rem;
+            }
+
+            body #menu {
+                background: none;
+            }
+
+            body {
+                box-shadow: rgba(0, 0, 0, 0.103) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+
+            body.dark {
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+
+            body.dark .boxDarkBtn {
+                padding-left: 40px;
+            }
+
+            body #rafas-site{
+                text-align: center;
+                background: url(https://i.gifer.com/8VvO.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: transparent;
+                background-clip: text;
+                font-family: "Bodoni Moda SC", serif;
+                font-weight: 400;
+                color: #f1dfc7be;
+            }
+
+
+           
+            body.dark #rafas-site{
+                text-align: center;
+                background: url(https://i.gifer.com/8VvO.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: transparent;
+                background-clip: text;
+                font-family: "Bodoni Moda SC", serif;
+                font-weight: 400;
+                color: #ffffff2c;
+            }
         }
 
         * {
@@ -1054,6 +1120,7 @@
             flex: 1;
             overflow-y: auto;
         }
+
     </style>
 
 <script src="script.js">

@@ -549,6 +549,9 @@ boxDarkBtn.forEach((darkBtn) => {
     const blackMacOs = document.querySelector(".blackMacOs");
     whiteMacOs.classList.toggle("hidden");
     blackMacOs.classList.toggle("hidden");
+
+    const html = document.querySelector('html');
+    html.classList.toggle('dark');
   });
 });
 
