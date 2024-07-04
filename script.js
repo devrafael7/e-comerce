@@ -189,21 +189,43 @@ function updateImage() {
     mainCardImage.src = images[currentIndex];
     mainCardImage.classList.remove("opacity-0");
 
-    if (currentIndex === 2) {
-      mainCardImage.style.width = "10rem";
-      mainCardImage.style.height = "auto";
-      mainCardImage.style.marginTop = "50px";
-      mainCardImage.style.marginLeft = "2rem";
-    } else if (currentIndex === 0) {
-      mainCardImage.style.width = "10rem";
-      mainCardImage.style.height = "auto";
-      mainCardImage.style.marginBottom = "20px";
-      mainCardImage.style.marginLeft = "2rem";
+
+    if (window.innerWidth >= 1024) {
+      if (currentIndex === 2) {
+        mainCardImage.style.width = "13rem";
+        mainCardImage.style.height = "auto";
+        mainCardImage.style.marginTop = "5rem";
+        mainCardImage.style.marginLeft = "0.50rem";
+      } else if (currentIndex === 0) {
+        mainCardImage.style.width = "12rem";
+        mainCardImage.style.height = "auto";
+        mainCardImage.style.marginBottom = "20px";
+        mainCardImage.style.marginTop = "2.4rem";
+        mainCardImage.style.marginLeft = "0.50rem";
+      } else {
+        mainCardImage.style.width = "10rem";
+        mainCardImage.style.height = "auto";
+        mainCardImage.style.marginLeft = "0.50rem";
+        mainCardImage.style.marginBottom = "2rem";
+        mainCardImage.style.marginTop = "2rem";
+      }
     } else {
-      mainCardImage.style.width = "8rem";
-      mainCardImage.style.height = "auto";
-      mainCardImage.style.marginLeft = "2rem";
-      mainCardImage.style.marginBottom = "2rem";
+      if (currentIndex === 2) {
+        mainCardImage.style.width = "10rem";
+        mainCardImage.style.height = "auto";
+        mainCardImage.style.marginTop = "50px";
+        mainCardImage.style.marginLeft = "2rem";
+      } else if (currentIndex === 0) {
+        mainCardImage.style.width = "10rem";
+        mainCardImage.style.height = "auto";
+        mainCardImage.style.marginBottom = "20px";
+        mainCardImage.style.marginLeft = "2rem";
+      } else {
+        mainCardImage.style.width = "8rem";
+        mainCardImage.style.height = "auto";
+        mainCardImage.style.marginLeft = "2rem";
+        mainCardImage.style.marginBottom = "2rem";
+      }
     }
 
     buttons.forEach((btn, index) => {

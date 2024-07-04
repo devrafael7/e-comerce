@@ -411,20 +411,29 @@
 
     <div class="contentScroll h-full lg:overflow-y-auto">
     <div class="flex w-full h-auto items-center gap-3 lg:flex">
-    <div id="mainCard" class="mainCard w-full h-40 bg-gray-700 shadow-xl rounded-2xl px-4 py-4 flex items-center relative cursor-pointer lg:w-4/6 lg:h-60 lg:pl-5">
-        <article class="promotionCard w-2/5 h-full rounded-xl px-3 py-3 text-white flex justify-center items-center md:mr-5 lg:mr-20">
-          <h1 class="text-4xl font-semibold bg-none">
+    <div id="mainCard" class="mainCard w-full h-40 bg-gray-700 shadow-xl rounded-2xl px-4 py-4 flex items-center relative cursor-pointer lg:w-4/6 lg:h-60 lg:pl-5 lg:rounded-2xl">
+        <article class="promotionCard w-2/5 h-full rounded-xl px-3 py-3 text-white flex justify-center items-center md:mr-5 lg:mr-14 lg:relative lg:h-48 lg:flex-col lg:rounded-3xl">
+          <h1 class="text-4xl font-semibold bg-none lg:mb-4 lg:text-gray-600">
             50% <br>
             OFF
           </h1>
+          <h2 class="text-center leading-tight lg:text-gray-600 text-sm hidden lg:flex">Don't miss <br> this promotion</h2>
         </article>
-        <img id="mainCardImage" class="bg-none w-auto h-40 mt-5 ml-5" src="imgs/pngwing.com (1).png" alt="Promotion Image">
+        <img id="mainCardImage" class="bg-none w-auto h-40 mt-5 ml-5 lg:h-48" src="imgs/pngwing.com (1).png" alt="Promotion Image">
         <img id="mainCardFavoriteBtnEmpty" class="absolute right-2 top-2 w-8 h-8 rounded-full flex justify-center items-center p-2" src="icons/icons8-gostar-empty.png" alt="Favorite Button">
         <img id="mainCardFavoriteBtn" class="absolute right-2 top-2 w-8 h-8 rounded-full flex justify-center items-center p-2 hidden" src="icons/icons8-gostar-50.png" alt="Favorite Button h">
     </div>
     <div class="flex gap-3 w-2/6 h-full justify-between flex-col hidden lg:flex">
-        <div class="bg-gray-500 rounded-xl w- h-28"></div>
-        <div class="bg-gray-500 rounded-xl w- h-28"></div>
+        <div class="secondCardPromotion bg-gray-500 rounded-2xl w- h-28 flex justify-center items-center cursor-pointer">
+            <h1 class="leading-tight font-bold text-xl text-center text-gray-900">Get up to <span class="text-blue-900">50%</span> <br> OFF Nike Shoes</h1>
+        </div>
+        <div class="thirdCardPromotion bg-gray-500 rounded-2xl w-full h-28 flex justify-between px-6 relative cursor-pointer">
+            <div class="flex flex-col w-1/2  justify-center items-center">
+                <h1 class="mb-1 text-lg font-bold text-gray-800">Go to cart!</h1>
+                <img class="cursor-pointer w-16" src="imgs/bendy-button-with-shopping-cart.png" alt="">
+            </div>
+            <img class="h-full absolute -top-4 right-7" src="imgs/isometric-shopping-cart-with-bag.png" alt="">
+        </div>
     </div>
       </div>
       <section class="flex gap-1 w-full justify-center my-3 lg:items-center lg:w-4/6">
@@ -474,7 +483,7 @@
     <main class="w-full h-auto my-3 flex flex-col gap-6 mb-14 px-2  lg:justify-center lg:items-center lg:gap-8 lg:pr-24">
         <div class="wholeFootwear w-full h-auto flex lg:gap-3 gap-5 lg:items-center lg:relative">
             <div class="flex flex-col w-1/2 h-auto gap-6 lg:gap-5 lg:flex-row lg:mr-2">
-                <div class="md:pt-1 gap-5 card w-full h-64 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pt-7 relative">
+                <div class="md:pt-1 gap-5 lg:bg-gray-200 card w-full h-64 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pt-7 relative">
                     <p class="newCard absolute top-3 left-2 bg-white rounded-full px-2 font-semibold">New</p>
                     <img class="shoesImg transform w-full h-auto mr-5 lg:mt-5" src="imgs/pngwing.com (9).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
@@ -488,7 +497,7 @@
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                     </button>
                 </div>
-                <div class="md:py-7 gap-5 card w-full md:h-64 h-56 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pr-2 pt-5 relative">
+                <div class="md:py-7 gap-5 lg:bg-gray-200 card w-full md:h-64 h-56 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pr-2 pt-5 relative">
                     <img class="shoesImg transform w-full" src="imgs/pngwing.com (5).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="mt-3 mb-1 leading-tight font-medium text-lg">Nike Jordan W&B</h2>
@@ -504,7 +513,7 @@
             </div>
            
             <div class="flex flex-col w-1/2 h-auto gap-6 lg:gap-5 lg:flex-row">
-                <div class="md:py-7 gap-5 card w-full md:h-64  h-56 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pr-2 pt-3 relative">
+                <div class="md:py-7 gap-5 lg:bg-gray-200 card w-full md:h-64  h-56 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pr-2 pt-3 relative">
                     <img class="shoesImg transform w-full" src="imgs/pngwing.com (7).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-1 mt-3 font-medium text-lg">Nike SB DK Green</h2>
@@ -517,7 +526,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="md:py-7 gap-5 card w-full md:pt-1 h-64 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pt-7 relative">
+                <div class="md:py-7 gap-5 lg:bg-gray-200 card w-full md:pt-1 h-64 bg-gray-300 shadow-lg rounded-xl flex flex-col items-center pt-7 relative">
                     <img class="shoesImg transform w-full mr-3 mt-2 lg:mt-8" src="imgs/pngwing.com (4).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class=" leading-tight mb-2 text-lg font-semibold">Nike Jordan Traditional</h2>
@@ -536,7 +545,7 @@
 
         <div class="wholeWatches w-full h-auto flex gap-5 lg:gap-5 lg:pb-10">
             <div class="flex flex-col w-1/2 h-auto gap-5 lg:gap-5 lg:flex-row ">
-                <div class="lg:h-72 card pt-3 md:pb-3 flex items-center flex-col w-full md:h-80 h-72 bg-gray-300 rounded-xl relative">
+                <div class="lg:h-72 lg:bg-gray-200 card pt-3 md:pb-3 flex items-center flex-col w-full md:h-80 h-72 bg-gray-300 rounded-xl relative">
                     <img class="transform rotate-12 lg:px-4 lg:py-4" src="imgs/pngwing.com (17).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-2 font-medium text-lg">Black Square Watch</h2>
@@ -549,7 +558,7 @@
                         <img class="w-2/6" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                     </button>
                 </div>
-                <div class="md:py-7 gap-5 lg:h-72 card pt-3 flex items-center flex-col w-full md:h-72  h-60 bg-gray-300 rounded-xl relative">
+                <div class="md:py-7 gap-5 lg:h-72 lg:bg-gray-200 card pt-3 flex items-center flex-col w-full md:h-72  h-60 bg-gray-300 rounded-xl relative">
                     <img class="md:mb-3 w-32 lg:mt-3" src="imgs/pngwing.com (21).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-2 font-medium text-lg">Black Fine Watch</h2>
@@ -565,7 +574,7 @@
             </div>
            
             <div class="flex flex-col w-1/2 h-auto gap-5 relative lg:flex-row lg:items-center lg:justify-center">
-                <div class=" md:gap-5 lg:h-72 card pt-3 flex items-center flex-col w-full md:h-64  h-60 bg-gray-300 rounded-xl relative">
+                <div class=" md:gap-5 lg:h-72 lg:bg-gray-200 card pt-3 flex items-center flex-col w-full md:h-64  h-60 bg-gray-300 rounded-xl relative">
                     <img class="w-32 transform rotate-12 lg:mt-5" src="imgs/pngwing.com (18).png" alt="">
                     <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <p class="newCard absolute top-3 left-2 bg-white rounded-full px-2 font-semibold">New</p>
@@ -580,7 +589,7 @@
                         <img id="black-square-watch-img" class="w-2/6" src="icons/icons8-sacola-de-compras-50.png" alt="">
                     </button>
                 </div>
-                <div class="gap-5 lg:h-72 card md:pt-1 pt-3 flex items-center flex-col md:h-80 w-full h-72 bg-gray-300 rounded-xl relative">
+                <div class="gap-5 lg:h-72 lg:bg-gray-200 card md:pt-1 pt-3 flex items-center flex-col md:h-80 w-full h-72 bg-gray-300 rounded-xl relative">
                     <img class="lg:px-4 lg:py-4 transform -rotate-12" src="imgs/pngwing.com (19).png" alt="">
                        <div class="flex flex-col w-full h-full justify-center items-start px-3">
                         <h2 class="leading-tight mb-2 font-medium text-lg">Gray Premium Watch</h2>
@@ -704,8 +713,6 @@
                 color: #f1dfc7be;
             }
 
-
-           
             body.dark #rafas-site{
                 text-align: center;
                 background: url(https://i.gifer.com/8VvO.gif);
@@ -717,6 +724,47 @@
                 font-weight: 400;
                 color: #ffffff2c;
             }
+
+            body .mainCard {
+                background: rgba(86, 212, 250, 0.815);
+                background: linear-gradient(94deg, rgba(247, 204, 199, 0.897) 0%, rgba(188, 216, 252, 0.973) 100%);
+                box-shadow: rgba(0, 0, 0, 0.082) 0px 3px 6px, rgba(0, 0, 0, 0.096) 0px 3px 6px;
+            }
+
+            body .mainCard .promotionCard{
+                box-shadow: rgba(0, 0, 0, 0) 0px 3px 6px, rgba(0, 0, 0, 0.068) 0px 3px 6px;
+            }
+
+            body.dark .secondCardPromotion {
+                background: none;
+                border: 1px solid rgba(191, 123, 255, 0.404);
+            }
+
+            body.dark .thirdCardPromotion {
+                background: none;
+                border: 1px solid rgba(191, 123, 255, 0.404);
+            }
+
+            body.dark .secondCardPromotion h1{
+                color: #ffffffd8;
+            }
+
+            body.dark .secondCardPromotion span{
+                color: #9258fdd8;
+            }
+
+            body.dark .thirdCardPromotion h1{
+                color: #ffffffd8;
+            }
+
+            body.dark .promotionCard h1{
+                color: #ffffff8e;
+            }
+
+            body.dark .promotionCard h1{
+                color: #ffffffd8;
+            }
+
         }
 
         * {
@@ -1116,10 +1164,22 @@
             flex-direction: column;
             height: 100vh;
         }
+
         .content {
             flex: 1;
             overflow-y: auto;
         }
+
+        .secondCardPromotion {
+            background: rgba(247, 183, 176, 0.815);
+            background: linear-gradient(94deg, rgba(252, 160, 150, 0.596) 0%, rgba(179, 211, 251, 0.788) 100%);
+        }
+
+        .thirdCardPromotion {
+            background: rgb(179, 225, 240);
+        }
+
+
 
     </style>
 
