@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="md:text-2xl lg:text-lg lg:px-10 lg:pl-12 lg:bg-blue-200 lg:py-6 lg:overflow-y-auto lg:h-auto">
+<html lang="en" class="md:text-2xl lg:text-lg lg:px-10 lg:pl-12 lg:bg-blue-200 lg:py-6 lg:overflow-y-auto lg:h-auto lg:overflow-y-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +13,8 @@
     <!--Menu Creation-->
     <div id="menu"  class="fade-in-out fade-in-out show menu w-5/6 h-screen bg-white fixed left-0 z-20 top-0 py-7 flex flex-col pl-10 pr-5 hidden lg:flex lg:absolute lg:left-0 lg:w-1/6 lg:pl-2 lg:text-sm lg:pr-5 lg:pl-4">
         <div class="w-full h-auto items-center flex gap-5 lg:gap-3 mb-8 lg:mb-6">
-            <div class="w-14 h-14 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md relative lg:px-2 lg:w-10 lg:h-10">
-                <img id="" class="w-full opacity-80" src="icons/icons8-usuário-30.png" alt="">
+            <div class="w-14 h-14 bg-white rounded-full bg-purple-500 flex justify-center items-center px-2 cursor-pointer shadow-md relative lg:px-2 lg:w-10 lg:h-10 lg:cursor-pointer">
+                <img id="" class="w-full opacity-80 " src="icons/icons8-usuário-30.png" alt="">
             </div>
             <div class="flex flex-col">
                 <h1 class="font-medium lg:leading-none lg:text-sm lg:mb-1">How is it going?</h1>
@@ -26,7 +26,7 @@
         </h1>
         <div class="Menu flex flex-col gap-4 mb-12 pl-3 md:mb-5 md:gap-2 lg:pl-2 lg:mb-5">
             <div class="flex flex-col jusitfy-center w-full h-auto" id="account-toggle">
-                <div class="flex items-center">
+                <div class="flex items-center lg:cursor-pointer">
                     <img  class="whiteUser w-4 h-4 hidden" src="icons/icons8-usuário-30.png" alt="">
                     <img class="blackUser w-4 h-4" src="icons/icons8-usuário-30 (1).png" alt="">
                     <p class="font-medium pl-3">Account</p>
@@ -41,7 +41,7 @@
             </div>
 
             <div class="flex flex-col jusitfy-center w-full h-auto" id="cart-toggle">
-                <div class="flex items-center">
+                <div class="flex items-center lg:cursor-pointer">
                     <img  class="menuWhiteCart hidden w-4 h-4" src="icons/icons8-sacola-de-compras-50 (1).png" alt="">
                     <img  class="menuBlackCart w-4 h-4" src="icons/icons8-sacola-de-compras-50.png" alt="">
                     <p class="font-medium pl-3">Shopping Cart</p>
@@ -53,7 +53,7 @@
             </div>
 
             <div class="flex flex-col jusitfy-center w-full h-auto" id="favorites-toggle">
-                <div class="flex items-center">
+                <div class="flex items-center lg:cursor-pointer">
                     <img class="whiteFavBtn w-4 h-4 hidden" src="icons/icons8-gostar-50.png" alt="">
                     <img class="blackFavBtn w-4 h-4" src="icons/icons8-gostar-30.png" alt="">
                     <p class="font-medium pl-3">Favorites</p>
@@ -65,7 +65,7 @@
             </div>
            
             <div class="flex flex-col jusitfy-center w-full h-auto" id="contact-toggle">
-                <div class="flex items-center">
+                <div class="flex items-center lg:cursor-pointer">
                     <img class="whiteContact hidden w-4 h-4" src="icons/icons8-casa-50.white.png" alt="">
                     <img class="blackContact w-4 h-4" src="icons/icons8-telefone-desligado-30.png" alt="">
                     <p class="font-medium pl-3">Contact</p>
@@ -79,7 +79,7 @@
             </div>
            
 
-            <div class="reportBtn relative flex items-center w-full h-auto" id="report-toggle">
+            <div class="reportBtn relative flex items-center w-full h-auto lg:cursor-pointer" id="report-toggle">
                 <img class="reportBtn whiteRP w-5 h-5 lg:h-4 lg:w-4 hidden" src="icons/icons8-estado-mental-30 (2).png" alt="">
                 <img class="reportBtn blackRP w-5 h-5 lg:h-4 lg:w-4" src="icons/icons8-estado-mental-30.png" alt="">
                 <p class="font-medium pl-3 lg:leading-tight">Report a problem</p>
@@ -105,14 +105,14 @@
 
             <div class="flex justify-between items-end">
                 <h1 class="leading-tight font-semibold text-lg lg:text-sm  lg:pr-3">Floating Icon<br> <span class="font-medium text-gray-400 text-sm lg:text-sm sizeTextMenu">hide floating items</span> </h1>
-                <div class="menuBoxDarkBtn lg:w-14 lg:h-5 w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
+                <div class="menuBoxDarkBtn lg:w-14 lg:h-5 w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center lg:cursor-pointer">
                     <div class="w-6 h-6 bg-white rounded-full lg:w-4 lg:h-4"></div>
                 </div>
             </div>
 
             <div class="flex justify-between items-end">
                 <h1 class="leading-tight font-semibold text-lg lg:text-sm">Discounts<br> <span class="font-medium text-gray-400 text-sm lg:text-sm sizeTextMenu">not receive discounts</span> </h1>
-                <div class="menuBoxDarkBtn lg:w-14 lg:h-5 w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center ">
+                <div class="menuBoxDarkBtn lg:w-14 lg:h-5 w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center lg:cursor-pointer">
                     <div class="w-6 h-6 bg-white rounded-full lg:w-4 lg:h-4"></div>
                 </div>
             </div>
@@ -125,8 +125,8 @@
     </div>
 
      <!-- Cart Creation-->
-     <div id="bg-cart" class="w-full h-screen bg-white fixed left-0 top-0 z-20 flex flex-col pt-14 px-5 justify-between hidden pb-10 ">
-        <div class="flex flex-col ">
+     <div id="bg-cart" class="w-full h-screen bg-white fixed left-0 top-0 z-20 flex flex-col pt-14 px-5 justify-between hidden pb-10 lg:absolute">
+        <div class="flex flex-col">
             <img id="back=arrow-btn-my-cart-w"  class="backArrowBtn hidden whiteArrow absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-24.png" alt="">
             <img id="back=arrow-btn-my-cart-b"  class="backArrowBtn blackArrow absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
             <h1 class="w-full text-center font-semibold text-xl mb-7">My Cart</h1>
@@ -154,11 +154,11 @@
             </div>
             <button class="checkoutBtn w-full h-16 bg-black text-white rounded-full text-lg mt-3" type="button">Checkout</button>
 
-            <div class="container checkoutPayment hidden fixed w-full h-screen bg-white z-50 top-0 left-0 flex flex-col justify-center items-center px-10">
+            <div class="container checkoutPayment hidden fixed w-full h-screen bg-white z-50 top-0 left-0 flex flex-col justify-center items-center px-10 lg:rounded-2xl">
                 <img id="finalize-payment-back-arrow-w"  class="backArrowBtn hidden whiteArrow absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-24.png" alt="">
                 <img id="finalize-payment-back-arrow-b"  class="backArrowBtn blackArrow absolute top-7 left-5 w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-30.png" alt="">
 
-                <div class="paymentFinished hidden w-full h-screen bg-white fixed top-0 left-0 flex justify-center items-center flex-col px-10">
+                <div class="paymentFinished hidden w-full h-screen bg-white fixed top-0 left-0 flex justify-center items-center flex-col px-10 lg:rounded-2xl">
                     <h1 class="mb-7 font-semibold text-yellow-400 text-2xl text-center">Thank you for <br> your preferences, <span class="userName"></span></h1>
                     <img class="w-72" src="imgs/mochi-young-man-or-teenager-skateboarding.gif" alt="">
                 </div>
@@ -190,7 +190,7 @@
                         <p  class="total-cart font-semibold text-2xl">$0</p>
                     </div>
                     <div class="form-group px-- mt-2">
-                        <input type="checkbox" id="agree-checkbox-payment">
+                        <input class="lg:cursor-pointer" type="checkbox" id="agree-checkbox-payment">
                         <label for="agree-checkbox-payment">I want to receive emails to keep me updated</label>
                     </div>
                     <button class="bg-green-500 w-full h-10 rounded-md text-white font-medium tracking-wide hover:bg-green-700" type="button" id="pay-button">Pay</button>
@@ -201,16 +201,16 @@
         </div>
      </div>
     
-    <form id="bg-login" class=" fixed w-full h-screen z-30 left-0 md:pt-6 pt-36 top-0 flex justify-end items-center flex-col  lg:justify-center lg:items-center lg:pb-3 lg:h-auto lg:pt-3 hidden">
+    <form id="bg-login" class=" fixed w-full h-screen z-30 left-0 md:pt-6 pt-36 top-0 flex justify-end items-center flex-col  lg:justify-center lg:items-center lg:pb-3 lg:h-auto  hidden lg:absolute lg:justify-start lg:items-start lg:pt-0">
         <div id="confirmation-pop-up" class="w-4/6 bg-red-500 rounded-b-xl h-16 fixed z-40 top-0 text-white text-xl flex justify-center items-center font-semibold hidden">
             Check the blanks!
         </div>
         
         <!-- close PopUp confirmation informations -->
       
-        <div class="login w-full h-full bg-white rounded-t-xl shadow-md flex flex-col items-center pt-10 px-7 relative lg:w-1/2 lg:rounded-xl lg:rounded-b-xl lg:">
-            <img  class="closeLogin whiteCloseLogin hidden absolute left-4 top-3 w-8 h-8" src="icons/icons8-close-26 (1).png" alt="">
-            <img  class="closeLogin blackCloseLogin absolute left-4 top-3 w-8 h-8" src="icons/icons8-close-26.png" alt="">
+        <div class="login w-full h-full bg-white rounded-t-xl shadow-md flex flex-col items-center pt-10 px-7 relative lg:overflow-y-auto lg:w-full">
+            <img  class=" closeLogin whiteCloseLogin hidden absolute left-4 top-3 w-8 h-8 lg:cursor-pointer" src="icons/icons8-close-26 (1).png" alt="">
+            <img  class="closeLogin blackCloseLogin absolute left-4 top-3 w-8 h-8 lg:cursor-pointer" src="icons/icons8-close-26.png" alt="">
             <h2 id="get-started" class="text-2xl font-semibold text-purple-800 mb-8">Get Started</h2>
             <div class="w-full flex-col flex h-auto gap-7">
 
@@ -237,10 +237,10 @@
             <div class="flex flex-col items-center mt-7">
                 <p class="opacity-80">Sign up with</p>
                 <div class="flex gap-5 my-4">
-                    <img class="w-10" src="icons/google.color.png" alt="">
-                    <img class="w-10" src="icons/facebook.color.png" alt="">
-                    <img class="w-10 hidden whiteMacOs" src="icons/icons8-mac-os-30 (1).png" alt="">
-                    <img class="w-10 blackMacOs" src="icons/icons8-mac-os-30.png" alt="">
+                    <img class="w-10 lg:cursor-pointer" src="icons/google.color.png" alt="">
+                    <img class="w-10 lg:cursor-pointer" src="icons/facebook.color.png" alt="">
+                    <img class="w-10 lg:cursor-pointer hidden whiteMacOs" src="icons/icons8-mac-os-30 (1).png" alt="">
+                    <img class="w-10 lg:cursor-pointer blackMacOs" src="icons/icons8-mac-os-30.png" alt="">
                 </div>
             </div>
         </div>
@@ -254,7 +254,7 @@
         </div>
       </div>
 
-     <div id="filter" class="w-full h-screen fixed bg-white z-20 left-0 top-0 px-5 pt-8 hidden">
+     <div id="filter" class="w-full h-screen fixed bg-white z-20 left-0 top-0 px-5 pt-8 hidden lg:absolute lg:w-2/6 lg:transition-all lg:overflow-y-auto">
         <div class="flex items-center h-auto justify-between mb-12">
             <div class="flex gap-4">
                 <img class="hidden backArrowBtnFilter whiteBackArrowF w-12 transform rotate-180 px-1 cursor-pointer" src="icons/icons8-seta-longa-à-direita-24.png" alt="">
@@ -265,8 +265,8 @@
           
 
             <div>
-                <img class="confirmFilterBtn whiteConfirmFBtn hidden w-9 h-9" src="icons/icons8-done-50.png" alt="">
-                <img class="confirmFilterBtn blackConfirmFBtn  w-9 h-9" src="icons/icons8-selecionado-50.png" alt="">
+                <img class="lg:cursor-pointer confirmFilterBtn whiteConfirmFBtn hidden w-9 h-9" src="icons/icons8-done-50.png" alt="">
+                <img class="lg:cursor-pointer confirmFilterBtn blackConfirmFBtn  w-9 h-9" src="icons/icons8-selecionado-50.png" alt="">
             </div>
         </div>
            
@@ -287,11 +287,11 @@
             </div>
 
             <div class="flex gap-3 mb-9">
-                <div id="all-products-toggle" class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div id="all-products-toggle" class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class=" opacity-90 font-medium">All Products</p>
                 </div>
 
-                <div id="new-products-toggle" class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div id="new-products-toggle" class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Only New</p>
                 </div>
             </div>
@@ -299,33 +299,33 @@
             <h2 class="font-semibold text-md mb-4">Brand</h2>
 
             <div class="flex flex-wrap gap-3 mb-8">
-                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Nike</p>
                 </div>
 
-                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Apple</p>
                 </div>
 
-                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Adidas</p>
                 </div>
 
 
-                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Puma</p>
                 </div>
                 
 
-                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Vans</p>
                 </div>
 
-                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Nike Jordan</p>
                 </div>
 
-                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">New Balance</p>
                 </div>
             </div>
@@ -333,25 +333,25 @@
             <h2 class="font-semibold text-md mb-3">Features</h2>
           
             <div class="flex flex-wrap gap-3">
-                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Footwear</p>
                 </div>
 
-                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Watches</p>
                 </div>
 
-                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Headset</p>
                 </div>
 
 
-                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">T-Shirt</p>
                 </div>
 
 
-                <div class="toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                <div class="lg:cursor-pointer toggleFilterBtn w-max px-3 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
                     <p class="opacity-90 font-medium">Cap</p>
                 </div>
             </div>
@@ -362,7 +362,7 @@
 
     <header id="header-content" class="w-full h-auto py-3 gap-7  flex flex-col mb-2 relative">
 
-        <h1 id="rafas-site" class="fixed right-52 text-xl mt-1 hidden lg:flex">Rafa's Website</h1>
+        <h1 id="rafas-site" class="lg:cursor-pointer fixed right-52 text-xl mt-1 hidden lg:flex">Rafa's Website</h1>
         
        
         <div class="flex justify-between w-full h-1/2 items-center">
@@ -374,7 +374,7 @@
                     <div class="insideMenuBtn w-full h-full bg-gray-400 rounded-full"></div>
                 </div>
 
-             <div class="boxDarkBtn w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
+             <div class="lg:cursor-pointer boxDarkBtn w-16 h-8 bg-gray-300 rounded-full px-1 flex items-center">
                     <div class="indicatorDarkBtn w-6 h-6 bg-white rounded-full"></div>
                 </div>
             </div>
@@ -405,7 +405,7 @@
                 <img id="white-loupe" class="h-1/2 w-auto opacity-60 hidden z-10" src="icons/icons8-pesquisar-50.png" alt="">
                 <div id="search-results" class="opacity-90 z-50 absolute left-0 top-full w-full bg-white border border-gray-300 mt-2 rounded-b-lg shadow-lg hidden"></div>
             </div>
-            <img id="filter-btn" class="hover:bg-red-500 bg-red-400 w-11 p-1 rounded-xl shadow-md lg:w-10 lg:rounded-lg" src="icons/icons8-opções-de-ordenação-24.png" alt="">
+            <img id="filter-btn" class="lg:cursor-pointer hover:bg-red-500 bg-red-400 w-11 p-1 rounded-xl shadow-md lg:w-10 lg:rounded-lg" src="icons/icons8-opções-de-ordenação-24.png" alt="">
         </div>
     </header>
 
@@ -424,15 +424,15 @@
         <img id="mainCardFavoriteBtn" class="absolute right-2 top-2 w-8 h-8 rounded-full flex justify-center items-center p-2 hidden" src="icons/icons8-gostar-50.png" alt="Favorite Button h">
     </div>
     <div class="flex gap-3 w-2/6 h-full justify-between flex-col hidden lg:flex">
-        <div class="secondCardPromotion bg-gray-500 rounded-2xl w- h-28 flex justify-center items-center cursor-pointer">
+        <div class="secondCardPromotion bg-gray-500 rounded-2xl w- h-28 flex justify-center items-center">
             <h1 class="leading-tight font-bold text-xl text-center text-gray-900">Get up to <span class="text-blue-900">50%</span> <br> OFF Nike Shoes</h1>
         </div>
-        <div class="thirdCardPromotion bg-gray-500 rounded-2xl w-full h-28 flex justify-between px-6 relative cursor-pointer">
+        <div class="thirdCardPromotion bg-gray-500 rounded-2xl w-full h-28 flex justify-between px-6 relative">
             <div class="flex flex-col w-1/2  justify-center items-center">
                 <h1 class="mb-1 text-lg font-bold text-gray-800">Go to cart!</h1>
-                <img class="cursor-pointer w-16" src="imgs/bendy-button-with-shopping-cart.png" alt="">
+                <img class="goToCartBtn cursor-pointer w-16" src="imgs/bendy-button-with-shopping-cart.png" alt="">
             </div>
-            <img class="h-full absolute -top-4 right-7" src="imgs/isometric-shopping-cart-with-bag.png" alt="">
+            <img class=" lg:cursor-pointer h-full absolute -top-4 right-7" src="imgs/isometric-shopping-cart-with-bag.png" alt="">
         </div>
     </div>
       </div>
@@ -626,14 +626,14 @@
     </div>
     </div>
 
-    <div class="fixed w-auto h-auto bottom-3 right-5 flex justify-center items-center gap-2">
+    <div id="floating-items" class="fixed w-auto h-auto bottom-3 right-5 flex justify-center items-center gap-2 lg:right-12 lg:bottom-7">
         <div class="relative">
-            <img id="fixed-cart-btn" class="z-30 bg-white rounded-full p-2 w-12" src="icons/icons8-sacola-de-compras-50.png" alt="">
+            <img id="fixed-cart-btn" class="lg:cursor-pointer z-30 bg-white rounded-full p-2 w-12" src="icons/icons8-sacola-de-compras-50.png" alt="">
             <h4 id="fixed-cart-counter" class="cartCounter absolute right-0 -top-1 bg-green-600 w-6 h-6 flex justify-center items-center font-semibold text-white rounded-full hidden"></h4>
         </div>
       
         <a href="https://wa.me/5524993318146?text=Olá,%20gostaria%20de%20mais%20informações" target="" class="whatsapp-button">
-            <img class="w-16 h-auto" src="icons/whatsapp.color.png" alt="WhatsApp">
+            <img class="lg:w-14 w-16 h-auto" src="icons/whatsapp.color.png" alt="WhatsApp">
         </a>
 
 
@@ -659,112 +659,6 @@
         .contentScroll {
             overflow-y: scroll; 
             -ms-overflow-style: none; 
-        }
-
-        @media (min-width: 1024px) {
-            html {
-                background: rgba(47, 86, 177, 0.938);
-                background: linear-gradient(49deg, rgba(47, 86, 177, 0.356) 0%, rgb(212, 234, 253) 100%);
-            }
-
-            html.dark {
-                background: rgba(30, 29, 92, 0.938);
-                background: linear-gradient(49deg, rgb(41, 18, 94) 0%, rgb(40, 36, 61) 100%);
-            }
-
-            body {
-                height: 92vh;
-            }
-
-            body .sizeTextMenu {
-                font-size: 0.75rem;
-                line-height: 1px;
-            }
-
-            body .settingsAndFeaturesText {
-                font-size: 1rem;
-            }
-
-            body #menu {
-                background: none;
-            }
-
-            body {
-                box-shadow: rgba(0, 0, 0, 0.103) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-            }
-
-            body.dark {
-                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-            }
-
-            body.dark .boxDarkBtn {
-                padding-left: 40px;
-            }
-
-            body #rafas-site{
-                text-align: center;
-                background: url(https://i.gifer.com/8VvO.gif);
-                background-repeat: no-repeat;
-                background-size: cover;
-                color: transparent;
-                background-clip: text;
-                font-family: "Bodoni Moda SC", serif;
-                font-weight: 400;
-                color: #f1dfc7be;
-            }
-
-            body.dark #rafas-site{
-                text-align: center;
-                background: url(https://i.gifer.com/8VvO.gif);
-                background-repeat: no-repeat;
-                background-size: cover;
-                color: transparent;
-                background-clip: text;
-                font-family: "Bodoni Moda SC", serif;
-                font-weight: 400;
-                color: #ffffff2c;
-            }
-
-            body .mainCard {
-                background: rgba(86, 212, 250, 0.815);
-                background: linear-gradient(94deg, rgba(247, 204, 199, 0.897) 0%, rgba(188, 216, 252, 0.973) 100%);
-                box-shadow: rgba(0, 0, 0, 0.082) 0px 3px 6px, rgba(0, 0, 0, 0.096) 0px 3px 6px;
-            }
-
-            body .mainCard .promotionCard{
-                box-shadow: rgba(0, 0, 0, 0) 0px 3px 6px, rgba(0, 0, 0, 0.068) 0px 3px 6px;
-            }
-
-            body.dark .secondCardPromotion {
-                background: none;
-                border: 1px solid rgba(191, 123, 255, 0.404);
-            }
-
-            body.dark .thirdCardPromotion {
-                background: none;
-                border: 1px solid rgba(191, 123, 255, 0.404);
-            }
-
-            body.dark .secondCardPromotion h1{
-                color: #ffffffd8;
-            }
-
-            body.dark .secondCardPromotion span{
-                color: #9258fdd8;
-            }
-
-            body.dark .thirdCardPromotion h1{
-                color: #ffffffd8;
-            }
-
-            body.dark .promotionCard h1{
-                color: #ffffff8e;
-            }
-
-            body.dark .promotionCard h1{
-                color: #ffffffd8;
-            }
-
         }
 
         * {
@@ -794,8 +688,14 @@
         }
 
         #bg-login .login {
-            border-top-left-radius: 40px;
             border-top-right-radius: 40px;
+        }
+
+        @media (min-width: 300px) and (max-width: 1024px) {
+            #bg-login .login {
+            border-top-right-radius: 40px;
+            border-top-left-radius: 40px;
+            }
         }
 
         @keyframes bounce {
@@ -1177,6 +1077,187 @@
 
         .thirdCardPromotion {
             background: rgb(179, 225, 240);
+        }
+
+        @media (min-width: 1024px) {
+            html {
+                background: rgba(47, 86, 177, 0.938);
+                background: linear-gradient(49deg, rgba(47, 86, 177, 0.356) 0%, rgb(212, 234, 253) 100%);
+            }
+
+            html.dark {
+                background: rgba(30, 29, 92, 0.938);
+                background: linear-gradient(49deg, rgb(41, 18, 94) 0%, rgb(40, 36, 61) 100%);
+            }
+
+            body {
+                height: 92vh;
+            }
+
+            body .sizeTextMenu {
+                font-size: 0.75rem;
+                line-height: 1px;
+            }
+
+            body .settingsAndFeaturesText {
+                font-size: 1rem;
+            }
+
+            body #menu {
+                background: none;
+            }
+
+            body {
+                box-shadow: rgba(0, 0, 0, 0.103) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+
+            body.dark {
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+
+            body.dark .boxDarkBtn {
+                padding-left: 40px;
+            }
+
+            body #rafas-site{
+                text-align: center;
+                background: url(https://i.gifer.com/8VvO.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: transparent;
+                background-clip: text;
+                font-family: "Bodoni Moda SC", serif;
+                font-weight: 400;
+                color: #f1dfc7be;
+            }
+
+            body.dark #rafas-site{
+                text-align: center;
+                background: url(https://i.gifer.com/8VvO.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: transparent;
+                background-clip: text;
+                font-family: "Bodoni Moda SC", serif;
+                font-weight: 400;
+                color: #ffffff2c;
+            }
+
+            body .mainCard {
+                background: rgba(86, 212, 250, 0.815);
+                background: linear-gradient(94deg, rgba(247, 204, 199, 0.897) 0%, rgba(188, 216, 252, 0.973) 100%);
+                box-shadow: rgba(0, 0, 0, 0.082) 0px 3px 6px, rgba(0, 0, 0, 0.096) 0px 3px 6px;
+            }
+
+            body .mainCard .promotionCard{
+                box-shadow: rgba(0, 0, 0, 0) 0px 3px 6px, rgba(0, 0, 0, 0.068) 0px 3px 6px;
+            }
+
+            body.dark .secondCardPromotion {
+                background: none;
+                border: 1px solid rgba(191, 123, 255, 0.404);
+            }
+
+            body.dark .thirdCardPromotion {
+                background: none;
+                border: 1px solid rgba(191, 123, 255, 0.404);
+            }
+
+            body.dark .secondCardPromotion h1{
+                color: #ffffffd8;
+            }
+
+            body.dark .secondCardPromotion span{
+                color: #9258fdd8;
+            }
+
+            body.dark .thirdCardPromotion h1{
+                color: #ffffffd8;
+            }
+
+            body.dark .promotionCard h1{
+                color: #ffffff8e;
+            }
+
+            body.dark .promotionCard h1{
+                color: #ffffffd8;
+            }
+
+            #filter::-webkit-scrollbar {
+            display: none;
+            }
+
+            #filter {
+                scrollbar-width: none; 
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+
+            #filter {
+                overflow-y: scroll; 
+                -ms-overflow-style: none; 
+            }
+
+            #bg-cart::-webkit-scrollbar {
+            display: none;
+            }
+
+            #bg-cart  {
+                scrollbar-width: none; 
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+
+            #bg-cart  {
+                overflow-y: scroll; 
+                -ms-overflow-style: none; 
+            }
+
+            body #bg-cart {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                border-radius: 30px;
+            }
+
+            body .checkoutPayment {
+                position: fixed;
+                width: 100vw;
+                height: 92vh;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            body .paymentFinished {
+                height: 92vh;
+            }
+
+            #bg-login {
+                padding-right: 55%;
+            }
+
+
+            #bg-login .login {
+                border-top-left-radius: none;
+                border-top-right-radius: 60px;
+                border-bottom-right-radius: 60px;
+                height: 92vh;
+                padding-right: 7%;
+            }
+
+            #bg-login .login::-webkit-scrollbar {
+            display: none;
+            }
+
+            #bg-login .login {
+                scrollbar-width: none; 
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+
+            #bg-login .login {
+                overflow-y: scroll; 
+                -ms-overflow-style: none; 
+            }
+
         }
 
 
